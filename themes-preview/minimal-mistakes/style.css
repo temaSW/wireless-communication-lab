@@ -24,6 +24,37 @@ body {
   font-size: 0.82rem;
 }
 
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.language-switch {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid #dde2e6;
+  background: #fff;
+}
+
+.language-switch button {
+  min-width: 42px;
+  min-height: 32px;
+  border: 0;
+  color: #66727c;
+  background: transparent;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.language-switch button[aria-pressed="true"] {
+  color: #fff;
+  background: #7a4f22;
+}
+
 .brand {
   display: grid;
   grid-template-columns: 72px 1fr;
@@ -142,6 +173,11 @@ dd {
 }
 
 @media (max-width: 620px) {
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .brand,
   .interest-list,
   .project-list,

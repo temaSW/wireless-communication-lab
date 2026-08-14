@@ -16,10 +16,43 @@ body {
   padding: 56px 0;
 }
 
+.root-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
 .lab-mark {
   width: 76px;
   height: 76px;
   object-fit: contain;
+}
+
+.language-switch {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid #d6dde5;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.language-switch button {
+  min-width: 44px;
+  min-height: 34px;
+  border: 0;
+  border-radius: 6px;
+  color: #47627c;
+  background: transparent;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.language-switch button[aria-pressed="true"] {
+  color: #fff;
+  background: #1f6fb2;
 }
 
 .eyebrow {
@@ -90,6 +123,11 @@ h1 {
 }
 
 @media (max-width: 540px) {
+  .root-topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .theme-grid {
     grid-template-columns: 1fr;
   }
