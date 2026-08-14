@@ -2,11 +2,16 @@
 
 Shared sections:
 - News
-- Research
 - Projects
 - People
 - Publications
 - Media
+
+Homepage:
+- Research only
+- Each research direction has a short explanation
+
+Research is not a navigation tab.
 
 Themes control only:
 - layout

@@ -78,7 +78,12 @@
             <h2>${labels.researchTitle}</h2>
           </div>
           <div class="interest-list">
-            ${content.researchInterests.map((item) => `<article>${item}</article>`).join("")}
+            ${content.researchInterests.map((item) => `
+              <article>
+                <h3>${item.title}</h3>
+                <p>${item.text}</p>
+              </article>
+            `).join("")}
           </div>
         </section>
       `;
@@ -173,7 +178,7 @@
     }
 
     const pages = {
-      home: newsBlock() + researchBlock() + projectsBlock(),
+      home: researchBlock(),
       news: newsBlock(),
       research: researchBlock(),
       projects: projectsBlock(),

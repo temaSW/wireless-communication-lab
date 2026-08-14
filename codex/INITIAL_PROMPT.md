@@ -18,9 +18,11 @@ Root index:
 - only selects a design
 - links to all theme previews
 
-Each theme homepage starts with:
-- Research Interests
-- Projects
+Each theme homepage contains only:
+- Research Interests with explanations
+
+Research is not a separate navigation tab.
+News is a separate navigation tab.
 
 All pages must use labicon.png.
 

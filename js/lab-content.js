@@ -37,7 +37,6 @@ window.LAB_CONTENT = {
       home: "Главная",
       sections: [
         { key: "news", title: "Новости", href: "news.html" },
-        { key: "research", title: "Исследования", href: "research.html" },
         { key: "projects", title: "Проекты", href: "projects.html" },
         { key: "people", title: "Участники", href: "people.html" },
         { key: "publications", title: "Публикации", href: "publications.html" },
@@ -58,10 +57,22 @@ window.LAB_CONTENT = {
         mediaTitle: "Медиа"
       },
       researchInterests: [
-        "5G/6G",
-        "Polar codes",
-        "Next-generation multiple access",
-        "RIS"
+        {
+          title: "5G/6G",
+          text: "Исследование технологий мобильной связи пятого и шестого поколений, включая архитектуры сетей, радиоинтерфейсы и сценарии сверхнадёжной передачи данных."
+        },
+        {
+          title: "Polar codes",
+          text: "Изучение полярных кодов как класса помехоустойчивого кодирования для современных и перспективных систем связи."
+        },
+        {
+          title: "Next-generation multiple access",
+          text: "Методы множественного доступа нового поколения для эффективного совместного использования радиоресурсов большим числом устройств."
+        },
+        {
+          title: "RIS",
+          text: "Reconfigurable Intelligent Surfaces для управления распространением радиосигнала и повышения качества беспроводных каналов."
+        }
       ],
       newsItems: [
         {
@@ -149,7 +160,6 @@ window.LAB_CONTENT = {
       home: "Home",
       sections: [
         { key: "news", title: "News", href: "news.html" },
-        { key: "research", title: "Research", href: "research.html" },
         { key: "projects", title: "Projects", href: "projects.html" },
         { key: "people", title: "People", href: "people.html" },
         { key: "publications", title: "Publications", href: "publications.html" },
@@ -170,10 +180,22 @@ window.LAB_CONTENT = {
         mediaTitle: "Media"
       },
       researchInterests: [
-        "5G/6G",
-        "Polar codes",
-        "Next-generation multiple access",
-        "RIS"
+        {
+          title: "5G/6G",
+          text: "Research on fifth- and sixth-generation mobile communication technologies, including network architectures, radio interfaces, and ultra-reliable data transmission scenarios."
+        },
+        {
+          title: "Polar codes",
+          text: "Study of polar codes as an error-correcting coding class for current and future communication systems."
+        },
+        {
+          title: "Next-generation multiple access",
+          text: "Next-generation multiple access methods for efficient radio resource sharing across large numbers of devices."
+        },
+        {
+          title: "RIS",
+          text: "Reconfigurable Intelligent Surfaces for controlling radio propagation and improving wireless channel quality."
+        }
       ],
       newsItems: [
         {
