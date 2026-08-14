@@ -12,7 +12,7 @@ PhD Students:
 - Еремеев Сергей Александрович
 - Ильинский Дмитрий Евгеньевич
 
-Bachelor Students:
+Students:
 - Погорелов Евгений Батькович
 
 Each person:

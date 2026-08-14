@@ -125,7 +125,7 @@ window.LAB_CONTENT = {
           ]
         },
         {
-          title: "Бакалавры",
+          title: "Студенты",
           people: [
             "Погорелов Евгений Батькович"
           ]
@@ -248,7 +248,7 @@ window.LAB_CONTENT = {
           ]
         },
         {
-          title: "Bachelor Students",
+          title: "Students",
           people: [
             "Погорелов Евгений Батькович"
           ]
