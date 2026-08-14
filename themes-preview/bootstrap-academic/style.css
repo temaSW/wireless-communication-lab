@@ -110,6 +110,10 @@ h1 {
   text-decoration: none;
 }
 
+.site-nav a[href="research.html"] {
+  display: none !important;
+}
+
 main {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;

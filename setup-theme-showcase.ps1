@@ -10,7 +10,6 @@ $themes = @(
 $pages = @(
     "index.html",
     "news.html",
-    "research.html",
     "projects.html",
     "people.html",
     "publications.html",

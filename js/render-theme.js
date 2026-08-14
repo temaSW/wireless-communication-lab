@@ -47,6 +47,7 @@
     document.title = `${content.labName} - ${themeName}`;
 
     const nav = content.sections
+      .filter((section) => section.key !== "research" && section.href !== "research.html")
       .map((section) => `<a href="${section.href}">${section.title}</a>`)
       .join("");
 
@@ -180,7 +181,6 @@
     const pages = {
       home: researchBlock(),
       news: newsBlock(),
-      research: researchBlock(),
       projects: projectsBlock(),
       people: peopleBlock(),
       publications: publicationsBlock(),

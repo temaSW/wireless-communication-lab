@@ -117,6 +117,10 @@ h2 {
   text-decoration: none;
 }
 
+.site-nav a[href="research.html"] {
+  display: none !important;
+}
+
 main {
   padding: 28px 0 64px;
 }
