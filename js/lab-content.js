@@ -36,6 +36,7 @@ window.LAB_CONTENT = {
       themeSelector: "Выбор темы",
       home: "Главная",
       sections: [
+        { key: "news", title: "Новости", href: "news.html" },
         { key: "research", title: "Исследования", href: "research.html" },
         { key: "projects", title: "Проекты", href: "projects.html" },
         { key: "people", title: "Участники", href: "people.html" },
@@ -43,6 +44,8 @@ window.LAB_CONTENT = {
         { key: "media", title: "Медиа", href: "media.html" }
       ],
       sectionLabels: {
+        newsKicker: "Новости лаборатории",
+        newsTitle: "Новости",
         researchKicker: "Научные направления",
         researchTitle: "Исследования",
         projectsKicker: "Текущая работа",
@@ -59,6 +62,23 @@ window.LAB_CONTENT = {
         "Polar codes",
         "Next-generation multiple access",
         "RIS"
+      ],
+      newsItems: [
+        {
+          date: "Дата уточняется",
+          title: "Новость лаборатории",
+          text: "Место для объявления лаборатории."
+        },
+        {
+          date: "Дата уточняется",
+          title: "Научное событие",
+          text: "Место для новости об исследовательской активности."
+        },
+        {
+          date: "Дата уточняется",
+          title: "Конференция или семинар",
+          text: "Место для новости о мероприятии."
+        }
       ],
       projects: [
         {
@@ -90,7 +110,12 @@ window.LAB_CONTENT = {
             "Шинкевич Артём Сергеевич",
             "Шалин Георгий Николаевич",
             "Еремеев Сергей Александрович",
-            "Ильинский Дмитрий Евгеньевич",
+            "Ильинский Дмитрий Евгеньевич"
+          ]
+        },
+        {
+          title: "Бакалавры",
+          people: [
             "Погорелов Евгений Батькович"
           ]
         }
@@ -123,6 +148,7 @@ window.LAB_CONTENT = {
       themeSelector: "Theme selector",
       home: "Home",
       sections: [
+        { key: "news", title: "News", href: "news.html" },
         { key: "research", title: "Research", href: "research.html" },
         { key: "projects", title: "Projects", href: "projects.html" },
         { key: "people", title: "People", href: "people.html" },
@@ -130,6 +156,8 @@ window.LAB_CONTENT = {
         { key: "media", title: "Media", href: "media.html" }
       ],
       sectionLabels: {
+        newsKicker: "Laboratory News",
+        newsTitle: "News",
         researchKicker: "Research Interests",
         researchTitle: "Research",
         projectsKicker: "Current Work",
@@ -146,6 +174,23 @@ window.LAB_CONTENT = {
         "Polar codes",
         "Next-generation multiple access",
         "RIS"
+      ],
+      newsItems: [
+        {
+          date: "Date TBD",
+          title: "Laboratory news",
+          text: "Placeholder for a laboratory announcement."
+        },
+        {
+          date: "Date TBD",
+          title: "Research activity",
+          text: "Placeholder for a research activity update."
+        },
+        {
+          date: "Date TBD",
+          title: "Conference or seminar",
+          text: "Placeholder for an event update."
+        }
       ],
       projects: [
         {
@@ -177,7 +222,12 @@ window.LAB_CONTENT = {
             "Шинкевич Артём Сергеевич",
             "Шалин Георгий Николаевич",
             "Еремеев Сергей Александрович",
-            "Ильинский Дмитрий Евгеньевич",
+            "Ильинский Дмитрий Евгеньевич"
+          ]
+        },
+        {
+          title: "Bachelor Students",
+          people: [
             "Погорелов Евгений Батькович"
           ]
         }

@@ -1,6 +1,7 @@
 # Content Model
 
 Shared sections:
+- News
 - Research
 - Projects
 - People

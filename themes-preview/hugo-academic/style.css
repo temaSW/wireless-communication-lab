@@ -131,6 +131,7 @@ main {
 }
 
 .interest-list,
+.news-list,
 .project-list,
 .publication-list,
 .media-list,
@@ -141,6 +142,7 @@ main {
 }
 
 .interest-list article,
+.news-item,
 .project,
 .publication-section,
 .media-placeholder,
@@ -149,6 +151,14 @@ main {
   padding: 20px;
   border-radius: 8px;
   background: #f5fafc;
+}
+
+.news-item time {
+  display: block;
+  margin-bottom: 8px;
+  color: #1f7a8c;
+  font-size: 0.82rem;
+  font-weight: 800;
 }
 
 .people-list {
@@ -175,6 +185,7 @@ dd {
 
 @media (max-width: 900px) {
   .interest-list,
+  .news-list,
   .project-list,
   .publication-list,
   .media-list,
@@ -199,6 +210,7 @@ dd {
   }
 
   .interest-list,
+  .news-list,
   .project-list,
   .publication-list,
   .media-list,

@@ -125,6 +125,7 @@ main {
 }
 
 .interest-list,
+.news-list,
 .project-list,
 .publication-list,
 .media-list,
@@ -135,6 +136,7 @@ main {
 }
 
 .interest-list article,
+.news-item,
 .project,
 .publication-section,
 .media-placeholder,
@@ -142,6 +144,14 @@ main {
   padding: 16px;
   border-left: 4px solid #7a4f22;
   background: #fff;
+}
+
+.news-item time {
+  display: block;
+  margin-bottom: 8px;
+  color: #7a4f22;
+  font-size: 0.82rem;
+  font-weight: 800;
 }
 
 .people-list {
@@ -180,6 +190,7 @@ dd {
 
   .brand,
   .interest-list,
+  .news-list,
   .project-list,
   .publication-list,
   .media-list,

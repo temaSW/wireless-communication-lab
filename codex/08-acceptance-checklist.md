@@ -4,6 +4,7 @@
 - Theme links work
 - Four themes render
 - Shared content model used
+- News page exists
 - Research page exists
 - Projects page exists
 - People page exists

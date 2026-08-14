@@ -50,6 +50,26 @@
       .map((section) => `<a href="${section.href}">${section.title}</a>`)
       .join("");
 
+    function newsBlock() {
+      return `
+        <section class="section section-news">
+          <div class="section-head">
+            <p class="kicker">${labels.newsKicker}</p>
+            <h2>${labels.newsTitle}</h2>
+          </div>
+          <div class="news-list">
+            ${content.newsItems.map((item) => `
+              <article class="news-item">
+                <time>${item.date}</time>
+                <h3>${item.title}</h3>
+                <p>${item.text}</p>
+              </article>
+            `).join("")}
+          </div>
+        </section>
+      `;
+    }
+
     function researchBlock() {
       return `
         <section class="section section-research">
@@ -153,7 +173,8 @@
     }
 
     const pages = {
-      home: researchBlock() + projectsBlock(),
+      home: newsBlock() + researchBlock() + projectsBlock(),
+      news: newsBlock(),
       research: researchBlock(),
       projects: projectsBlock(),
       people: peopleBlock(),
