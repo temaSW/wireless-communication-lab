@@ -48,7 +48,7 @@
 
     const nav = content.sections
       .filter((section) => section.key !== "research" && section.href !== "research.html")
-      .map((section) => `<a href="${section.href}">${section.title}</a>`)
+      .map((section) => `<a href="${section.href}" aria-current="${page === section.key ? "page" : "false"}">${section.title}</a>`)
       .join("");
 
     function newsBlock() {
@@ -116,15 +116,19 @@
             <p class="kicker">${labels.peopleKicker}</p>
             <h2>${labels.peopleTitle}</h2>
           </div>
-          ${content.peopleGroups.map((group) => `
-            <section class="people-group" aria-label="${group.title}">
-              <h3>${group.title}</h3>
+          ${content.peopleGroups.map((group, groupIndex) => `
+            <section class="people-group people-group-${groupIndex + 1}" aria-label="${group.title}">
+              <div class="group-head">
+                <h3>${group.title}</h3>
+                <span>${group.people.length}</span>
+              </div>
               <div class="people-list">
                 ${group.people.map((name) => `
                   <article class="person">
                     <div class="photo-placeholder" aria-hidden="true"></div>
+                    <p class="person-role">${group.title}</p>
                     <h4>${name}</h4>
-                    <dl>
+                    <dl class="profile-list">
                       <dt>${placeholders.email}</dt><dd>${placeholders.value}</dd>
                       <dt>${placeholders.orcid}</dt><dd>${placeholders.value}</dd>
                       <dt>${placeholders.scholar}</dt><dd>${placeholders.value}</dd>
@@ -202,10 +206,10 @@
           </div>
         </div>
         <nav class="site-nav" aria-label="${labels.peopleTitle}">
-          <a href="index.html">${content.home}</a>${nav}
+          <a href="index.html" aria-current="${page === "home" ? "page" : "false"}">${content.home}</a>${nav}
         </nav>
       </header>
-      <main>${pages[page] || pages.home}</main>
+      <main class="page page-${page}">${pages[page] || pages.home}</main>
     `;
 
     app.querySelectorAll("[data-language]").forEach((button) => {

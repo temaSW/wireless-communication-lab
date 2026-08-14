@@ -112,6 +112,11 @@ h1 {
   text-decoration: none;
 }
 
+.site-nav a[aria-current="page"] {
+  color: #14395b;
+  background: #fff;
+}
+
 .site-nav a[href="research.html"] {
   display: none !important;
 }
@@ -165,6 +170,101 @@ main {
   font-weight: 800;
 }
 
+.page-home .section-research {
+  background:
+    radial-gradient(circle at top right, rgba(31, 122, 140, 0.16), transparent 34%),
+    #fff;
+}
+
+.page-home .interest-list {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.page-home .interest-list article {
+  display: grid;
+  align-content: space-between;
+  min-height: 230px;
+  border: 1px solid #dcecf1;
+}
+
+.page-home .interest-list h3 {
+  font-size: 1.5rem;
+}
+
+.people-group {
+  margin-top: 22px;
+}
+
+.group-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.group-head span {
+  color: #1f7a8c;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.person {
+  position: relative;
+  overflow: hidden;
+}
+
+.person::after {
+  content: "";
+  position: absolute;
+  right: -28px;
+  bottom: -28px;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: rgba(31, 122, 140, 0.1);
+}
+
+.person-role {
+  margin-bottom: 8px;
+  color: #1f7a8c;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.profile-list {
+  position: relative;
+  z-index: 1;
+}
+
+.page-news .news-list {
+  grid-template-columns: 1fr;
+}
+
+.page-news .news-item {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.page-publications .publication-list {
+  grid-template-columns: 1fr;
+}
+
+.publication-section {
+  border-left: 6px solid #1f7a8c;
+}
+
+.media-placeholder div {
+  min-height: 160px;
+  background:
+    linear-gradient(135deg, rgba(20, 57, 91, 0.16), rgba(31, 122, 140, 0.08)),
+    linear-gradient(135deg, #dfeff4, #f8fbfc);
+}
+
 .people-list {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -196,6 +296,10 @@ dd {
   .people-list {
     grid-template-columns: 1fr 1fr;
   }
+
+  .page-home .interest-list {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 620px) {
@@ -219,6 +323,10 @@ dd {
   .publication-list,
   .media-list,
   .people-list {
+    grid-template-columns: 1fr;
+  }
+
+  .page-news .news-item {
     grid-template-columns: 1fr;
   }
 }

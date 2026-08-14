@@ -5,6 +5,8 @@
 - Four themes render
 - Shared content model used
 - Homepage shows only research with explanations
+- People is first after Home
+- News is the last navigation tab
 - News page exists
 - Projects page exists
 - People page exists

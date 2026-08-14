@@ -110,6 +110,11 @@ h1 {
   text-decoration: none;
 }
 
+.site-nav a[aria-current="page"] {
+  color: #fff;
+  background: #0d6efd;
+}
+
 .site-nav a[href="research.html"] {
   display: none !important;
 }
@@ -171,6 +176,96 @@ main {
   font-weight: 800;
 }
 
+.page-home .section-research {
+  border-color: #b8d7ff;
+  background:
+    linear-gradient(180deg, #fff, #f7fbff);
+}
+
+.page-home .interest-list article {
+  min-height: 210px;
+  border-top: 5px solid #0d6efd;
+}
+
+.people-group {
+  margin-top: 20px;
+}
+
+.group-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: #eaf2ff;
+}
+
+.group-head span {
+  display: inline-grid;
+  min-width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 999px;
+  color: #fff;
+  background: #0d6efd;
+  font-weight: 800;
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  min-height: 310px;
+}
+
+.person-role {
+  order: -1;
+  align-self: flex-start;
+  margin-bottom: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  color: #0d6efd;
+  background: #eaf2ff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.profile-list {
+  margin-top: auto;
+}
+
+.page-news .news-list {
+  grid-template-columns: 1fr;
+}
+
+.page-news .news-item {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 20px;
+}
+
+.page-publications .publication-list {
+  grid-template-columns: 1fr;
+}
+
+.publication-section {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 20px;
+  border-left: 5px solid #0d6efd;
+}
+
+.media-placeholder {
+  overflow: hidden;
+}
+
+.media-placeholder div {
+  margin: -18px -18px 14px;
+  border-radius: 0;
+}
+
 .photo-placeholder,
 .media-placeholder div {
   height: 100px;
@@ -217,6 +312,11 @@ dd {
   .publication-list,
   .media-list,
   .people-list {
+    grid-template-columns: 1fr;
+  }
+
+  .page-news .news-item,
+  .publication-section {
     grid-template-columns: 1fr;
   }
 }

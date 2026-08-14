@@ -36,11 +36,11 @@ window.LAB_CONTENT = {
       themeSelector: "Выбор темы",
       home: "Главная",
       sections: [
-        { key: "news", title: "Новости", href: "news.html" },
-        { key: "projects", title: "Проекты", href: "projects.html" },
         { key: "people", title: "Участники", href: "people.html" },
+        { key: "projects", title: "Проекты", href: "projects.html" },
         { key: "publications", title: "Публикации", href: "publications.html" },
-        { key: "media", title: "Медиа", href: "media.html" }
+        { key: "media", title: "Медиа", href: "media.html" },
+        { key: "news", title: "Новости", href: "news.html" }
       ],
       sectionLabels: {
         newsKicker: "Новости лаборатории",
@@ -159,11 +159,11 @@ window.LAB_CONTENT = {
       themeSelector: "Theme selector",
       home: "Home",
       sections: [
-        { key: "news", title: "News", href: "news.html" },
-        { key: "projects", title: "Projects", href: "projects.html" },
         { key: "people", title: "People", href: "people.html" },
+        { key: "projects", title: "Projects", href: "projects.html" },
         { key: "publications", title: "Publications", href: "publications.html" },
-        { key: "media", title: "Media", href: "media.html" }
+        { key: "media", title: "Media", href: "media.html" },
+        { key: "news", title: "News", href: "news.html" }
       ],
       sectionLabels: {
         newsKicker: "Laboratory News",
