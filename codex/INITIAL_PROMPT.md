@@ -13,6 +13,7 @@ Required themes:
 - Bootstrap Academic
 
 Use one shared content source. Do not duplicate content manually.
+Use tools/ for repeated theme-page boilerplate and cache-version updates.
 
 Root index:
 - only selects a design
