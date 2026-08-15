@@ -143,6 +143,30 @@
       `;
     }
 
+    function studentsBlock() {
+      return `
+        <section class="section section-students">
+          <div class="section-head">
+            <p class="kicker">${labels.studentsKicker}</p>
+            <h2>${labels.studentsTitle}</h2>
+            <p class="student-lead">${content.studentOffer.lead}</p>
+          </div>
+          <div class="student-steps">
+            ${content.studentOffer.steps.map((step, index) => `
+              <article class="student-step">
+                <span>${index + 1}</span>
+                <h3>${step.title}</h3>
+                <p>${step.text}</p>
+              </article>
+            `).join("")}
+          </div>
+          <div class="student-tracks" aria-label="${labels.studentsKicker}">
+            ${content.studentOffer.tracks.map((track) => `<article>${track}</article>`).join("")}
+          </div>
+        </section>
+      `;
+    }
+
     function publicationsBlock() {
       return `
         <section class="section">
@@ -187,6 +211,7 @@
       news: newsBlock(),
       projects: projectsBlock(),
       people: peopleBlock(),
+      students: studentsBlock(),
       publications: publicationsBlock(),
       media: mediaBlock()
     };

@@ -37,6 +37,7 @@ window.LAB_CONTENT = {
       home: "Главная",
       sections: [
         { key: "people", title: "Участники", href: "people.html" },
+        { key: "students", title: "Студентам", href: "students.html" },
         { key: "projects", title: "Проекты", href: "projects.html" },
         { key: "publications", title: "Публикации", href: "publications.html" },
         { key: "media", title: "Медиа", href: "media.html" },
@@ -51,6 +52,8 @@ window.LAB_CONTENT = {
         projectsTitle: "Проекты",
         peopleKicker: "Команда лаборатории",
         peopleTitle: "Участники",
+        studentsKicker: "Для студентов",
+        studentsTitle: "Не знаешь -- научим",
         publicationsKicker: "Результаты",
         publicationsTitle: "Публикации",
         mediaKicker: "Медиа",
@@ -111,7 +114,12 @@ window.LAB_CONTENT = {
           people: [
             "Покаместов Дмитрий Алексеевич",
             "Крюков Яков Владимирович",
-            "Литвинов Рудольф Викторович",
+            "Литвинов Рудольф Викторович"
+          ]
+        },
+        {
+          title: "Инженеры",
+          people: [
             "Степной Виктор Серафимович"
           ]
         },
@@ -131,6 +139,29 @@ window.LAB_CONTENT = {
           ]
         }
       ],
+      studentOffer: {
+        lead: "В лаборатории можно начать с нуля: разберём базовые идеи беспроводной связи, поможем выбрать задачу и доведём до первого рабочего результата.",
+        steps: [
+          {
+            title: "Войти в тему",
+            text: "Объясним основы 5G/6G, кодирования, множественного доступа и RIS понятным языком."
+          },
+          {
+            title: "Получить задачу",
+            text: "Подберём небольшой исследовательский или инженерный фрагмент под текущий уровень подготовки."
+          },
+          {
+            title: "Сделать результат",
+            text: "Поможем оформить эксперимент, прототип, доклад, курсовую или выпускную работу."
+          }
+        ],
+        tracks: [
+          "Моделирование систем связи",
+          "Кодирование и обработка сигналов",
+          "Сетевые эксперименты",
+          "Научное письмо и доклады"
+        ]
+      },
       publicationSections: [
         "Международные журналы",
         "Российские журналы",
@@ -160,6 +191,7 @@ window.LAB_CONTENT = {
       home: "Home",
       sections: [
         { key: "people", title: "People", href: "people.html" },
+        { key: "students", title: "For Students", href: "students.html" },
         { key: "projects", title: "Projects", href: "projects.html" },
         { key: "publications", title: "Publications", href: "publications.html" },
         { key: "media", title: "Media", href: "media.html" },
@@ -174,6 +206,8 @@ window.LAB_CONTENT = {
         projectsTitle: "Projects",
         peopleKicker: "Laboratory Team",
         peopleTitle: "People",
+        studentsKicker: "For Students",
+        studentsTitle: "If you do not know yet, we will teach you",
         publicationsKicker: "Outputs",
         publicationsTitle: "Publications",
         mediaKicker: "Media",
@@ -234,7 +268,12 @@ window.LAB_CONTENT = {
           people: [
             "Покаместов Дмитрий Алексеевич",
             "Крюков Яков Владимирович",
-            "Литвинов Рудольф Викторович",
+            "Литвинов Рудольф Викторович"
+          ]
+        },
+        {
+          title: "Engineers",
+          people: [
             "Степной Виктор Серафимович"
           ]
         },
@@ -254,6 +293,29 @@ window.LAB_CONTENT = {
           ]
         }
       ],
+      studentOffer: {
+        lead: "The laboratory is a place to start from the basics: we explain wireless communication ideas, help choose a task, and guide students toward a first concrete result.",
+        steps: [
+          {
+            title: "Enter the field",
+            text: "We explain the fundamentals of 5G/6G, coding, multiple access, and RIS in clear terms."
+          },
+          {
+            title: "Get a task",
+            text: "We help select a small research or engineering task that matches the student's current level."
+          },
+          {
+            title: "Produce a result",
+            text: "We support experiments, prototypes, talks, coursework, and graduation projects."
+          }
+        ],
+        tracks: [
+          "Communication system modeling",
+          "Coding and signal processing",
+          "Network experiments",
+          "Scientific writing and talks"
+        ]
+      },
       publicationSections: [
         "International Journals",
         "Russian Journals",

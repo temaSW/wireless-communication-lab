@@ -2,6 +2,7 @@
 
 Shared sections:
 - People
+- Students
 - Projects
 - Publications
 - Media
@@ -13,6 +14,7 @@ Homepage:
 
 Research is not a navigation tab.
 People is the first tab after Home.
+Students tab follows People.
 News is the last navigation tab.
 
 Themes control only:

@@ -12,6 +12,7 @@ $pages = @(
     "news.html",
     "projects.html",
     "people.html",
+    "students.html",
     "publications.html",
     "media.html"
 )

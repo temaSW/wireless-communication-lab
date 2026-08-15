@@ -6,6 +6,7 @@
 - Shared content model used
 - Homepage shows only research with explanations
 - People is first after Home
+- Students page exists after People
 - News is the last navigation tab
 - News page exists
 - Projects page exists
