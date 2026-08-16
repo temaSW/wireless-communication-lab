@@ -1,9 +1,5 @@
-# Laboratory News
+# Laboratory news
 
-```json
-{
-  "date": "Date TBD",
-  "title": "Laboratory news",
-  "text": "Placeholder for a laboratory announcement."
-}
-```
+Date: Date TBD
+
+Placeholder for a laboratory announcement.

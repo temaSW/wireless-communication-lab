@@ -1,26 +1,15 @@
 # Projects
 
-Projects page content.
+Kicker: Current Work
 
-```json
-{
-  "sectionLabels": {
-    "projectsKicker": "Current Work",
-    "projectsTitle": "Projects"
-  },
-  "projects": [
-    {
-      "title": "Project placeholder 1",
-      "text": "Placeholder for a laboratory research project."
-    },
-    {
-      "title": "Project placeholder 2",
-      "text": "Placeholder for a collaborative wireless systems activity."
-    },
-    {
-      "title": "Project placeholder 3",
-      "text": "Placeholder for an experimental communication networks study."
-    }
-  ]
-}
-```
+## Project placeholder 1
+
+Placeholder for a laboratory research project.
+
+## Project placeholder 2
+
+Placeholder for a collaborative wireless systems activity.
+
+## Project placeholder 3
+
+Placeholder for an experimental communication networks study.

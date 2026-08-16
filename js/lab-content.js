@@ -167,7 +167,7 @@ window.LAB_CONTENT = {
         "media": "Заглушка"
       },
       "studentOffer": {
-        "lead": "В лаборатории можно начать с нуля: разберём базовые идеи беспроводной связи, поможем выбрать задачу и доведём до первого рабочего результата.",
+        "lead": "",
         "steps": [
           {
             "title": "Войти в тему",
@@ -345,7 +345,7 @@ window.LAB_CONTENT = {
         "media": "Placeholder"
       },
       "studentOffer": {
-        "lead": "The laboratory is a place to start from the basics: we explain wireless communication ideas, help choose a task, and guide students toward a first concrete result.",
+        "lead": "",
         "steps": [
           {
             "title": "Enter the field",

@@ -1,22 +1,17 @@
 # Navigation
 
-This file controls shared site copy and tab order.
+Lab name: Wireless Communication Laboratory
+Tagline: Research group in wireless communication systems
+Theme selector eyebrow: Theme comparison environment
+Theme selector lead: Select one academic website style preview.
+Theme selector link: Theme selector
+Home: Home
 
-```json
-{
-  "labName": "Wireless Communication Laboratory",
-  "tagline": "Research group in wireless communication systems",
-  "rootEyebrow": "Theme comparison environment",
-  "rootLead": "Select one academic website style preview.",
-  "themeSelector": "Theme selector",
-  "home": "Home",
-  "sections": [
-    { "key": "people", "title": "People", "href": "people.html" },
-    { "key": "students", "title": "For Students", "href": "students.html" },
-    { "key": "projects", "title": "Projects", "href": "projects.html" },
-    { "key": "publications", "title": "Publications", "href": "publications.html" },
-    { "key": "media", "title": "Media", "href": "media.html" },
-    { "key": "news", "title": "News", "href": "news.html" }
-  ]
-}
-```
+## Tabs
+
+- people | People | people.html
+- students | For Students | students.html
+- projects | Projects | projects.html
+- publications | Publications | publications.html
+- media | Media | media.html
+- news | News | news.html

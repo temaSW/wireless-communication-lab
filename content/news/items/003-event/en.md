@@ -1,9 +1,5 @@
-# Conference or Seminar
+# Conference or seminar
 
-```json
-{
-  "date": "Date TBD",
-  "title": "Conference or seminar",
-  "text": "Placeholder for an event update."
-}
-```
+Date: Date TBD
+
+Placeholder for an event update.

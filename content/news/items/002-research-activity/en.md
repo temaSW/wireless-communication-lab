@@ -1,9 +1,5 @@
-# Research Activity
+# Research activity
 
-```json
-{
-  "date": "Date TBD",
-  "title": "Research activity",
-  "text": "Placeholder for a research activity update."
-}
-```
+Date: Date TBD
+
+Placeholder for a research activity update.

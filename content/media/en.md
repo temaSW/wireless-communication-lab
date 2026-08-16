@@ -1,20 +1,7 @@
 # Media
 
-Media page content.
+Kicker: Media
 
-```json
-{
-  "sectionLabels": {
-    "mediaKicker": "Media",
-    "mediaTitle": "Media"
-  },
-  "mediaSections": [
-    "Laboratory photos",
-    "Research activity photos",
-    "Conference photos"
-  ],
-  "placeholders": {
-    "media": "Placeholder"
-  }
-}
-```
+- Laboratory photos
+- Research activity photos
+- Conference photos

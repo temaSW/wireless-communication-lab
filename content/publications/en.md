@@ -1,20 +1,7 @@
 # Publications
 
-Publications page content.
+Kicker: Outputs
 
-```json
-{
-  "sectionLabels": {
-    "publicationsKicker": "Outputs",
-    "publicationsTitle": "Publications"
-  },
-  "publicationSections": [
-    "International Journals",
-    "Russian Journals",
-    "Patents"
-  ],
-  "placeholders": {
-    "todo": "TODO"
-  }
-}
-```
+- International Journals
+- Russian Journals
+- Patents
