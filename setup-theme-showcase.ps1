@@ -16,6 +16,20 @@ $pages = @(
     "publications.html",
     "media.html"
 )
+$contentFiles = @(
+    "content\site.md",
+    "content\ru.md",
+    "content\en.md",
+    "tools\build-content.js"
+)
+
+foreach ($file in $contentFiles) {
+    if (-not (Test-Path -LiteralPath (Join-Path $root $file))) {
+        throw "Missing content build file: $file"
+    }
+}
+
+node (Join-Path $root "tools\build-content.js")
 
 foreach ($theme in $themes) {
     $themePath = Join-Path $root "themes-preview\$theme"

@@ -18,6 +18,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Build content
+        run: node tools/build-content.js
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
