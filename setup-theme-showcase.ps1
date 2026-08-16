@@ -18,8 +18,22 @@ $pages = @(
 )
 $contentFiles = @(
     "content\site.md",
-    "content\ru.md",
-    "content\en.md",
+    "content\navigation\ru.md",
+    "content\navigation\en.md",
+    "content\home\ru.md",
+    "content\home\en.md",
+    "content\people\ru.md",
+    "content\people\en.md",
+    "content\students\ru.md",
+    "content\students\en.md",
+    "content\projects\ru.md",
+    "content\projects\en.md",
+    "content\publications\ru.md",
+    "content\publications\en.md",
+    "content\media\ru.md",
+    "content\media\en.md",
+    "content\news\ru.md",
+    "content\news\en.md",
     "tools\build-content.js"
 )
 
