@@ -232,6 +232,12 @@ main {
   text-transform: uppercase;
 }
 
+.person-bio {
+  margin-bottom: 14px;
+  color: #27364a;
+  line-height: 1.55;
+}
+
 .profile-list {
   margin-top: auto;
 }

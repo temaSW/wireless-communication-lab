@@ -219,6 +219,13 @@ main {
   text-transform: uppercase;
 }
 
+.person-bio {
+  grid-column: 2;
+  margin-bottom: 10px;
+  color: #3f3b36;
+  line-height: 1.5;
+}
+
 .profile-list {
   grid-column: 2;
 }

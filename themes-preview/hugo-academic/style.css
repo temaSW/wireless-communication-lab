@@ -234,6 +234,14 @@ main {
   text-transform: uppercase;
 }
 
+.person-bio {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 14px;
+  color: #29415a;
+  line-height: 1.55;
+}
+
 .profile-list {
   position: relative;
   z-index: 1;

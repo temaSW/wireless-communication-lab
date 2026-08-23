@@ -1,3 +1,6 @@
 codex/
 .obsidian/
 themes-preview/*-demo/
+.env
+.env.*
+!.env.example

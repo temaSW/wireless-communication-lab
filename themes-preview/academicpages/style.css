@@ -229,6 +229,12 @@ main {
   text-transform: uppercase;
 }
 
+.person-bio {
+  margin-bottom: 14px;
+  color: #2f3740;
+  line-height: 1.55;
+}
+
 .profile-list {
   display: grid;
   grid-template-columns: max-content 1fr;

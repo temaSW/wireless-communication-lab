@@ -130,6 +130,21 @@ function bullets(lines) {
     .filter(Boolean);
 }
 
+function headingTitle(line, level) {
+  const prefix = `${"#".repeat(level)} `;
+  return line.startsWith(prefix) ? line.slice(prefix.length).trim() : null;
+}
+
+function firstSubheadingBeforeSection(lines, level = 3) {
+  for (const line of lines) {
+    if (line.startsWith("## ")) return null;
+    const title = headingTitle(line, level);
+    if (title) return title;
+  }
+
+  return null;
+}
+
 function readPage(lang, section) {
   const filePath = path.join(contentRoot, section, `${lang}.md`);
   return {
@@ -215,23 +230,64 @@ function parseHome(lang) {
 
   return {
     ...labelData(lang, "home", title, meta),
-    researchInterests: sections(markdown).map((section) => ({
+    researchInterests: parseSectionCards(markdown)
+  };
+}
+
+function parseSectionCards(markdown) {
+  return sections(markdown).flatMap((section) => {
+    const cards = parseNestedCards(section.lines);
+
+    if (cards.length) {
+      return cards;
+    }
+
+    return [{
       title: section.title,
       text: textFromLines(section.lines)
-    }))
-  };
+    }];
+  });
+}
+
+function parseNestedCards(lines) {
+  const cards = [];
+  let current = null;
+
+  lines.forEach((line) => {
+    const cardTitle = headingTitle(line, 3);
+
+    if (cardTitle) {
+      current = {
+        title: cardTitle,
+        lines: []
+      };
+      cards.push(current);
+      return;
+    }
+
+    if (current) {
+      current.lines.push(line);
+    }
+  });
+
+  return cards.map((card) => ({
+    title: card.title,
+    text: textFromLines(card.lines)
+  }));
 }
 
 function parsePeople(lang) {
   const { filePath, markdown } = readPage(lang, "people");
   const title = titleOf(markdown, filePath);
-  const meta = metadata(bodyAfterTitle(markdown));
+  const bodyLines = bodyAfterTitle(markdown).map(stripComment).filter(Boolean);
+  const meta = metadata(bodyLines);
+  const kicker = firstSubheadingBeforeSection(bodyLines) || meta["надзаголовок"] || meta.kicker;
 
   return {
-    ...labelData(lang, "people", title, meta),
+    ...labelData(lang, "people", title, { ...meta, kicker, "надзаголовок": kicker }),
     peopleGroups: sections(markdown).map((section) => ({
       title: section.title,
-      people: bullets(section.lines)
+      people: parsePeopleEntries(section.lines)
     })),
     placeholders: {
       email: placeholderDefaults[lang].email,
@@ -241,6 +297,78 @@ function parsePeople(lang) {
       value: placeholderDefaults[lang].value
     }
   };
+}
+
+function parsePeopleEntries(lines) {
+  const hasCards = lines.some((line) => line.startsWith("### "));
+  const people = [];
+  let current = null;
+
+  function startPerson(name) {
+    current = {
+      name: name.trim(),
+      photo: "",
+      description: "",
+      contacts: []
+    };
+    people.push(current);
+  }
+
+  function appendPersonLine(line) {
+    const listItem = line.match(/^-\s+(.+)$/);
+    const markdownLink = line.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    const bracketNote = line.match(/^\[([^\]]+)\]$/);
+
+    if (!current) return;
+
+    if (markdownLink) {
+      current.photo = markdownLink[2].trim();
+      return;
+    }
+
+    if (bracketNote) {
+      current.photoLabel = bracketNote[1].trim();
+      return;
+    }
+
+    if (listItem) {
+      const [label, ...valueParts] = listItem[1].split(":");
+      current.contacts.push({
+        label: label.trim(),
+        value: valueParts.join(":").trim()
+      });
+      return;
+    }
+
+    current.description = `${current.description} ${line}`.trim();
+  }
+
+  if (hasCards) {
+    lines.forEach((line) => {
+      const cardTitle = headingTitle(line, 3);
+      if (cardTitle) {
+        startPerson(cardTitle);
+        return;
+      }
+
+      appendPersonLine(line);
+    });
+
+    return people;
+  }
+
+  lines.forEach((line) => {
+    const listItem = line.match(/^-\s+(.+)$/);
+
+    if (listItem) {
+      startPerson(listItem[1]);
+      return;
+    }
+
+    appendPersonLine(line);
+  });
+
+  return people;
 }
 
 function parseStudents(lang) {
@@ -281,10 +409,7 @@ function parseProjects(lang) {
 
   return {
     ...labelData(lang, "projects", title, meta),
-    projects: sections(markdown).map((section) => ({
-      title: section.title,
-      text: textFromLines(section.lines)
-    }))
+    projects: parseSectionCards(markdown)
   };
 }
 
@@ -293,10 +418,12 @@ function parseSimpleList(lang, sectionName, outputKey, placeholderKey) {
   const title = titleOf(markdown, filePath);
   const lines = bodyAfterTitle(markdown).map(stripComment).filter(Boolean);
   const meta = metadata(lines);
+  const items = bullets(lines);
+  const sectionTitles = sections(markdown).map((section) => section.title);
 
   return {
     ...labelData(lang, sectionName, title, meta),
-    [outputKey]: bullets(lines),
+    [outputKey]: items.length ? items : sectionTitles,
     placeholders: {
       [placeholderKey]: placeholderDefaults[lang][placeholderKey]
     }

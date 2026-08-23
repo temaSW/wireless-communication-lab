@@ -110,6 +110,38 @@
     }
 
     function peopleBlock() {
+      function personName(person) {
+        return typeof person === "string" ? person : person.name;
+      }
+
+      function personDescription(person) {
+        return typeof person === "string" ? "" : person.description;
+      }
+
+      function personPhoto(person, name) {
+        if (typeof person === "string" || !person.photo) {
+          return `<div class="photo-placeholder" aria-hidden="true"></div>`;
+        }
+
+        return `<img class="photo-placeholder" src="${person.photo}" alt="${name}">`;
+      }
+
+      function personContacts(person) {
+        if (typeof person === "string" || !person.contacts || !person.contacts.length) {
+          return [
+            { label: placeholders.email, value: placeholders.value },
+            { label: placeholders.orcid, value: placeholders.value },
+            { label: placeholders.scholar, value: placeholders.value },
+            { label: placeholders.profile, value: placeholders.value }
+          ];
+        }
+
+        return person.contacts.map((contact) => ({
+          label: contact.label,
+          value: contact.value || placeholders.value
+        }));
+      }
+
       return `
         <section class="section">
           <div class="section-head">
@@ -123,19 +155,21 @@
                 <span>${group.people.length}</span>
               </div>
               <div class="people-list">
-                ${group.people.map((name) => `
+                ${group.people.map((person) => {
+                  const name = personName(person);
+                  const description = personDescription(person);
+                  return `
                   <article class="person">
-                    <div class="photo-placeholder" aria-hidden="true"></div>
+                    ${personPhoto(person, name)}
                     <p class="person-role">${group.title}</p>
                     <h4>${name}</h4>
+                    ${description ? `<p class="person-bio">${description}</p>` : ""}
                     <dl class="profile-list">
-                      <dt>${placeholders.email}</dt><dd>${placeholders.value}</dd>
-                      <dt>${placeholders.orcid}</dt><dd>${placeholders.value}</dd>
-                      <dt>${placeholders.scholar}</dt><dd>${placeholders.value}</dd>
-                      <dt>${placeholders.profile}</dt><dd>${placeholders.value}</dd>
+                      ${personContacts(person).map((contact) => `<dt>${contact.label}</dt><dd>${contact.value}</dd>`).join("")}
                     </dl>
                   </article>
-                `).join("")}
+                `;
+                }).join("")}
               </div>
             </section>
           `).join("")}
