@@ -217,13 +217,15 @@
                   const description = personDescription(person);
                   return `
                   <article class="person">
-                    ${personPhoto(person, name)}
-                    <p class="person-role">${group.title}</p>
-                    <h4>${name}</h4>
-                    ${description ? `<p class="person-bio">${description}</p>` : ""}
-                    <dl class="profile-list">
-                      ${personContacts(person).map((contact) => `<dt>${html(contact.label)}</dt><dd>${contactValue(contact)}</dd>`).join("")}
-                    </dl>
+                    <div class="person-photo">${personPhoto(person, name)}</div>
+                    <div class="person-info">
+                      <p class="person-role">${group.title}</p>
+                      <h4>${name}</h4>
+                      ${description ? `<p class="person-bio">${description}</p>` : ""}
+                      <dl class="profile-list">
+                        ${personContacts(person).map((contact) => `<dt>${html(contact.label)}</dt><dd>${contactValue(contact)}</dd>`).join("")}
+                      </dl>
+                    </div>
                   </article>
                 `;
                 }).join("")}

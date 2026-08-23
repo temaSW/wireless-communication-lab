@@ -152,7 +152,7 @@ main {
 
 .people-list {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -223,13 +223,23 @@ main {
 }
 
 .person {
-  display: flex;
-  flex-direction: column;
-  min-height: 310px;
+  display: grid;
+  grid-template-columns: minmax(140px, 34%) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  min-height: 0;
+}
+
+.person .photo-placeholder {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  margin-bottom: 0;
+  object-fit: cover;
 }
 
 .person-role {
-  order: -1;
   align-self: flex-start;
   margin-bottom: 12px;
   padding: 4px 8px;
@@ -248,7 +258,7 @@ main {
 }
 
 .profile-list {
-  margin-top: auto;
+  margin-top: 0;
 }
 
 .page-news .news-list {
@@ -419,6 +429,10 @@ dd {
   .page-news .news-item,
   .publication-section {
     grid-template-columns: 1fr;
+  }
+
+  .person {
+    grid-template-columns: minmax(108px, 34%) minmax(0, 1fr);
   }
 
   .student-steps {

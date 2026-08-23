@@ -19,6 +19,10 @@ Design and install an agent harness for this static lab website.
 - Verified translation tooling with `node --check`, `--help`, and a MyMemory
   dry-run without writing files.
 - Re-ran `tools/codex-check.ps1` successfully after adding translation tooling.
+- Updated the people card renderer and all theme preview styles so person cards
+  use a larger `photo | information` layout while keeping people data sourced
+  from Markdown.
+- Ran `tools/codex-check.ps1` successfully after the people card layout update.
 
 ## In Progress
 
