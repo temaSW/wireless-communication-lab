@@ -4,8 +4,8 @@ Reusable project tools.
 
 ## `tools/build-content.js`
 
-- Purpose: Generate `js/lab-content.js` from human-readable Markdown in
-  `content/**/*.md`.
+- Purpose: Auto-generate missing English Markdown from Russian Markdown, then
+  generate `js/lab-content.js` from human-readable Markdown in `content/**/*.md`.
 - Parameters: None.
 - Example:
 
@@ -13,13 +13,20 @@ Reusable project tools.
 node tools/build-content.js
 ```
 
-- Dependencies: Node.js built-in `fs` and `path` modules.
-- Notes: Required after changing `content/` or the parser itself.
+- Dependencies: Node.js built-in `fs`, `path`, and `child_process` modules;
+  internet access for the configured translation provider when English files are
+  missing.
+- Notes:
+  - Required after changing `content/` or the parser itself.
+  - Set `LAB_TRANSLATE_PROVIDER=libre` to use LibreTranslate during the build.
+  - Set `LAB_SKIP_AUTO_TRANSLATE=1` only for parser debugging when paired
+    English files already exist.
 
 ## `setup-theme-showcase.ps1`
 
 - Purpose: Regenerate shared content, sync the root `labicon.png` into theme
-  preview folders, and ensure required preview pages exist.
+  preview folders, auto-generate missing English Markdown from Russian Markdown,
+  and ensure required preview pages exist.
 - Parameters: None.
 - Example:
 
@@ -79,6 +86,8 @@ powershell -ExecutionPolicy Bypass -File .\tools\codex-check.ps1
   - `--all`: translate all `content/**/ru.md` files.
   - `--write`: write files; otherwise print translation to stdout.
   - `--force`: overwrite non-empty targets.
+  - `--if-source-newer`: write only when the English target is missing, empty,
+    or older than the Russian source.
   - `--provider mymemory|libre`: choose provider; default is `mymemory`.
 - Example:
 

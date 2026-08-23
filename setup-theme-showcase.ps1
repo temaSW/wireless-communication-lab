@@ -34,7 +34,8 @@ $contentFiles = @(
     "content\media\en.md",
     "content\news\ru.md",
     "content\news\en.md",
-    "tools\build-content.js"
+    "tools\build-content.js",
+    "tools\translate-ru-to-en.js"
 )
 
 foreach ($file in $contentFiles) {
@@ -44,6 +45,9 @@ foreach ($file in $contentFiles) {
 }
 
 node (Join-Path $root "tools\build-content.js")
+if ($LASTEXITCODE -ne 0) {
+    throw "Content generation failed."
+}
 
 foreach ($theme in $themes) {
     $themePath = Join-Path $root "themes-preview\$theme"

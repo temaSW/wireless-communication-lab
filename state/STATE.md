@@ -23,6 +23,13 @@ Design and install an agent harness for this static lab website.
   use a larger `photo | information` layout while keeping people data sourced
   from Markdown.
 - Ran `tools/codex-check.ps1` successfully after the people card layout update.
+- Extended Markdown rendering so `#` sections, nested subsections, lists, and
+  home-page action links render consistently across theme previews.
+- Removed visible `undefined` fallbacks from shared renderers and converted the
+  home contact link into a mail button action.
+- Moved automatic RU to EN synchronization into `tools/build-content.js` so the
+  main content build creates missing paired English Markdown before generating
+  `js/lab-content.js`.
 
 ## In Progress
 
@@ -30,7 +37,9 @@ Design and install an agent harness for this static lab website.
 
 ## Blocked
 
-- Nothing blocked.
+- Regenerating all deleted `content/**/en.md` files is blocked until the
+  MyMemory daily quota resets or a reachable LibreTranslate endpoint is
+  configured.
 
 ## Known Issues
 

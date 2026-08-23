@@ -95,7 +95,7 @@ window.LAB_CONTENT = {
         "peopleKicker": "Команда лаборатории",
         "peopleTitle": "Коллектив",
         "studentsKicker": "Для студентов",
-        "studentsTitle": "Не знаешь -- научим",
+        "studentsTitle": "Не знаешь – научим",
         "projectsKicker": "Текущая работа",
         "projectsTitle": "Проекты",
         "publicationsKicker": "Результаты",
@@ -108,24 +108,26 @@ window.LAB_CONTENT = {
       "homeSections": [
         {
           "title": "Информация о лаборатории",
-          "text": "Лаборатория базируется на кафедре телекоммуникаций и основ радиотехники (ТОР) Томского Университета Систем Управления и Радиоэлектроники (ТУСУР). Адрес: Россия, г. Томск, ул. Вершинина 47, аудитория 317. [Для связи](laboratory317.gmail.com)",
+          "text": "- Лаборатория базируется на кафедре телекоммуникаций и основ радиотехники (ТОР) Томского Университета Систем Управления и Радиоэлектроники (ТУСУР).\n- Адрес: Россия, г. Томск, ул. Вершинина 47, аудитория 317.",
           "images": [],
+          "actions": [],
           "cards": [],
           "type": "text"
         },
         {
           "title": "Научные направления",
-          "text": "Исследование технологий мобильной связи пятого и шестого поколений, включая архитектуры сетей, радиоинтерфейсы и сценарии сверхнадёжной передачи данных. Изучение полярных кодов как класса помехоустойчивого кодирования для современных и перспективных систем связи. Методы множественного доступа нового поколения для эффективного совместного использования радиоресурсов большим числом устройств. Реконфигурируемые интеллектуальные поверхности для управления распространением радиосигнала и повышения качества беспроводных каналов.",
+          "text": "",
           "images": [
             {
               "alt": "Pasted image 20260823200008",
               "src": "Pasted image 20260823200008.png"
             }
           ],
+          "actions": [],
           "cards": [
             {
               "title": "5G/6G",
-              "text": "Исследование технологий мобильной связи пятого и шестого поколений, включая архитектуры сетей, радиоинтерфейсы и сценарии сверхнадёжной передачи данных.",
+              "text": "",
               "images": [
                 {
                   "alt": "Pasted image 20260823200008",
@@ -135,21 +137,16 @@ window.LAB_CONTENT = {
             },
             {
               "title": "Polar codes",
-              "text": "Изучение полярных кодов как класса помехоустойчивого кодирования для современных и перспективных систем связи.",
+              "text": "",
               "images": []
             },
             {
               "title": "Next-generation multiple access",
-              "text": "Методы множественного доступа нового поколения для эффективного совместного использования радиоресурсов большим числом устройств.",
+              "text": "",
               "images": []
             },
             {
               "title": "RIS",
-              "text": "Реконфигурируемые интеллектуальные поверхности для управления распространением радиосигнала и повышения качества беспроводных каналов.",
-              "images": []
-            },
-            {
-              "title": "Разработка алгоритмов цифровой обработки сигналов для коммерческих партнеров",
               "text": "",
               "images": []
             }
@@ -160,14 +157,22 @@ window.LAB_CONTENT = {
           "title": "История лаборатории",
           "text": "TODO",
           "images": [],
+          "actions": [],
           "cards": [],
           "type": "text"
+        }
+      ],
+      "headerActions": [
+        {
+          "label": "Для связи",
+          "href": "mailto:laboratory317@gmail.com",
+          "icon": "mail"
         }
       ],
       "researchInterests": [
         {
           "title": "5G/6G",
-          "text": "Исследование технологий мобильной связи пятого и шестого поколений, включая архитектуры сетей, радиоинтерфейсы и сценарии сверхнадёжной передачи данных.",
+          "text": "",
           "images": [
             {
               "alt": "Pasted image 20260823200008",
@@ -177,21 +182,16 @@ window.LAB_CONTENT = {
         },
         {
           "title": "Polar codes",
-          "text": "Изучение полярных кодов как класса помехоустойчивого кодирования для современных и перспективных систем связи.",
+          "text": "",
           "images": []
         },
         {
           "title": "Next-generation multiple access",
-          "text": "Методы множественного доступа нового поколения для эффективного совместного использования радиоресурсов большим числом устройств.",
+          "text": "",
           "images": []
         },
         {
           "title": "RIS",
-          "text": "Реконфигурируемые интеллектуальные поверхности для управления распространением радиосигнала и повышения качества беспроводных каналов.",
-          "images": []
-        },
-        {
-          "title": "Разработка алгоритмов цифровой обработки сигналов для коммерческих партнеров",
           "text": "",
           "images": []
         }
@@ -203,8 +203,16 @@ window.LAB_CONTENT = {
             {
               "name": "Покаместов Дмитрий Алексеевич",
               "photo": "",
-              "description": "Кандидат технических наук. Доцент кафедры телекоммуникаций и основ радиотехники, ТУСУР.",
+              "description": "",
               "contacts": [
+                {
+                  "label": "Кандидат технических наук.",
+                  "value": ""
+                },
+                {
+                  "label": "Доцент кафедры ТОР, ТУСУР.",
+                  "value": ""
+                },
                 {
                   "label": "E-mail",
                   "value": ""
@@ -223,8 +231,16 @@ window.LAB_CONTENT = {
             {
               "name": "Крюков Яков Владимирович",
               "photo": "",
-              "description": "Кандидат технических наук. Доцент кафедры телекоммуникаций и основ радиотехники, ТУСУР.",
+              "description": "",
               "contacts": [
+                {
+                  "label": "Кандидат технических наук.",
+                  "value": ""
+                },
+                {
+                  "label": "Доцент кафедры ТОР, ТУСУР.",
+                  "value": ""
+                },
                 {
                   "label": "E-mail",
                   "value": ""
@@ -243,8 +259,16 @@ window.LAB_CONTENT = {
             {
               "name": "Литвинов Рудольф Викторович",
               "photo": "",
-              "description": "Кандидат физико-математических наук. Доцент кафедры телекоммуникаций и основ радиотехники, ТУСУР.",
+              "description": "",
               "contacts": [
+                {
+                  "label": "Кандидат физико-математических наук.",
+                  "value": ""
+                },
+                {
+                  "label": "Доцент кафедры ТОР, ТУСУР.",
+                  "value": ""
+                },
                 {
                   "label": "E-mail",
                   "value": ""
@@ -268,7 +292,7 @@ window.LAB_CONTENT = {
             {
               "name": "Степной Виктор Серафимович",
               "photo": "",
-              "description": "Старший преподаватель кафедра телекоммуникаций и основ радиотехники, ТУСУР.",
+              "description": "Старший преподаватель кафедра ТОР, ТУСУР.",
               "contacts": [
                 {
                   "label": "E-mail",
@@ -285,8 +309,12 @@ window.LAB_CONTENT = {
             {
               "name": "Шинкевич Артём Сергеевич",
               "photo": "Pasted image 20260823214412.png",
-              "description": "Ассистент кафедра телекоммуникаций и основ радиотехники, ТУСУР.",
+              "description": "",
               "contacts": [
+                {
+                  "label": "Ассистент кафедры ТОР, ТУСУР.",
+                  "value": ""
+                },
                 {
                   "label": "E-mail",
                   "value": "a.shinkevich00@gmail.com"
@@ -305,8 +333,12 @@ window.LAB_CONTENT = {
             {
               "name": "Шалин Георгий Николаевич",
               "photo": "",
-              "description": "Ассистент кафедра телекоммуникаций и основ радиотехники, ТУСУР.",
+              "description": "",
               "contacts": [
+                {
+                  "label": "Ассистент кафедры ТОР, ТУСУР.",
+                  "value": ""
+                },
                 {
                   "label": "E-mail",
                   "value": ""
@@ -325,8 +357,12 @@ window.LAB_CONTENT = {
             {
               "name": "Еремеев Сергей Александрович",
               "photo": "",
-              "description": "Ассистент кафедра телекоммуникаций и основ радиотехники, ТУСУР.",
+              "description": "",
               "contacts": [
+                {
+                  "label": "Ассистент кафедры ТОР, ТУСУР.",
+                  "value": ""
+                },
                 {
                   "label": "E-mail",
                   "value": ""
@@ -345,8 +381,12 @@ window.LAB_CONTENT = {
             {
               "name": "Ильинский Дмитрий Евгеньевич",
               "photo": "",
-              "description": "Ассистент кафедра телекоммуникаций и основ радиотехники, ТУСУР.",
+              "description": "",
               "contacts": [
+                {
+                  "label": "Ассистент кафедры ТОР, ТУСУР.",
+                  "value": ""
+                },
                 {
                   "label": "E-mail",
                   "value": ""
@@ -386,27 +426,9 @@ window.LAB_CONTENT = {
         "media": "Заглушка"
       },
       "studentOffer": {
-        "lead": "",
-        "steps": [
-          {
-            "title": "Войти в тему",
-            "text": "Объясним основы 5G/6G, кодирования, множественного доступа и RIS понятным языком."
-          },
-          {
-            "title": "Получить задачу",
-            "text": "Подберём небольшой исследовательский или инженерный фрагмент под текущий уровень подготовки."
-          },
-          {
-            "title": "Сделать результат",
-            "text": "Поможем оформить эксперимент, прототип, доклад, курсовую или выпускную работу."
-          }
-        ],
-        "tracks": [
-          "Моделирование систем связи",
-          "Кодирование и обработка сигналов",
-          "Сетевые эксперименты",
-          "Научное письмо и доклады"
-        ]
+        "lead": "TODO",
+        "steps": [],
+        "tracks": []
       },
       "projects": [
         {
@@ -426,11 +448,11 @@ window.LAB_CONTENT = {
         }
       ],
       "publicationContent": {
-        "lead": "Научные публикации лаборатории. Список объединён из библиографических выгрузок руководителей лаборатории; работы других участников включены только при наличии руководителя среди соавторов.",
+        "lead": "",
         "sections": [
           {
-            "title": "Избранные публикации",
-            "text": "Репрезентативные журнальные работы по 5G/6G, NOMA/RSMA и физическому уровню систем связи.",
+            "title": "Избранные",
+            "text": "",
             "items": [
               "**Fairness-Aware Comparison of PD-NOMA and OMA Under Max-Min, Proportional, and Round-Robin Scheduling.** Yakov Kryukov, Dmitriy Pokamestov, Artem Shinkevich, Georgy Shalin, Sergey Eremeev, Dmitriy Ilinskiy. *Internet Technology Letters*, vol. 9, no. 2, e70219. 2026. [DOI](https://doi.org/10.1002/itl2.70219)",
               "**Comparative analysis of multiple access techniques for 6G communication systems.** Dmitriy Pokamestov, Yakov Kryukov, Eugeniy Rogozhnikov, Georgiy Shalin, Artem Shinkevich, Rudolf Litvinov. *Telecommunication Systems*, vol. 88, no. 3, 104. 2025. [DOI](https://doi.org/10.1007/s11235-025-01333-8)",
@@ -651,66 +673,58 @@ window.LAB_CONTENT = {
       ],
       "newsItems": [
         {
-          "date": "Дата уточняется",
+          "date": "",
           "title": "Новость лаборатории",
-          "text": "Место для объявления лаборатории."
+          "text": ""
         },
         {
-          "date": "Дата уточняется",
-          "title": "Научное событие",
-          "text": "Место для новости об исследовательской активности."
-        },
-        {
-          "date": "Дата уточняется",
-          "title": "Конференция или семинар",
-          "text": "Место для новости о мероприятии."
+          "date": "",
+          "title": "Создание сайта",
+          "text": "Первая версия сайта готова"
         }
       ]
     },
     "en": {
-      "labName": "Wireless Communication Laboratory",
-      "tagline": "Research group in wireless communication systems",
-      "rootEyebrow": "Theme comparison environment",
-      "rootLead": "Select one academic website style preview.",
-      "themeSelector": "Theme selector",
+      "labName": "wireless laboratory",
+      "themeSelector": "Theme Settings",
       "home": "Home",
       "sections": [
         {
-          "key": "people",
-          "title": "People",
+          "key": "Team",
+          "title": "Collective",
           "href": "people.html"
         },
         {
-          "key": "students",
-          "title": "For Students",
+          "key": "For students",
+          "title": "For students",
           "href": "students.html"
         },
         {
-          "key": "projects",
+          "key": "Projects",
           "title": "Projects",
           "href": "projects.html"
         },
         {
-          "key": "publications",
+          "key": "Publications",
           "title": "Publications",
           "href": "publications.html"
         },
         {
-          "key": "media",
+          "key": "Media",
           "title": "Media",
           "href": "media.html"
         },
         {
-          "key": "news",
+          "key": "News",
           "title": "News",
           "href": "news.html"
         }
       ],
       "sectionLabels": {
         "researchKicker": "Research Interests",
-        "researchTitle": "Research Interests",
-        "peopleKicker": "Laboratory Team",
-        "peopleTitle": "People",
+        "researchTitle": "Research areas",
+        "peopleKicker": "Laboratory team",
+        "peopleTitle": "Team",
         "studentsKicker": "For Students",
         "studentsTitle": "If you do not know yet, we will teach you",
         "projectsKicker": "Current Work",
@@ -724,25 +738,27 @@ window.LAB_CONTENT = {
       },
       "homeSections": [
         {
-          "title": "Laboratory Information",
-          "text": "The laboratory is based at the Department of Telecommunications and Basic Radio Engineering (TOR), Tomsk State University of Control Systems and Radioelectronics (TUSUR). Russia, Tomsk, 47 Vershinina Street, room 317. [Contact](laboratory317.gmail.com)",
+          "title": "Lab Information",
+          "text": "- The laboratory is based at the Department of Telecommunications and Radio Engineering Fundamentals (TOR) of Tomsk University of Control Systems and Radio Electronics (TUSUR).\n- Address: Russia, Tomsk, Vershinina str., 47, auditorium 317.\n- [Contact us](mailto: laboratory317@gmail.com)",
           "images": [],
+          "actions": [],
           "cards": [],
           "type": "text"
         },
         {
-          "title": "Research Interests",
-          "text": "Research on fifth- and sixth-generation mobile communication technologies, including network architectures, radio interfaces, and ultra-reliable data transmission scenarios. Study of polar codes as an error-correcting coding class for current and future communication systems. Next-generation multiple access methods for efficient radio resource sharing across large numbers of devices. Reconfigurable Intelligent Surfaces for controlling radio propagation and improving wireless channel quality.",
+          "title": "Research areas",
+          "text": "",
           "images": [
             {
               "alt": "Pasted image 20260823200008",
               "src": "Pasted image 20260823200008.png"
             }
           ],
+          "actions": [],
           "cards": [
             {
               "title": "5G/6G",
-              "text": "Research on fifth- and sixth-generation mobile communication technologies, including network architectures, radio interfaces, and ultra-reliable data transmission scenarios.",
+              "text": "",
               "images": [
                 {
                   "alt": "Pasted image 20260823200008",
@@ -752,21 +768,16 @@ window.LAB_CONTENT = {
             },
             {
               "title": "Polar codes",
-              "text": "Study of polar codes as an error-correcting coding class for current and future communication systems.",
+              "text": "",
               "images": []
             },
             {
               "title": "Next-generation multiple access",
-              "text": "Next-generation multiple access methods for efficient radio resource sharing across large numbers of devices.",
+              "text": "",
               "images": []
             },
             {
-              "title": "RIS",
-              "text": "Reconfigurable Intelligent Surfaces for controlling radio propagation and improving wireless channel quality.",
-              "images": []
-            },
-            {
-              "title": "Development of digital signal processing algorithms for commercial partners",
+              "title": "Oryza sativa",
               "text": "",
               "images": []
             }
@@ -774,17 +785,19 @@ window.LAB_CONTENT = {
           "type": "research"
         },
         {
-          "title": "Laboratory History",
+          "title": "History of the Laboratory",
           "text": "TODO",
           "images": [],
+          "actions": [],
           "cards": [],
           "type": "text"
         }
       ],
+      "headerActions": [],
       "researchInterests": [
         {
           "title": "5G/6G",
-          "text": "Research on fifth- and sixth-generation mobile communication technologies, including network architectures, radio interfaces, and ultra-reliable data transmission scenarios.",
+          "text": "",
           "images": [
             {
               "alt": "Pasted image 20260823200008",
@@ -794,46 +807,107 @@ window.LAB_CONTENT = {
         },
         {
           "title": "Polar codes",
-          "text": "Study of polar codes as an error-correcting coding class for current and future communication systems.",
+          "text": "",
           "images": []
         },
         {
           "title": "Next-generation multiple access",
-          "text": "Next-generation multiple access methods for efficient radio resource sharing across large numbers of devices.",
+          "text": "",
           "images": []
         },
         {
-          "title": "RIS",
-          "text": "Reconfigurable Intelligent Surfaces for controlling radio propagation and improving wireless channel quality.",
-          "images": []
-        },
-        {
-          "title": "Development of digital signal processing algorithms for commercial partners",
+          "title": "Oryza sativa",
           "text": "",
           "images": []
         }
       ],
       "peopleGroups": [
         {
-          "title": "Senior Researchers",
+          "title": "Research Assistants",
           "people": [
             {
-              "name": "Покаместов Дмитрий Алексеевич",
+              "name": "Pokamestov Dmitry Alekseevich",
               "photo": "",
               "description": "",
-              "contacts": []
+              "contacts": [
+                {
+                  "label": "Candidate of Technical Sciences.",
+                  "value": ""
+                },
+                {
+                  "label": "Associate Professor of the THOR Department, TUSUR.",
+                  "value": ""
+                },
+                {
+                  "label": "E-mail",
+                  "value": ""
+                },
+                {
+                  "label": "Scholar",
+                  "value": "https://scholar.google.ru/citations?user=32XjC7sAAAAJ&hl=ru&oi=ao"
+                },
+                {
+                  "label": "ORCID",
+                  "value": "0000-0002-9405-4573"
+                }
+              ],
+              "photoLabel": "Ссылка на фото"
             },
             {
-              "name": "Крюков Яков Владимирович",
+              "name": "Kryukov Yakov Vladimirovich",
               "photo": "",
               "description": "",
-              "contacts": []
+              "contacts": [
+                {
+                  "label": "Candidate of Technical Sciences.",
+                  "value": ""
+                },
+                {
+                  "label": "Associate Professor of the THOR Department, TUSUR.",
+                  "value": ""
+                },
+                {
+                  "label": "E-mail",
+                  "value": ""
+                },
+                {
+                  "label": "Scholar",
+                  "value": "https://scholar.google.com/citations?user=Ms3raocp3REC&hl=ru"
+                },
+                {
+                  "label": "ORCID",
+                  "value": "0000-0002-4115-9080"
+                }
+              ],
+              "photoLabel": "Ссылка на фото"
             },
             {
-              "name": "Литвинов Рудольф Викторович",
+              "name": "Litvinov Rudolf Viktorovich",
               "photo": "",
               "description": "",
-              "contacts": []
+              "contacts": [
+                {
+                  "label": "Candidate of physical and mathematical sciences.",
+                  "value": ""
+                },
+                {
+                  "label": "Associate Professor of the THOR Department, TUSUR.",
+                  "value": ""
+                },
+                {
+                  "label": "E-mail",
+                  "value": ""
+                },
+                {
+                  "label": "Scholar",
+                  "value": ""
+                },
+                {
+                  "label": "ORCID",
+                  "value": ""
+                }
+              ],
+              "photoLabel": "Ссылка на фото"
             }
           ]
         },
@@ -841,39 +915,117 @@ window.LAB_CONTENT = {
           "title": "Engineers",
           "people": [
             {
-              "name": "Степной Виктор Серафимович",
+              "name": "Stepnoy Viktor Serafimovich",
               "photo": "",
-              "description": "",
-              "contacts": []
+              "description": "Senior Lecturer, TOR Department, TUSUR.",
+              "contacts": [
+                {
+                  "label": "E-mail",
+                  "value": ""
+                }
+              ],
+              "photoLabel": "Ссылка на фото"
             }
           ]
         },
         {
-          "title": "PhD Students",
+          "title": "PhD students",
           "people": [
             {
-              "name": "Шинкевич Артём Сергеевич",
-              "photo": "",
+              "name": "Shinkevich Artem Sergeevich",
+              "photo": "Pasted image 20260823214412.png",
               "description": "",
-              "contacts": []
+              "contacts": [
+                {
+                  "label": "Assistant of the TOR Department, TUSUR.",
+                  "value": ""
+                },
+                {
+                  "label": "E-mail",
+                  "value": "a.shinkevich00@gmail.com"
+                },
+                {
+                  "label": "Scholar",
+                  "value": "https://scholar.google.com/citations?user=TA-ngpgAAAAJ&hl=ru"
+                },
+                {
+                  "label": "ORCID",
+                  "value": "0000-0002-0174-9158"
+                }
+              ],
+              "photoAlt": "Pasted image 20260823214412"
             },
             {
-              "name": "Шалин Георгий Николаевич",
+              "name": "Shalin Georgy Nikolaevich",
               "photo": "",
               "description": "",
-              "contacts": []
+              "contacts": [
+                {
+                  "label": "Assistant of the TOR Department, TUSUR.",
+                  "value": ""
+                },
+                {
+                  "label": "E-mail",
+                  "value": ""
+                },
+                {
+                  "label": "Scholar",
+                  "value": ""
+                },
+                {
+                  "label": "ORCID",
+                  "value": ""
+                }
+              ],
+              "photoLabel": "Ссылка на фото"
             },
             {
-              "name": "Еремеев Сергей Александрович",
+              "name": "Eremeev Sergey Alexandrovich",
               "photo": "",
               "description": "",
-              "contacts": []
+              "contacts": [
+                {
+                  "label": "Assistant of the TOR Department, TUSUR.",
+                  "value": ""
+                },
+                {
+                  "label": "E-mail",
+                  "value": ""
+                },
+                {
+                  "label": "Scholar",
+                  "value": ""
+                },
+                {
+                  "label": "ORCID",
+                  "value": ""
+                }
+              ],
+              "photoLabel": "Ссылка на фото"
             },
             {
-              "name": "Ильинский Дмитрий Евгеньевич",
+              "name": "Ilyinsky Dmitry Evgenievich",
               "photo": "",
               "description": "",
-              "contacts": []
+              "contacts": [
+                {
+                  "label": "Assistant of the TOR Department, TUSUR.",
+                  "value": ""
+                },
+                {
+                  "label": "E-mail",
+                  "value": ""
+                },
+                {
+                  "label": "Scholar",
+                  "value": ""
+                },
+                {
+                  "label": "ORCID",
+                  "value": ""
+                }
+              ],
+              "photoLabel": "Ссылка на фото"
             }
           ]
         },
@@ -881,10 +1033,11 @@ window.LAB_CONTENT = {
           "title": "Students",
           "people": [
             {
-              "name": "Погорелов Евгений Батькович",
+              "name": "Evgeny Batkovich Pogorelov",
               "photo": "",
               "description": "",
-              "contacts": []
+              "contacts": [],
+              "photoLabel": "Ссылка на фото"
             }
           ]
         }
@@ -938,11 +1091,11 @@ window.LAB_CONTENT = {
         }
       ],
       "publicationContent": {
-        "lead": "Research publications of the laboratory. The list is consolidated from the laboratory leaders’ bibliographic records; publications by other team members are included only when a laboratory leader is a co-author.",
+        "lead": "",
         "sections": [
           {
-            "title": "Selected publications",
-            "text": "Representative journal papers on 5G/6G, NOMA/RSMA, and wireless physical-layer technologies.",
+            "title": "Selected",
+            "text": "",
             "items": [
               "**Fairness-Aware Comparison of PD-NOMA and OMA Under Max-Min, Proportional, and Round-Robin Scheduling.** Yakov Kryukov, Dmitriy Pokamestov, Artem Shinkevich, Georgy Shalin, Sergey Eremeev, Dmitriy Ilinskiy. *Internet Technology Letters*, vol. 9, no. 2, e70219. 2026. [DOI](https://doi.org/10.1002/itl2.70219)",
               "**Comparative analysis of multiple access techniques for 6G communication systems.** Dmitriy Pokamestov, Yakov Kryukov, Eugeniy Rogozhnikov, Georgiy Shalin, Artem Shinkevich, Rudolf Litvinov. *Telecommunication Systems*, vol. 88, no. 3, 104. 2025. [DOI](https://doi.org/10.1007/s11235-025-01333-8)",
@@ -1163,19 +1316,14 @@ window.LAB_CONTENT = {
       ],
       "newsItems": [
         {
-          "date": "Date TBD",
-          "title": "Laboratory news",
-          "text": "Placeholder for a laboratory announcement."
+          "date": "",
+          "title": "Lab News",
+          "text": ""
         },
         {
-          "date": "Date TBD",
-          "title": "Research activity",
-          "text": "Placeholder for a research activity update."
-        },
-        {
-          "date": "Date TBD",
-          "title": "Conference or seminar",
-          "text": "Placeholder for an event update."
+          "date": "",
+          "title": "Creating a website",
+          "text": "The first version of the site is ready"
         }
       ]
     }

@@ -44,15 +44,15 @@
         <img class="lab-mark" src="labicon.png" alt="${content.labName}">
         ${languageSwitch(language)}
       </div>
-      <p class="eyebrow">${content.rootEyebrow}</p>
+      ${content.rootEyebrow ? `<p class="eyebrow">${content.rootEyebrow}</p>` : ""}
       <h1 id="page-title">${content.labName}</h1>
-      <p class="lead">${content.rootLead}</p>
+      ${content.rootLead ? `<p class="lead">${content.rootLead}</p>` : ""}
 
       <nav class="theme-grid" aria-label="${content.themeSelector}">
         ${model.themes.map((theme) => `
           <a class="theme-card" href="${theme.href}">
             <span>${theme.title[language]}</span>
-            <small>${theme.description[language]}</small>
+            ${theme.description[language] ? `<small>${theme.description[language]}</small>` : ""}
           </a>
         `).join("")}
       </nav>

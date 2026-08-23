@@ -33,6 +33,7 @@ Options:
   --target <path>       English Markdown target file. Defaults to sibling en.md.
   --write               Write target files. Without this, print to stdout.
   --force               Allow overwriting a non-empty target file.
+  --if-source-newer     Write only when target is missing, empty, or older than source.
   --provider <name>     mymemory or libre. Default: mymemory.
   --delay-ms <number>   Delay between API calls. Default: 250.
   --help                Show this help.
@@ -51,6 +52,7 @@ function parseArgs(argv) {
     target: null,
     write: false,
     force: false,
+    ifSourceNewer: false,
     help: false,
     provider: "mymemory",
     delayMs: 250
@@ -62,6 +64,7 @@ function parseArgs(argv) {
     if (arg === "--all") args.all = true;
     else if (arg === "--write") args.write = true;
     else if (arg === "--force") args.force = true;
+    else if (arg === "--if-source-newer") args.ifSourceNewer = true;
     else if (arg === "--help" || arg === "-h") args.help = true;
     else if (arg === "--source") args.source = argv[++index];
     else if (arg === "--target") args.target = argv[++index];
@@ -117,12 +120,22 @@ function readMarkdown(filePath) {
   return fs.readFileSync(filePath, "utf8").replace(/\r\n/g, "\n").trimEnd();
 }
 
-function shouldSkipTarget(target, args) {
+function shouldSkipTarget(source, target, args) {
   if (!args.write || args.force || !fs.existsSync(target)) {
     return false;
   }
 
-  return fs.readFileSync(target, "utf8").trim().length > 0;
+  if (fs.readFileSync(target, "utf8").trim().length === 0) {
+    return false;
+  }
+
+  if (args.ifSourceNewer) {
+    const sourceMtime = fs.statSync(source).mtimeMs;
+    const targetMtime = fs.statSync(target).mtimeMs;
+    return targetMtime >= sourceMtime;
+  }
+
+  return true;
 }
 
 function sleep(ms) {
@@ -290,7 +303,7 @@ async function main() {
   for (const job of jobs) {
     const sourceMarkdown = readMarkdown(job.source);
 
-    if (shouldSkipTarget(job.target, args)) {
+    if (shouldSkipTarget(job.source, job.target, args)) {
       console.log(`Skipping non-empty target: ${path.relative(root, job.target)} (use --force to overwrite)`);
       continue;
     }

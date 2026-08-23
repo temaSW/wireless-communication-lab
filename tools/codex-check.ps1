@@ -28,9 +28,15 @@ git status --short --branch
 
 Step "Regenerating js/lab-content.js"
 node tools/build-content.js
+if ($LASTEXITCODE -ne 0) {
+    throw "Content generation failed."
+}
 
 Step "Checking theme showcase structure"
 powershell -ExecutionPolicy Bypass -File .\setup-theme-showcase.ps1
+if ($LASTEXITCODE -ne 0) {
+    throw "Theme showcase check failed."
+}
 
 Step "Checking generated content is valid JavaScript"
 node -e "const fs=require('fs'); const vm=require('vm'); vm.runInNewContext(fs.readFileSync('js/lab-content.js','utf8'), { window: {} });"

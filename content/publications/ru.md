@@ -1,10 +1,7 @@
 # Публикации
 
-Научные публикации лаборатории. Список объединён из библиографических выгрузок руководителей лаборатории; работы других участников включены только при наличии руководителя среди соавторов.
 
-## Избранные публикации
-
-Репрезентативные журнальные работы по 5G/6G, NOMA/RSMA и физическому уровню систем связи.
+## Избранные 
 
 - **Fairness-Aware Comparison of PD-NOMA and OMA Under Max-Min, Proportional, and Round-Robin Scheduling.** Yakov Kryukov, Dmitriy Pokamestov, Artem Shinkevich, Georgy Shalin, Sergey Eremeev, Dmitriy Ilinskiy. *Internet Technology Letters*, vol. 9, no. 2, e70219. 2026. [DOI](https://doi.org/10.1002/itl2.70219)
 - **Comparative analysis of multiple access techniques for 6G communication systems.** Dmitriy Pokamestov, Yakov Kryukov, Eugeniy Rogozhnikov, Georgiy Shalin, Artem Shinkevich, Rudolf Litvinov. *Telecommunication Systems*, vol. 88, no. 3, 104. 2025. [DOI](https://doi.org/10.1007/s11235-025-01333-8)

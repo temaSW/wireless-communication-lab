@@ -51,6 +51,80 @@
       .replace(/\*([^*]+)\*/g, "<em>$1</em>");
   }
 
+  function blockMarkdown(text) {
+    const lines = String(text || "").split(/\n+/).map((line) => line.trim()).filter(Boolean);
+    const blocks = [];
+    let paragraph = [];
+    let list = [];
+
+    function flushParagraph() {
+      if (!paragraph.length) return;
+      blocks.push(`<p>${inlineMarkdown(paragraph.join(" "))}</p>`);
+      paragraph = [];
+    }
+
+    function flushList() {
+      if (!list.length) return;
+      blocks.push(`<ul>${list.map((item) => `<li>${inlineMarkdown(item)}</li>`).join("")}</ul>`);
+      list = [];
+    }
+
+    lines.forEach((line) => {
+      if (line.startsWith("- ")) {
+        flushParagraph();
+        list.push(line.replace(/^-\s+/, "").trim());
+        return;
+      }
+
+      flushList();
+      paragraph.push(line);
+    });
+
+    flushParagraph();
+    flushList();
+
+    return blocks.join("");
+  }
+
+  function mailIcon() {
+    return `
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+      </svg>
+    `;
+  }
+
+  function sectionActions(actions) {
+    if (!actions || !actions.length) return "";
+
+    return `
+      <div class="section-actions">
+        ${actions.map((action) => `
+          <a class="section-action section-action-${html(action.icon || "link")}" href="${html(action.href)}">
+            ${action.icon === "mail" ? mailIcon() : ""}
+            <span>${html(action.label)}</span>
+          </a>
+        `).join("")}
+      </div>
+    `;
+  }
+
+  function headerActions(actions) {
+    if (!actions || !actions.length) return "";
+
+    return `
+      <div class="header-actions">
+        ${actions.map((action) => `
+          <a class="header-action header-action-${html(action.icon || "link")}" href="${html(action.href)}" aria-label="${html(action.label)}">
+            ${action.icon === "mail" ? mailIcon() : ""}
+            <span>${html(action.label)}</span>
+          </a>
+        `).join("")}
+      </div>
+    `;
+  }
+
   function assetSrc(src) {
     if (!src || /^(https?:|data:|\/)/.test(src)) {
       return src;
@@ -90,7 +164,7 @@
               <article class="news-item">
                 <time>${item.date}</time>
                 <h3>${item.title}</h3>
-                <p>${item.text}</p>
+                <div class="markdown-block">${blockMarkdown(item.text)}</div>
               </article>
             `).join("")}
           </div>
@@ -128,7 +202,8 @@
             <div class="section-head">
               <h2>${html(section.title)}</h2>
             </div>
-            ${section.text ? `<p class="home-text-body">${inlineMarkdown(section.text)}</p>` : ""}
+            ${section.text ? `<div class="home-text-body markdown-block">${blockMarkdown(section.text)}</div>` : ""}
+            ${sectionActions(section.actions)}
           </section>
         `;
       }
@@ -152,7 +227,7 @@
                   <img class="interest-image" src="${assetSrc(item.images[0].src)}" alt="${html(item.images[0].alt || item.title)}">
                 ` : ""}
                 <h3>${html(item.title)}</h3>
-                <p>${inlineMarkdown(item.text)}</p>
+                <div class="markdown-block">${blockMarkdown(item.text)}</div>
               </article>
             `).join("")}
           </div>
@@ -171,7 +246,7 @@
             ${content.projects.map((project) => `
               <article class="project">
                 <h3>${project.title}</h3>
-                <p>${project.text}</p>
+                <div class="markdown-block">${blockMarkdown(project.text)}</div>
               </article>
             `).join("")}
           </div>
@@ -283,14 +358,14 @@
           <div class="section-head">
             <p class="kicker">${labels.studentsKicker}</p>
             <h2>${labels.studentsTitle}</h2>
-            <p class="student-lead">${content.studentOffer.lead}</p>
+            <div class="student-lead markdown-block">${blockMarkdown(content.studentOffer.lead)}</div>
           </div>
           <div class="student-steps">
             ${content.studentOffer.steps.map((step, index) => `
               <article class="student-step">
                 <span>${index + 1}</span>
                 <h3>${step.title}</h3>
-                <p>${step.text}</p>
+                <div class="markdown-block">${blockMarkdown(step.text)}</div>
               </article>
             `).join("")}
           </div>
@@ -327,14 +402,14 @@
           <div class="section-head">
             <p class="kicker">${labels.publicationsKicker}</p>
             <h2>${labels.publicationsTitle}</h2>
-            ${publicationContent.lead ? `<p>${inlineMarkdown(publicationContent.lead)}</p>` : ""}
+            ${publicationContent.lead ? `<div class="markdown-block">${blockMarkdown(publicationContent.lead)}</div>` : ""}
           </div>
           <div class="publication-list">
             ${publicationContent.sections.map((section) => `
               <article class="publication-section">
                 <div class="publication-section-head">
                   <h3>${html(section.title)}</h3>
-                  ${section.text ? `<p>${inlineMarkdown(section.text)}</p>` : ""}
+                  ${section.text ? `<div class="markdown-block">${blockMarkdown(section.text)}</div>` : ""}
                 </div>
                 <div class="publication-section-body">
                   ${publicationItems(section.items)}
@@ -386,14 +461,17 @@
       <header class="site-header">
         <div class="topbar">
           <a class="back-link" href="../../index.html">${content.themeSelector}</a>
-          ${languageSwitch(language)}
+          <div class="topbar-actions">
+            ${headerActions(content.headerActions)}
+            ${languageSwitch(language)}
+          </div>
         </div>
         <div class="brand">
           <img src="labicon.png" alt="${content.labName}">
           <div>
             <p class="theme-label">${themeName}</p>
             <h1>${content.labName}</h1>
-            <p>${content.tagline}</p>
+            ${content.tagline ? `<p>${html(content.tagline)}</p>` : ""}
           </div>
         </div>
         <nav class="site-nav" aria-label="${labels.peopleTitle}">

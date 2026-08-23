@@ -28,6 +28,32 @@ body {
   gap: 16px;
 }
 
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: #14395b;
+  background: #fff;
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
 .language-switch {
   display: inline-flex;
   gap: 4px;
@@ -390,6 +416,44 @@ main {
   background: linear-gradient(135deg, #dfeff4, #f8fbfc);
 }
 
+.markdown-block p {
+  margin: 0 0 12px;
+}
+
+.markdown-block p:last-child,
+.markdown-block ul:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-block ul {
+  margin: 0 0 12px;
+  padding-left: 1.25rem;
+}
+
+.markdown-block li + li {
+  margin-top: 6px;
+}
+
+.section-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.section-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: #fff;
+  background: #1f7a8c;
+  font-weight: 800;
+  text-decoration: none;
+}
+
 dt {
   color: #517184;
   font-size: 0.76rem;
@@ -428,6 +492,11 @@ dd {
   .topbar {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .topbar-actions {
+    align-items: flex-start;
+    flex-wrap: wrap;
   }
 
   .brand,

@@ -1,9 +1,38 @@
 const fs = require("fs");
 const path = require("path");
+const { spawnSync } = require("child_process");
 
 const root = path.resolve(__dirname, "..");
 const contentRoot = path.join(root, "content");
 const languages = ["ru", "en"];
+
+function syncEnglishContent() {
+  if (process.env.LAB_SKIP_AUTO_TRANSLATE === "1") return;
+
+  const args = [
+    path.join(__dirname, "translate-ru-to-en.js"),
+    "--all",
+    "--write"
+  ];
+
+  if (process.env.LAB_TRANSLATE_PROVIDER) {
+    args.push("--provider", process.env.LAB_TRANSLATE_PROVIDER);
+  }
+
+  if (process.env.LAB_TRANSLATE_DELAY_MS) {
+    args.push("--delay-ms", process.env.LAB_TRANSLATE_DELAY_MS);
+  }
+
+  const result = spawnSync(process.execPath, args, {
+    cwd: root,
+    stdio: "inherit",
+    env: process.env
+  });
+
+  if (result.status !== 0) {
+    throw new Error("English content synchronization failed.");
+  }
+}
 
 const kickerDefaults = {
   ru: {
@@ -143,16 +172,16 @@ function textFromLines(lines, options = {}) {
   return lines
     .filter((line) => !headingMatchOf(line) && (options.includeBullets || !line.startsWith("- ")) && (options.includeKeyValues || !keyValue(line)) && !imageFromLine(line))
     .map((line) => {
-      const text = options.includeBullets ? line.replace(/^-\s+/, "").trim() : line;
+      const isBullet = line.startsWith("- ");
+      const text = isBullet ? line.replace(/^-\s+/, "").trim() : line;
       const pair = keyValue(text);
-      if (options.includeKeyValues && pair) {
-        return `${pair[0]}: ${pair[1]}`;
-      }
+      const rendered = options.includeKeyValues && pair ? `${pair[0]}: ${pair[1]}` : text;
 
-      return text;
+      return options.includeBullets && isBullet ? `- ${rendered}` : rendered;
     })
-    .join(" ")
-    .replace(/\s+/g, " ")
+    .join("\n")
+    .replace(/[ \t]+/g, " ")
+    .replace(/\n /g, "\n")
     .trim();
 }
 
@@ -299,9 +328,11 @@ function parseHome(lang) {
         title: section.title,
         text: section.text,
         images: section.images,
+        actions: section.type === "research" ? section.actions : [],
         cards: section.cards,
         type: section === researchSection ? "research" : "text"
       })),
+      headerActions: homeSections.flatMap((section) => section.actions || []),
       researchInterests: researchSection.cards
     };
   }
@@ -313,12 +344,38 @@ function parseHome(lang) {
 }
 
 function parseHomeSections(markdown) {
-  return topSections(markdown).map((section) => ({
-    title: section.title,
-    text: textFromLines(section.lines, { includeBullets: true, includeKeyValues: true }),
-    images: imagesFromLines(section.lines),
-    cards: parseNestedCards(section.lines, 2)
-  }));
+  return topSections(markdown).map((section) => {
+    const actions = actionsFromLines(section.lines);
+    const actionLines = new Set(actions.map((action) => action.sourceLine));
+
+    return {
+      title: section.title,
+      text: textFromLines(section.lines.filter((line) => !actionLines.has(line)), { includeBullets: true, includeKeyValues: true }),
+      images: imagesFromLines(section.lines),
+      actions: actions.map(({ sourceLine, ...action }) => action),
+      cards: parseNestedCards(section.lines, 2)
+    };
+  });
+}
+
+function actionsFromLines(lines) {
+  return lines
+    .map((line) => {
+      const trimmed = stripComment(line);
+      const match = trimmed.match(/^-\s+\[([^\]]+)\]\(([^)]+)\)$/);
+
+      if (!match || !/^(для связи|contact)$/i.test(match[1].trim())) {
+        return null;
+      }
+
+      return {
+        label: match[1].trim(),
+        href: match[2].trim(),
+        icon: "mail",
+        sourceLine: line
+      };
+    })
+    .filter(Boolean);
 }
 
 function parseSectionCards(markdown) {
@@ -669,6 +726,8 @@ function buildLanguage(lang) {
 
   return data;
 }
+
+syncEnglishContent();
 
 const site = parseSite();
 const content = {

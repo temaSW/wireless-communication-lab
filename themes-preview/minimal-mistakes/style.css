@@ -31,6 +31,31 @@ body {
   gap: 16px;
 }
 
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  padding: 6px 10px;
+  color: #fff;
+  background: #7a4f22;
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
 .language-switch {
   display: inline-flex;
   gap: 4px;
@@ -348,6 +373,44 @@ main {
   background: repeating-linear-gradient(45deg, #f1f3f4, #f1f3f4 8px, #fff 8px, #fff 16px);
 }
 
+.markdown-block p {
+  margin: 0 0 12px;
+}
+
+.markdown-block p:last-child,
+.markdown-block ul:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-block ul {
+  margin: 0 0 12px;
+  padding-left: 1.2rem;
+}
+
+.markdown-block li + li {
+  margin-top: 6px;
+}
+
+.section-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.section-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #7a4f22;
+  color: #fff;
+  background: #7a4f22;
+  font-weight: 800;
+  text-decoration: none;
+}
+
 dt {
   color: #66727c;
   font-size: 0.76rem;
@@ -372,6 +435,11 @@ dd {
   .topbar {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .topbar-actions {
+    align-items: flex-start;
+    flex-wrap: wrap;
   }
 
   .brand,
