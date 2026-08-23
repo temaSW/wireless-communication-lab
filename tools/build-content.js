@@ -349,11 +349,19 @@ function parsePeopleEntries(lines) {
     const listItem = line.match(/^-\s+(.+)$/);
     const markdownLink = line.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
     const bracketNote = line.match(/^\[([^\]]+)\]$/);
+    const image = imageFromLine(line);
 
     if (!current) return;
 
+    if (image) {
+      current.photo = image.src;
+      current.photoAlt = image.alt;
+      return;
+    }
+
     if (markdownLink) {
       current.photo = markdownLink[2].trim();
+      current.photoAlt = markdownLink[1].trim();
       return;
     }
 

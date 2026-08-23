@@ -153,7 +153,34 @@
           return `<div class="photo-placeholder" aria-hidden="true"></div>`;
         }
 
-        return `<img class="photo-placeholder" src="${person.photo}" alt="${name}">`;
+        return `<img class="photo-placeholder" src="${assetSrc(person.photo)}" alt="${html(person.photoAlt || name)}">`;
+      }
+
+      function contactValue(contact) {
+        const value = String(contact.value || "").trim();
+
+        if (!value) {
+          return html(placeholders.value);
+        }
+
+        const markdownLink = value.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        if (markdownLink) {
+          return `<a href="${html(markdownLink[2])}">${html(markdownLink[1])}</a>`;
+        }
+
+        if (/^https?:\/\//.test(value)) {
+          return `<a href="${html(value)}">${html(contact.label)}</a>`;
+        }
+
+        if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+          return `<a href="mailto:${html(value)}">${html(value)}</a>`;
+        }
+
+        if (/^\d{4}-\d{4}-\d{4}-\d{3}[\dX]$/i.test(value)) {
+          return `<a href="https://orcid.org/${html(value)}">${html(value)}</a>`;
+        }
+
+        return inlineMarkdown(value);
       }
 
       function personContacts(person) {
@@ -195,7 +222,7 @@
                     <h4>${name}</h4>
                     ${description ? `<p class="person-bio">${description}</p>` : ""}
                     <dl class="profile-list">
-                      ${personContacts(person).map((contact) => `<dt>${contact.label}</dt><dd>${contact.value}</dd>`).join("")}
+                      ${personContacts(person).map((contact) => `<dt>${html(contact.label)}</dt><dd>${contactValue(contact)}</dd>`).join("")}
                     </dl>
                   </article>
                 `;

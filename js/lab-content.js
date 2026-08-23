@@ -223,8 +223,8 @@ window.LAB_CONTENT = {
           "people": [
             {
               "name": "Шинкевич Артём Сергеевич",
-              "photo": "",
-              "description": "![[Pasted image 20260823214412.png]] Ассистент кафедра телекоммуникаций и основ радиотехники, ТУСУР.",
+              "photo": "Pasted image 20260823214412.png",
+              "description": "Ассистент кафедра телекоммуникаций и основ радиотехники, ТУСУР.",
               "contacts": [
                 {
                   "label": "E-mail",
@@ -238,7 +238,8 @@ window.LAB_CONTENT = {
                   "label": "ORCID",
                   "value": "0000-0002-0174-9158"
                 }
-              ]
+              ],
+              "photoAlt": "Pasted image 20260823214412"
             },
             {
               "name": "Шалин Георгий Николаевич",

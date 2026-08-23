@@ -387,6 +387,10 @@ dd {
   margin: 0 0 8px;
 }
 
+.profile-list a {
+  overflow-wrap: anywhere;
+}
+
 @media (max-width: 900px) {
   .interest-list,
   .news-list,
