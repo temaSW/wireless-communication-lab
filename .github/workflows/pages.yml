@@ -20,6 +20,8 @@ jobs:
 
       - name: Build content
         run: node tools/build-content.js
+        env:
+          LAB_SKIP_AUTO_TRANSLATE: "1"
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

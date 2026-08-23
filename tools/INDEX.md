@@ -19,8 +19,9 @@ node tools/build-content.js
 - Notes:
   - Required after changing `content/` or the parser itself.
   - Set `LAB_TRANSLATE_PROVIDER=libre` to use LibreTranslate during the build.
-  - Set `LAB_SKIP_AUTO_TRANSLATE=1` only for parser debugging when paired
-    English files already exist.
+  - Set `LAB_SKIP_AUTO_TRANSLATE=1` to skip network translation and build from
+    available English files, falling back to Russian content where English files
+    are missing. The GitHub Pages workflow uses this mode.
 
 ## `setup-theme-showcase.ps1`
 

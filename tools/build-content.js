@@ -238,6 +238,15 @@ function firstSubheadingBeforeSection(lines, level = 3) {
 
 function readPage(lang, section) {
   const filePath = path.join(contentRoot, section, `${lang}.md`);
+  const fallbackPath = path.join(contentRoot, section, "ru.md");
+
+  if (!fs.existsSync(filePath) && lang === "en" && fs.existsSync(fallbackPath)) {
+    return {
+      filePath: fallbackPath,
+      markdown: readMarkdown(fallbackPath)
+    };
+  }
+
   return {
     filePath,
     markdown: readMarkdown(filePath)
@@ -683,8 +692,12 @@ function parseNewsItems(lang) {
     .sort()
     .map((itemDir) => {
       const filePath = path.join(itemsRoot, itemDir, `${lang}.md`);
-      const markdown = readMarkdown(filePath);
-      const title = titleOf(markdown, filePath);
+      const fallbackPath = path.join(itemsRoot, itemDir, "ru.md");
+      const sourcePath = !fs.existsSync(filePath) && lang === "en" && fs.existsSync(fallbackPath)
+        ? fallbackPath
+        : filePath;
+      const markdown = readMarkdown(sourcePath);
+      const title = titleOf(markdown, sourcePath);
       const lines = bodyAfterTitle(markdown).map(stripComment).filter(Boolean);
       const meta = metadata(lines);
 
