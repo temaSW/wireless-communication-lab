@@ -18,7 +18,8 @@ node tools/build-content.js
 
 ## `setup-theme-showcase.ps1`
 
-- Purpose: Regenerate shared content, ensure theme preview pages and icons exist.
+- Purpose: Regenerate shared content, sync the root `labicon.png` into theme
+  preview folders, and ensure required preview pages exist.
 - Parameters: None.
 - Example:
 

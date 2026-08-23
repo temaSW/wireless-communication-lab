@@ -1,6 +1,10 @@
-# Research
+# Laboratory Information
 
-Kicker: Research Interests
+The laboratory is based at the Department of Telecommunications and Basic Radio Engineering (TOR), Tomsk State University of Control Systems and Radioelectronics (TUSUR).
+Russia, Tomsk, 47 Vershinina Street, room 317.
+[Contact](laboratory317.gmail.com)
+
+# Research Interests
 
 ## 5G/6G
 
@@ -18,3 +22,9 @@ Next-generation multiple access methods for efficient radio resource sharing acr
 ## RIS
 
 Reconfigurable Intelligent Surfaces for controlling radio propagation and improving wireless channel quality.
+
+## Development of digital signal processing algorithms for commercial partners
+
+# Laboratory History
+
+TODO

@@ -48,9 +48,7 @@ node (Join-Path $root "tools\build-content.js")
 foreach ($theme in $themes) {
     $themePath = Join-Path $root "themes-preview\$theme"
 
-    if (-not (Test-Path -LiteralPath (Join-Path $themePath "labicon.png"))) {
-        Copy-Item -LiteralPath (Join-Path $root "labicon.png") -Destination (Join-Path $themePath "labicon.png") -Force
-    }
+    Copy-Item -LiteralPath (Join-Path $root "labicon.png") -Destination (Join-Path $themePath "labicon.png") -Force
 
     foreach ($page in $pages) {
         $path = Join-Path $themePath $page

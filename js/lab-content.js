@@ -55,46 +55,43 @@ window.LAB_CONTENT = {
   "languages": {
     "ru": {
       "labName": "лаборатория беспроводной связи",
-      "tagline": "Исследовательская группа в области систем беспроводной связи",
-      "rootEyebrow": "Среда сравнения тем",
-      "rootLead": "Выберите один вариант академического сайта.",
       "themeSelector": "Выбор темы",
       "home": "Главная",
       "sections": [
         {
-          "key": "people",
-          "title": "Участники",
+          "key": "Team",
+          "title": "Коллектив",
           "href": "people.html"
         },
         {
-          "key": "students",
+          "key": "For students",
           "title": "Студентам",
           "href": "students.html"
         },
         {
-          "key": "projects",
+          "key": "Projects",
           "title": "Проекты",
           "href": "projects.html"
         },
         {
-          "key": "publications",
+          "key": "Publications",
           "title": "Публикации",
           "href": "publications.html"
         },
         {
-          "key": "media",
+          "key": "Media",
           "title": "Медиа",
           "href": "media.html"
         },
         {
-          "key": "news",
+          "key": "News",
           "title": "Новости",
           "href": "news.html"
         }
       ],
       "sectionLabels": {
         "researchKicker": "Научные направления",
-        "researchTitle": "Исследования",
+        "researchTitle": "Научные направления",
         "peopleKicker": "Команда лаборатории",
         "peopleTitle": "Коллектив",
         "studentsKicker": "Для студентов",
@@ -108,6 +105,65 @@ window.LAB_CONTENT = {
         "newsKicker": "Новости лаборатории",
         "newsTitle": "Новости"
       },
+      "homeSections": [
+        {
+          "title": "Информация о лаборатории",
+          "text": "Лаборатория базируется на кафедре телекоммуникаций и основ радиотехники (ТОР) Томского Университета Систем Управления и Радиоэлектроники (ТУСУР). Адрес: Россия, г. Томск, ул. Вершинина 47, аудитория 317. [Для связи](laboratory317.gmail.com)",
+          "images": [],
+          "cards": [],
+          "type": "text"
+        },
+        {
+          "title": "Научные направления",
+          "text": "Исследование технологий мобильной связи пятого и шестого поколений, включая архитектуры сетей, радиоинтерфейсы и сценарии сверхнадёжной передачи данных. Изучение полярных кодов как класса помехоустойчивого кодирования для современных и перспективных систем связи. Методы множественного доступа нового поколения для эффективного совместного использования радиоресурсов большим числом устройств. Реконфигурируемые интеллектуальные поверхности для управления распространением радиосигнала и повышения качества беспроводных каналов.",
+          "images": [
+            {
+              "alt": "Pasted image 20260823200008",
+              "src": "Pasted image 20260823200008.png"
+            }
+          ],
+          "cards": [
+            {
+              "title": "5G/6G",
+              "text": "Исследование технологий мобильной связи пятого и шестого поколений, включая архитектуры сетей, радиоинтерфейсы и сценарии сверхнадёжной передачи данных.",
+              "images": [
+                {
+                  "alt": "Pasted image 20260823200008",
+                  "src": "Pasted image 20260823200008.png"
+                }
+              ]
+            },
+            {
+              "title": "Polar codes",
+              "text": "Изучение полярных кодов как класса помехоустойчивого кодирования для современных и перспективных систем связи.",
+              "images": []
+            },
+            {
+              "title": "Next-generation multiple access",
+              "text": "Методы множественного доступа нового поколения для эффективного совместного использования радиоресурсов большим числом устройств.",
+              "images": []
+            },
+            {
+              "title": "RIS",
+              "text": "Реконфигурируемые интеллектуальные поверхности для управления распространением радиосигнала и повышения качества беспроводных каналов.",
+              "images": []
+            },
+            {
+              "title": "Разработка алгоритмов цифровой обработки сигналов для коммерческих партнеров",
+              "text": "",
+              "images": []
+            }
+          ],
+          "type": "research"
+        },
+        {
+          "title": "История лаборатории",
+          "text": "TODO",
+          "images": [],
+          "cards": [],
+          "type": "text"
+        }
+      ],
       "researchInterests": [
         {
           "title": "5G/6G",
@@ -131,7 +187,12 @@ window.LAB_CONTENT = {
         },
         {
           "title": "RIS",
-          "text": "Reconfigurable Intelligent Surfaces для управления распространением радиосигнала и повышения качества беспроводных каналов.",
+          "text": "Реконфигурируемые интеллектуальные поверхности для управления распространением радиосигнала и повышения качества беспроводных каналов.",
+          "images": []
+        },
+        {
+          "title": "Разработка алгоритмов цифровой обработки сигналов для коммерческих партнеров",
+          "text": "",
           "images": []
         }
       ],
@@ -647,7 +708,7 @@ window.LAB_CONTENT = {
       ],
       "sectionLabels": {
         "researchKicker": "Research Interests",
-        "researchTitle": "Research",
+        "researchTitle": "Research Interests",
         "peopleKicker": "Laboratory Team",
         "peopleTitle": "People",
         "studentsKicker": "For Students",
@@ -661,6 +722,65 @@ window.LAB_CONTENT = {
         "newsKicker": "Laboratory News",
         "newsTitle": "News"
       },
+      "homeSections": [
+        {
+          "title": "Laboratory Information",
+          "text": "The laboratory is based at the Department of Telecommunications and Basic Radio Engineering (TOR), Tomsk State University of Control Systems and Radioelectronics (TUSUR). Russia, Tomsk, 47 Vershinina Street, room 317. [Contact](laboratory317.gmail.com)",
+          "images": [],
+          "cards": [],
+          "type": "text"
+        },
+        {
+          "title": "Research Interests",
+          "text": "Research on fifth- and sixth-generation mobile communication technologies, including network architectures, radio interfaces, and ultra-reliable data transmission scenarios. Study of polar codes as an error-correcting coding class for current and future communication systems. Next-generation multiple access methods for efficient radio resource sharing across large numbers of devices. Reconfigurable Intelligent Surfaces for controlling radio propagation and improving wireless channel quality.",
+          "images": [
+            {
+              "alt": "Pasted image 20260823200008",
+              "src": "Pasted image 20260823200008.png"
+            }
+          ],
+          "cards": [
+            {
+              "title": "5G/6G",
+              "text": "Research on fifth- and sixth-generation mobile communication technologies, including network architectures, radio interfaces, and ultra-reliable data transmission scenarios.",
+              "images": [
+                {
+                  "alt": "Pasted image 20260823200008",
+                  "src": "Pasted image 20260823200008.png"
+                }
+              ]
+            },
+            {
+              "title": "Polar codes",
+              "text": "Study of polar codes as an error-correcting coding class for current and future communication systems.",
+              "images": []
+            },
+            {
+              "title": "Next-generation multiple access",
+              "text": "Next-generation multiple access methods for efficient radio resource sharing across large numbers of devices.",
+              "images": []
+            },
+            {
+              "title": "RIS",
+              "text": "Reconfigurable Intelligent Surfaces for controlling radio propagation and improving wireless channel quality.",
+              "images": []
+            },
+            {
+              "title": "Development of digital signal processing algorithms for commercial partners",
+              "text": "",
+              "images": []
+            }
+          ],
+          "type": "research"
+        },
+        {
+          "title": "Laboratory History",
+          "text": "TODO",
+          "images": [],
+          "cards": [],
+          "type": "text"
+        }
+      ],
       "researchInterests": [
         {
           "title": "5G/6G",
@@ -685,6 +805,11 @@ window.LAB_CONTENT = {
         {
           "title": "RIS",
           "text": "Reconfigurable Intelligent Surfaces for controlling radio propagation and improving wireless channel quality.",
+          "images": []
+        },
+        {
+          "title": "Development of digital signal processing algorithms for commercial partners",
+          "text": "",
           "images": []
         }
       ],

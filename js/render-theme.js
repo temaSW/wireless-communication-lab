@@ -99,6 +99,46 @@
     }
 
     function researchBlock() {
+      function researchSection(section) {
+        const items = section.cards || content.researchInterests || [];
+        return `
+          <section class="section section-research">
+            <div class="section-head">
+              <p class="kicker">${labels.researchKicker}</p>
+              <h2>${html(section.title || labels.researchTitle)}</h2>
+            </div>
+            <div class="interest-list">
+              ${items.map((item) => `
+                <article class="${item.images && item.images.length ? "has-image" : ""}">
+                  ${item.images && item.images.length ? `
+                    <img class="interest-image" src="${assetSrc(item.images[0].src)}" alt="${html(item.images[0].alt || item.title)}">
+                  ` : ""}
+                  <h3>${html(item.title)}</h3>
+                  <p>${inlineMarkdown(item.text)}</p>
+                </article>
+              `).join("")}
+            </div>
+          </section>
+        `;
+      }
+
+      function textSection(section) {
+        return `
+          <section class="section section-home-text">
+            <div class="section-head">
+              <h2>${html(section.title)}</h2>
+            </div>
+            ${section.text ? `<p class="home-text-body">${inlineMarkdown(section.text)}</p>` : ""}
+          </section>
+        `;
+      }
+
+      if (content.homeSections && content.homeSections.length) {
+        return content.homeSections.map((section) => (
+          section.type === "research" ? researchSection(section) : textSection(section)
+        )).join("");
+      }
+
       return `
         <section class="section section-research">
           <div class="section-head">
@@ -217,14 +257,15 @@
                   const description = personDescription(person);
                   return `
                   <article class="person">
-                    <div class="person-photo">${personPhoto(person, name)}</div>
-                    <div class="person-info">
-                      <p class="person-role">${group.title}</p>
-                      <h4>${name}</h4>
-                      ${description ? `<p class="person-bio">${description}</p>` : ""}
+                    <div class="person-photo">
+                      ${personPhoto(person, name)}
                       <dl class="profile-list">
                         ${personContacts(person).map((contact) => `<dt>${html(contact.label)}</dt><dd>${contactValue(contact)}</dd>`).join("")}
                       </dl>
+                    </div>
+                    <div class="person-info">
+                      <h4>${name}</h4>
+                      ${description ? `<p class="person-bio">${description}</p>` : ""}
                     </div>
                   </article>
                 `;

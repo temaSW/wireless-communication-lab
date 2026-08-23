@@ -90,11 +90,31 @@ function metadata(lines) {
 }
 
 function sections(markdown, level = 2) {
+  return sectionsFromLines(bodyAfterTitle(markdown), level);
+}
+
+function topSections(markdown) {
+  return sectionsFromLines(markdown.split("\n"), 1);
+}
+
+function contentSections(markdown) {
+  const roots = topSections(markdown);
+  return roots.length > 1 ? roots : sections(markdown);
+}
+
+function sectionsFromLines(lines, level = 2) {
   const heading = "#".repeat(level);
   const result = [];
   let current = null;
 
-  bodyAfterTitle(markdown).forEach((line) => {
+  lines.forEach((line) => {
+    const headingMatch = headingMatchOf(line);
+
+    if (headingMatch && headingMatch[1].length < level) {
+      current = null;
+      return;
+    }
+
     if (line.startsWith(`${heading} `)) {
       current = {
         title: line.replace(new RegExp(`^${heading}\\s+`), "").trim(),
@@ -115,9 +135,22 @@ function sections(markdown, level = 2) {
   }));
 }
 
-function textFromLines(lines) {
+function headingMatchOf(line) {
+  return stripComment(line).match(/^(#{1,6})\s+(.+)$/);
+}
+
+function textFromLines(lines, options = {}) {
   return lines
-    .filter((line) => !line.startsWith("- ") && !keyValue(line) && !imageFromLine(line))
+    .filter((line) => !headingMatchOf(line) && (options.includeBullets || !line.startsWith("- ")) && (options.includeKeyValues || !keyValue(line)) && !imageFromLine(line))
+    .map((line) => {
+      const text = options.includeBullets ? line.replace(/^-\s+/, "").trim() : line;
+      const pair = keyValue(text);
+      if (options.includeKeyValues && pair) {
+        return `${pair[0]}: ${pair[1]}`;
+      }
+
+      return text;
+    })
     .join(" ")
     .replace(/\s+/g, " ")
     .trim();
@@ -256,6 +289,22 @@ function parseHome(lang) {
   const { filePath, markdown } = readPage(lang, "home");
   const title = titleOf(markdown, filePath);
   const meta = metadata(bodyAfterTitle(markdown));
+  const homeSections = parseHomeSections(markdown);
+  const researchSection = homeSections.find((section) => section.cards.length);
+
+  if (researchSection) {
+    return {
+      ...labelData(lang, "home", researchSection.title, meta),
+      homeSections: homeSections.map((section) => ({
+        title: section.title,
+        text: section.text,
+        images: section.images,
+        cards: section.cards,
+        type: section === researchSection ? "research" : "text"
+      })),
+      researchInterests: researchSection.cards
+    };
+  }
 
   return {
     ...labelData(lang, "home", title, meta),
@@ -263,9 +312,22 @@ function parseHome(lang) {
   };
 }
 
+function parseHomeSections(markdown) {
+  return topSections(markdown).map((section) => ({
+    title: section.title,
+    text: textFromLines(section.lines, { includeBullets: true, includeKeyValues: true }),
+    images: imagesFromLines(section.lines),
+    cards: parseNestedCards(section.lines, 2)
+  }));
+}
+
 function parseSectionCards(markdown) {
-  return sections(markdown).flatMap((section) => {
-    const cards = parseNestedCards(section.lines);
+  const roots = topSections(markdown);
+  const sectionLevel = roots.length > 1 ? 1 : 2;
+  const cardLevel = sectionLevel + 1;
+
+  return (roots.length > 1 ? roots : sections(markdown)).flatMap((section) => {
+    const cards = parseNestedCards(section.lines, cardLevel);
 
     if (cards.length) {
       return cards;
@@ -279,12 +341,19 @@ function parseSectionCards(markdown) {
   });
 }
 
-function parseNestedCards(lines) {
+function parseNestedCards(lines, level = 3) {
   const cards = [];
   let current = null;
 
   lines.forEach((line) => {
-    const cardTitle = headingTitle(line, 3);
+    const headingMatch = headingMatchOf(line);
+
+    if (headingMatch && headingMatch[1].length < level) {
+      current = null;
+      return;
+    }
+
+    const cardTitle = headingTitle(line, level);
 
     if (cardTitle) {
       current = {
@@ -415,12 +484,12 @@ function parseStudents(lang) {
   const title = titleOf(markdown, filePath);
   const allLines = bodyAfterTitle(markdown).map(stripComment).filter(Boolean);
   const meta = metadata(allLines);
-  const contentSections = sections(markdown);
-  const tracksSection = contentSections.find((section) => {
+  const pageSections = contentSections(markdown);
+  const tracksSection = pageSections.find((section) => {
     const titleLower = section.title.toLowerCase();
     return titleLower === "направления" || titleLower === "tracks";
   });
-  const stepSections = contentSections.filter((section) => section !== tracksSection);
+  const stepSections = pageSections.filter((section) => section !== tracksSection);
   const leadLines = [];
 
   for (const line of allLines) {

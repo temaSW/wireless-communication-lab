@@ -1,17 +1,14 @@
 # Навигация
 
 Название лаборатории: лаборатория беспроводной связи
-Подзаголовок: Исследовательская группа в области систем беспроводной связи
-Надзаголовок выбора темы: Среда сравнения тем
-Описание выбора темы: Выберите один вариант академического сайта.
 Ссылка выбора темы: Выбор темы
 Главная: Главная
 
 ## Вкладки
 
-- people | Участники | people.html
-- students | Студентам | students.html
-- projects | Проекты | projects.html
-- publications | Публикации | publications.html
-- media | Медиа | media.html
-- news | Новости | news.html
+- Team | Коллектив | people.html
+- For students | Студентам | students.html
+- Projects | Проекты | projects.html
+- Publications | Публикации | publications.html
+- Media | Медиа | media.html
+- News | Новости | news.html
