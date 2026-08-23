@@ -96,7 +96,7 @@ window.LAB_CONTENT = {
         "researchKicker": "Научные направления",
         "researchTitle": "Исследования",
         "peopleKicker": "Команда лаборатории",
-        "peopleTitle": "Участники",
+        "peopleTitle": "Коллектив",
         "studentsKicker": "Для студентов",
         "studentsTitle": "Не знаешь -- научим",
         "projectsKicker": "Текущая работа",
@@ -150,11 +150,11 @@ window.LAB_CONTENT = {
                 },
                 {
                   "label": "Scholar",
-                  "value": ""
+                  "value": "https://scholar.google.ru/citations?user=32XjC7sAAAAJ&hl=ru&oi=ao"
                 },
                 {
                   "label": "ORCID",
-                  "value": ""
+                  "value": "0000-0002-9405-4573"
                 }
               ],
               "photoLabel": "Ссылка на фото"
@@ -170,11 +170,11 @@ window.LAB_CONTENT = {
                 },
                 {
                   "label": "Scholar",
-                  "value": ""
+                  "value": "https://scholar.google.com/citations?user=Ms3raocp3REC&hl=ru"
                 },
                 {
                   "label": "ORCID",
-                  "value": ""
+                  "value": "0000-0002-4115-9080"
                 }
               ],
               "photoLabel": "Ссылка на фото"
@@ -224,22 +224,21 @@ window.LAB_CONTENT = {
             {
               "name": "Шинкевич Артём Сергеевич",
               "photo": "",
-              "description": "Ассистент кафедра телекоммуникаций и основ радиотехники, ТУСУР.",
+              "description": "![[Pasted image 20260823214412.png]] Ассистент кафедра телекоммуникаций и основ радиотехники, ТУСУР.",
               "contacts": [
                 {
                   "label": "E-mail",
-                  "value": ""
+                  "value": "a.shinkevich00@gmail.com"
                 },
                 {
                   "label": "Scholar",
-                  "value": ""
+                  "value": "https://scholar.google.com/citations?user=TA-ngpgAAAAJ&hl=ru"
                 },
                 {
                   "label": "ORCID",
-                  "value": ""
+                  "value": "0000-0002-0174-9158"
                 }
-              ],
-              "photoLabel": "Ссылка на фото"
+              ]
             },
             {
               "name": "Шалин Георгий Николаевич",
