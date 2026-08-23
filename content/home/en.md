@@ -5,6 +5,7 @@ Kicker: Research Interests
 ## 5G/6G
 
 Research on fifth- and sixth-generation mobile communication technologies, including network architectures, radio interfaces, and ultra-reliable data transmission scenarios.
+![[Pasted image 20260823200008.png]]
 
 ## Polar codes
 

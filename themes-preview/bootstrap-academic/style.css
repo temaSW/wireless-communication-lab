@@ -187,6 +187,15 @@ main {
   border-top: 5px solid #0d6efd;
 }
 
+.interest-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 0 0 16px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
 .people-group {
   margin-top: 20px;
 }
@@ -261,6 +270,36 @@ main {
   grid-template-columns: 220px minmax(0, 1fr);
   gap: 20px;
   border-left: 5px solid #0d6efd;
+}
+
+.publication-section-head p {
+  margin-top: 8px;
+  color: #495057;
+}
+
+.publication-section-body {
+  min-width: 0;
+}
+
+.publication-items {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.publication-items li {
+  overflow-wrap: anywhere;
+  line-height: 1.55;
+}
+
+.publication-year + .publication-year {
+  margin-top: 24px;
+}
+
+.publication-year h4 {
+  margin-bottom: 10px;
+  color: #0d6efd;
 }
 
 .media-placeholder {

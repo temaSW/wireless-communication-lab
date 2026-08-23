@@ -117,7 +117,7 @@ function sections(markdown, level = 2) {
 
 function textFromLines(lines) {
   return lines
-    .filter((line) => !line.startsWith("- ") && !keyValue(line))
+    .filter((line) => !line.startsWith("- ") && !keyValue(line) && !imageFromLine(line))
     .join(" ")
     .replace(/\s+/g, " ")
     .trim();
@@ -127,6 +127,35 @@ function bullets(lines) {
   return lines
     .filter((line) => line.startsWith("- "))
     .map((line) => line.replace(/^-\s+/, "").trim())
+    .filter(Boolean);
+}
+
+function imageFromLine(line) {
+  const trimmed = stripComment(line);
+  const markdownImage = trimmed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+  const obsidianImage = trimmed.match(/^!\[\[([^\]|]+)(?:\|([^\]]+))?\]\]$/);
+
+  if (markdownImage) {
+    return {
+      alt: markdownImage[1].trim(),
+      src: markdownImage[2].trim()
+    };
+  }
+
+  if (obsidianImage) {
+    const src = obsidianImage[1].trim();
+    return {
+      alt: (obsidianImage[2] || path.basename(src, path.extname(src))).trim(),
+      src
+    };
+  }
+
+  return null;
+}
+
+function imagesFromLines(lines) {
+  return lines
+    .map(imageFromLine)
     .filter(Boolean);
 }
 
@@ -244,7 +273,8 @@ function parseSectionCards(markdown) {
 
     return [{
       title: section.title,
-      text: textFromLines(section.lines)
+      text: textFromLines(section.lines),
+      images: imagesFromLines(section.lines)
     }];
   });
 }
@@ -272,7 +302,8 @@ function parseNestedCards(lines) {
 
   return cards.map((card) => ({
     title: card.title,
-    text: textFromLines(card.lines)
+    text: textFromLines(card.lines),
+    images: imagesFromLines(card.lines)
   }));
 }
 
@@ -430,6 +461,73 @@ function parseSimpleList(lang, sectionName, outputKey, placeholderKey) {
   };
 }
 
+function leadBeforeSections(markdown) {
+  const leadLines = [];
+
+  for (const line of bodyAfterTitle(markdown).map(stripComment).filter(Boolean)) {
+    if (line.startsWith("## ")) break;
+    if (!keyValue(line)) leadLines.push(line);
+  }
+
+  return textFromLines(leadLines);
+}
+
+function parsePublicationSection(section) {
+  const sectionLead = [];
+  const items = [];
+  const groups = [];
+  let currentGroup = null;
+
+  section.lines.forEach((line) => {
+    const groupTitle = headingTitle(line, 3);
+
+    if (groupTitle) {
+      currentGroup = {
+        title: groupTitle,
+        items: []
+      };
+      groups.push(currentGroup);
+      return;
+    }
+
+    if (line.startsWith("- ")) {
+      const item = line.replace(/^-\s+/, "").trim();
+      if (currentGroup) {
+        currentGroup.items.push(item);
+      } else {
+        items.push(item);
+      }
+      return;
+    }
+
+    if (!keyValue(line)) {
+      sectionLead.push(line);
+    }
+  });
+
+  return {
+    title: section.title,
+    text: textFromLines(sectionLead),
+    items,
+    groups: groups.filter((group) => group.items.length)
+  };
+}
+
+function parsePublications(lang) {
+  const { filePath, markdown } = readPage(lang, "publications");
+  const title = titleOf(markdown, filePath);
+  const lines = bodyAfterTitle(markdown).map(stripComment).filter(Boolean);
+  const meta = metadata(lines);
+
+  return {
+    ...labelData(lang, "publications", title, meta),
+    publicationContent: {
+      lead: leadBeforeSections(markdown),
+      sections: sections(markdown).map(parsePublicationSection)
+    }
+  };
+}
+
 function parseNewsPage(lang) {
   const { filePath, markdown } = readPage(lang, "news");
   const title = titleOf(markdown, filePath);
@@ -485,7 +583,7 @@ function buildLanguage(lang) {
     parsePeople(lang),
     parseStudents(lang),
     parseProjects(lang),
-    parseSimpleList(lang, "publications", "publicationSections", "todo"),
+    parsePublications(lang),
     parseSimpleList(lang, "media", "mediaSections", "media"),
     parseNewsPage(lang)
   ].forEach((section) => mergeContent(data, section));

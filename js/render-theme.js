@@ -36,6 +36,33 @@
     `;
   }
 
+  function html(text) {
+    return String(text || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function inlineMarkdown(text) {
+    return html(text)
+      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
+      .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+      .replace(/\*([^*]+)\*/g, "<em>$1</em>");
+  }
+
+  function assetSrc(src) {
+    if (!src || /^(https?:|data:|\/)/.test(src)) {
+      return src;
+    }
+
+    if (src.startsWith("../")) {
+      return src;
+    }
+
+    return `../../${encodeURI(src)}`;
+  }
+
   function render(language) {
     const content = model.languages[language] || model.languages[model.defaultLanguage];
     const theme = model.themes.find((item) => item.key === themeKey);
@@ -80,9 +107,12 @@
           </div>
           <div class="interest-list">
             ${content.researchInterests.map((item) => `
-              <article>
-                <h3>${item.title}</h3>
-                <p>${item.text}</p>
+              <article class="${item.images && item.images.length ? "has-image" : ""}">
+                ${item.images && item.images.length ? `
+                  <img class="interest-image" src="${assetSrc(item.images[0].src)}" alt="${html(item.images[0].alt || item.title)}">
+                ` : ""}
+                <h3>${html(item.title)}</h3>
+                <p>${inlineMarkdown(item.text)}</p>
               </article>
             `).join("")}
           </div>
@@ -202,17 +232,49 @@
     }
 
     function publicationsBlock() {
+      const publicationContent = content.publicationContent || {
+        lead: "",
+        sections: (content.publicationSections || []).map((title) => ({
+          title,
+          text: "",
+          items: [],
+          groups: []
+        }))
+      };
+
+      function publicationItems(items) {
+        if (!items || !items.length) return "";
+
+        return `
+          <ul class="publication-items">
+            ${items.map((item) => `<li>${inlineMarkdown(item)}</li>`).join("")}
+          </ul>
+        `;
+      }
+
       return `
-        <section class="section">
+        <section class="section section-publications">
           <div class="section-head">
             <p class="kicker">${labels.publicationsKicker}</p>
             <h2>${labels.publicationsTitle}</h2>
+            ${publicationContent.lead ? `<p>${inlineMarkdown(publicationContent.lead)}</p>` : ""}
           </div>
           <div class="publication-list">
-            ${content.publicationSections.map((title) => `
+            ${publicationContent.sections.map((section) => `
               <article class="publication-section">
-                <h3>${title}</h3>
-                <p>${placeholders.todo}</p>
+                <div class="publication-section-head">
+                  <h3>${html(section.title)}</h3>
+                  ${section.text ? `<p>${inlineMarkdown(section.text)}</p>` : ""}
+                </div>
+                <div class="publication-section-body">
+                  ${publicationItems(section.items)}
+                  ${(section.groups || []).map((group) => `
+                    <section class="publication-year">
+                      <h4>${html(group.title)}</h4>
+                      ${publicationItems(group.items)}
+                    </section>
+                  `).join("")}
+                </div>
               </article>
             `).join("")}
           </div>
