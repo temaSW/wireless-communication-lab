@@ -28,11 +28,11 @@
 
 ## Industry Contracts
 
-- TUSUR contract with Micran. Development of software and signal processing algorithms for a radio-relay modem. 2024. Funding: RUB 12 million.
 - TUSUR and Skoltech contract. Mathematical model for calculating the maximum number of 5G base station users under limited computing resources. 2020.
 - TUSUR and Skoltech contract. Mathematical model for calculating communication channel throughput between an open-architecture 5G base station and the network core. 2021.
 - TUSUR and Skoltech contract. Mathematical model for calculating communication channel throughput between open-architecture 5G base station modules. 2021.
 - TUSUR and Skoltech contract. Machine-learning-based radio channel model for faster development and debugging of URLLC algorithms in 5G networks. 2021.
+- TUSUR contract with Micran. Development of software and signal processing algorithms for a radio-relay modem. 2024. Funding: RUB 12 million.
 
 ## Individual Grants
 

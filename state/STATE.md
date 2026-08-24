@@ -59,6 +59,12 @@ profile pages.
   lists of inventions, utility models, and software registrations.
 - Re-ran `tools/codex-check.ps1` successfully after the CV, projects, and
   patents updates.
+- Changed projects and patents rendering from card grids to ordinary
+  sequential grouped lists sourced from one Markdown file per language.
+- Added patent PDF files under `assets/patents/` and linked all patent entries
+  to their PDFs.
+- Sorted project and patent entries within each group by year in the Markdown
+  sources.
 
 ## In Progress
 

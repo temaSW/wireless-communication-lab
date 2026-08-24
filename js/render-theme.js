@@ -241,12 +241,12 @@
           <div class="section-head">
             <h2>${labels.projectsTitle}</h2>
           </div>
-          <div class="project-list">
+          <div class="grouped-list project-grouped-list">
             ${content.projects.map((project) => `
-              <article class="project">
-                <h3>${project.title}</h3>
+              <section class="grouped-section project-group">
+                <h3>${html(project.title)}</h3>
                 <div class="markdown-block">${blockMarkdown(project.text)}</div>
-              </article>
+              </section>
             `).join("")}
           </div>
         </section>
@@ -259,12 +259,12 @@
           <div class="section-head">
             <h2>${labels.patentsTitle}</h2>
           </div>
-          <div class="project-list">
+          <div class="grouped-list patent-grouped-list">
             ${content.patents.map((patent) => `
-              <article class="project">
+              <section class="grouped-section patent-group">
                 <h3>${html(patent.title)}</h3>
                 <div class="markdown-block">${blockMarkdown(patent.text)}</div>
-              </article>
+              </section>
             `).join("")}
           </div>
         </section>
