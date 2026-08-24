@@ -65,6 +65,8 @@ profile pages.
   to their PDFs.
 - Sorted project and patent entries within each group by year in the Markdown
   sources.
+- Changed project and patent sorting inside each group to reverse chronological
+  order: newer entries first.
 
 ## In Progress
 
