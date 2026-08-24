@@ -587,7 +587,7 @@ function parseProjects(lang) {
 
   return {
     ...labelData(lang, "projects", title, meta),
-    projects: parseSectionCards(markdown)
+    projects: parseGroupedSections(markdown)
   };
 }
 
@@ -598,8 +598,16 @@ function parsePatents(lang) {
 
   return {
     ...labelData(lang, "patents", title, meta),
-    patents: parseSectionCards(markdown)
+    patents: parseGroupedSections(markdown)
   };
+}
+
+function parseGroupedSections(markdown) {
+  return sections(markdown).map((section) => ({
+    title: section.title,
+    text: textFromLines(section.lines, { includeBullets: true, includeKeyValues: true }),
+    images: imagesFromLines(section.lines)
+  }));
 }
 
 function parseCv(lang) {

@@ -50,6 +50,15 @@ profile pages.
 - Added `content/README.md` with editor-facing instructions for non-technical
   content maintenance.
 - Full `tools/codex-check.ps1` passed after translation was made opt-in.
+- Simplified CV profile pages so their content renders as ordinary text
+  sections instead of card-like blocks, and removed leadership wording from the
+  Kryukov profile.
+- Regrouped the projects page into thematic lists: RSF, Priority 2030, TUSUR
+  Advanced Engineering School, UMNIK, industry contracts, and individual grants.
+- Filled the patents page from the supplied `Патенты.7z` archive as grouped
+  lists of inventions, utility models, and software registrations.
+- Re-ran `tools/codex-check.ps1` successfully after the CV, projects, and
+  patents updates.
 
 ## In Progress
 

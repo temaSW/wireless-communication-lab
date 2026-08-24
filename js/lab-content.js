@@ -101,7 +101,7 @@ window.LAB_CONTENT = {
         "peopleTitle": "Коллектив",
         "studentsKicker": "Для студентов",
         "studentsTitle": "Не знаешь – научим",
-        "projectsKicker": "Гранты и НИР",
+        "projectsKicker": "Текущая работа",
         "projectsTitle": "Проекты",
         "patentsKicker": "Интеллектуальная собственность",
         "patentsTitle": "Патенты",
@@ -433,85 +433,50 @@ window.LAB_CONTENT = {
       },
       "projects": [
         {
-          "title": "РНФ № 21-79-00160",
-          "text": "",
+          "title": "РНФ",
+          "text": "- РНФ № 19-79-00087. Использование методов неортогонального множественного доступа для систем беспроводной связи. 2019-2021. Объем финансирования: 3 млн руб.\n- РНФ № 21-79-00160. Распределение ресурсов связи в телекоммуникационных системах с неортогональным множественным доступом. 2021-2023.\n- РНФ № 22-79-10148. Перспективные методы множественного доступа для будущих систем беспроводной связи 6G. 2022-2025. Объем финансирования: 18 млн руб.\n- РНФ № 24-29-00172. Улучшение характеристик систем связи с неортогональным множественным доступом с помощью полярных кодов. 2023-2025.",
           "images": []
         },
         {
-          "title": "РНФ № 24-29-00172",
-          "text": "",
+          "title": "Приоритет 2030",
+          "text": "- Разработка экспериментального макета многоканальной системы связи с неортогональным множественным доступом. 2021.\n- Экспериментальное исследование неортогонального множественного доступа PD-NOMA для сетей 6G. 2022.\n- Имитационное моделирование помехоустойчивых кодов с малой плотностью проверок на четность в системах связи 5G NR. 2022. Объем финансирования: 0,5 млн руб.\n- Исследование эффективности применения полярных кодов для широкого класса моделей каналов. 2022. Объем финансирования: 1,5 млн руб.\n- Адаптация полярных кодов к состоянию канала передачи. 2023. Объем финансирования: 2 млн руб.\n- Разработка интеллектуальной отражающей поверхности STAR-RIS для перспективных беспроводных систем связи. 2025.",
           "images": []
         },
         {
-          "title": "РНФ № 19-79-00087",
-          "text": "",
+          "title": "Передовая инженерная школа ТУСУР",
+          "text": "- Разработка модели канала связи с реконфигурируемой интеллектуальной поверхностью. 2023-2025.\n- Разработка алгоритмов канального кодирования для систем связи 5G NR. 2023-2025. Объем финансирования: 1,5 млн руб.\n- Разработка методов и алгоритмов цифровой компенсации искажений в системах беспроводной связи. 2024-2026. Объем финансирования: 472,5 тыс. руб.",
           "images": []
         },
         {
-          "title": "РНФ № 22-79-10148",
-          "text": "",
+          "title": "У.М.Н.И.К.",
+          "text": "- Разработка реконфигурируемой интеллектуальной поверхности. 2024-2025.",
           "images": []
         },
         {
-          "title": "Приоритет 2030: макет PD-NOMA",
-          "text": "",
+          "title": "Хозяйственные договоры",
+          "text": "- Договор ТУСУР с АО НПФ \"Микран\". Разработка программного обеспечения и алгоритмов обработки сигналов модема радиорелейной линии связи. 2024. Объем финансирования: 12 млн руб.\n- Хозяйственный договор ТУСУР и Сколтех. Математическая модель расчета максимального количества обслуживаемых базовой станцией 5G абонентов при использовании ограниченных вычислительных ресурсов. 2020.\n- Хозяйственный договор ТУСУР и Сколтех. Математическая модель расчета пропускной способности каналов связи между базовой станцией сети 5G с открытой архитектурой и ядром сети для оптимизации транспортной инфраструктуры сети 5G. 2021.\n- Хозяйственный договор ТУСУР и Сколтех. Математическая модель расчета пропускной способности каналов связи между модулями базовой станции сети 5G с открытой архитектурой. 2021.\n- Хозяйственный договор ТУСУР и Сколтех. Математическая модель радиоканала, использующая методы машинного обучения для ускорения разработки и отладки алгоритмов сверхнадежного обмена данными URLLC в сетях 5G. 2021.",
           "images": []
         },
         {
-          "title": "Приоритет 2030: экспериментальное исследование PD-NOMA",
-          "text": "",
-          "images": []
-        },
-        {
-          "title": "Приоритет 2030: помехоустойчивое кодирование",
-          "text": "",
-          "images": []
-        },
-        {
-          "title": "Приоритет 2030: полярные коды",
-          "text": "",
-          "images": []
-        },
-        {
-          "title": "Приоритет 2030: адаптация полярных кодов",
-          "text": "",
-          "images": []
-        },
-        {
-          "title": "ПИШ ТУСУР: канал связи с RIS",
-          "text": "",
-          "images": []
-        },
-        {
-          "title": "ПИШ ТУСУР: канальное кодирование 5G NR",
-          "text": "",
-          "images": []
-        },
-        {
-          "title": "ПИШ ТУСУР: компенсация искажений",
-          "text": "",
-          "images": []
-        },
-        {
-          "title": "У.М.Н.И.К.: реконфигурируемая интеллектуальная поверхность",
-          "text": "",
-          "images": []
-        },
-        {
-          "title": "Приоритет 2030: STAR-RIS",
-          "text": "",
-          "images": []
-        },
-        {
-          "title": "Договор ТУСУР - АО НПФ \"Микран\"",
-          "text": "",
+          "title": "Индивидуальные гранты",
+          "text": "- Грант Президента 2019. Формирование адаптивных к состоянию канала передачи сигнальных конструкций для систем связи с множественным доступом на основе разреженных кодов, № 075-15-2019-374. 2019-2020. Объем финансирования: 1,2 млн руб.\n- Грант Президента 2021. Методы формирования и обработки сигналов в многоантенных системах связи с множественным доступом на основе разреженных кодов, № 075-15-2021-071. 2021-2022. Объем финансирования: 1,2 млн руб.",
           "images": []
         }
       ],
       "patents": [
         {
-          "title": "Раздел готовится",
-          "text": "Здесь будет размещен перечень патентов, свидетельств на программы для ЭВМ и других результатов интеллектуальной деятельности лаборатории.",
+          "title": "Изобретения",
+          "text": "- Радиометрический приемник шумовых сигналов низкой интенсивности. Патент RU 2848653. 2025.\n- Способ адаптивного согласования скорости LDPC-кодирования и параметров модуляции данных. Патент RU 2866894. 2026.\n- Способ компенсации частотного и фазового рассогласования в приемном тракте. Патент RU 2858326. 2026.\n- Способ оценки канала в системах передачи данных с ортогональным частотным мультиплексированием с применением Compressed Sensing. Патент RU 2858294. 2026.\n- Способ формирования структуры радиокадра с адаптивным размещением пилотных символов. Патент RU 2862272. 2026.",
+          "images": []
+        },
+        {
+          "title": "Полезные модели",
+          "text": "- Приемо-передающий модуль радиолокационной системы. Полезная модель. 2016.\n- Устройство передачи информации по цепям питания. Полезная модель. 2020.",
+          "images": []
+        },
+        {
+          "title": "Программы для ЭВМ",
+          "text": "- Модель системы связи с SCMA. Свидетельство о государственной регистрации программы для ЭВМ. 2019.\n- Модель системы связи с SCMA-MIMO. Свидетельство о государственной регистрации программы для ЭВМ. 2020.\n- Модель оценки параметров канала передачи для систем связи с SCMA. Свидетельство о государственной регистрации программы для ЭВМ. 2020.\n- Модель нисходящего канала системы связи с SCMA-MIMO. Свидетельство RU 2021667581. 2021.\n- Модель приемника сигналов на основе QR-разложения для многоантенных систем связи с SCMA. Свидетельство RU 2022664441. 2022.\n- Модель системы связи с адаптивным к состоянию канала полярным кодеком и NOMA. Свидетельство RU 2022667267. 2022.\n- Модель многопользовательской системы связи с MIMO и полярным кодеком. Свидетельство RU 2023667837. 2023.\n- Модель системы связи с полярным кодированием для канала Релея. Свидетельство RU 2023668072. 2023.\n- Модель системы связи с полярным кодированием для сценариев следующего поколения IH и UMa. Свидетельство RU 2025686708. 2025.\n- Модель для оценки спектральной эффективности систем связи с разделением по скорости. Свидетельство RU 2025696848. 2025.",
           "images": []
         }
       ],
@@ -743,28 +708,28 @@ window.LAB_CONTENT = {
         {
           "slug": "kryukov",
           "name": "Крюков Яков Владимирович",
-          "role": "Кандидат технических наук, доцент, один из руководителей лаборатории",
-          "summary": "Специалист в области беспроводных систем связи, обработки сигналов и технологий множественного доступа. Профессиональная деятельность объединяет научные исследования, разработку программных моделей и образовательные проекты в сфере телекоммуникаций.",
+          "role": "Кандидат технических наук, доцент",
+          "summary": "Специалист в области беспроводных систем связи, обработки сигналов и технологий множественного доступа. Профессиональная деятельность объединяет научные исследования, разработку программных моделей и образовательные проекты в сфере телекоммуникаций.\nС 2025 года работает доцентом кафедры телекоммуникаций и основ радиотехники ТУСУР. В 2023-2028 годах работает над докторской диссертацией по тематике формирования, обработки и передачи сигналов в многопользовательских беспроводных системах связи с разделением каналов по мощности и реконфигурируемыми интеллектуальными поверхностями.\nУчаствовал в проектах РНФ № 21-79-00160 \"Распределение ресурсов связи в телекоммуникационных системах с неортогональным множественным доступом\" и РНФ № 24-29-00172 \"Улучшение характеристик систем связи с неортогональным множественным доступом с помощью полярных кодов\". Также работал в проектах ТУСУР по программам \"Приоритет 2030\", ПИШ ТУСУР и \"У.М.Н.И.К.\", связанных с PD-NOMA, полярными кодами, RIS и STAR-RIS.\nУчаствует в образовательном процессе ТУСУР с 2013 года. Руководил выпускными квалификационными работами 31 бакалавра и 18 магистрантов. Ведет семь учебных дисциплин по тематике связи на русском и английском языках; разработал восемь онлайн-курсов.\nПобедитель стипендиальной программы Владимира Потанина 2017 года. Победитель конкурса разработок молодых ученых форума U-NOVUS 2019 года. В 2023 году занял II место в конкурсе \"Лучший электронный курс\" ТУСУР. В 2024 году стал лауреатом премии Томской области в сфере образования, науки, здравоохранения и культуры.",
           "sections": [
             {
               "title": "Профессиональный профиль",
-              "text": "- 2025. Доцент кафедры телекоммуникаций и основ радиотехники ТУСУР.\n- 2023-2028. Работа над докторской диссертацией по тематике формирования, обработки и передачи сигналов в многопользовательских беспроводных системах связи с разделением каналов по мощности и реконфигурируемыми интеллектуальными поверхностями."
+              "text": "С 2025 года работает доцентом кафедры телекоммуникаций и основ радиотехники ТУСУР. В 2023-2028 годах работает над докторской диссертацией по тематике формирования, обработки и передачи сигналов в многопользовательских беспроводных системах связи с разделением каналов по мощности и реконфигурируемыми интеллектуальными поверхностями."
             },
             {
               "title": "Научные направления и результаты",
-              "text": "- Основные направления исследований: неортогональный множественный доступ, помехоустойчивое кодирование, многоантенные системы, реконфигурируемые интеллектуальные поверхности, формирование и обработка сигналов для систем связи 5G/6G.\n- Автор и соавтор более 100 научных работ; более 60 публикаций индексируются в Scopus, Web of Science, перечне ВАК и \"Белом списке\".\n- Автор и соавтор 10 результатов интеллектуальной деятельности."
+              "text": "Основные направления исследований: неортогональный множественный доступ, помехоустойчивое кодирование, многоантенные системы, реконфигурируемые интеллектуальные поверхности, формирование и обработка сигналов для систем связи 5G/6G. Автор и соавтор более 100 научных работ; более 60 публикаций индексируются в Scopus, Web of Science, перечне ВАК и \"Белом списке\". Автор и соавтор 10 результатов интеллектуальной деятельности."
             },
             {
-              "title": "Руководство научными проектами",
-              "text": "- РНФ № 21-79-00160 \"Распределение ресурсов связи в телекоммуникационных системах с неортогональным множественным доступом\", 2021-2023.\n- РНФ № 24-29-00172 \"Улучшение характеристик систем связи с неортогональным множественным доступом с помощью полярных кодов\", 2023-2025.\n- Проекты ТУСУР по программам \"Приоритет 2030\", ПИШ ТУСУР и \"У.М.Н.И.К.\", связанные с PD-NOMA, полярными кодами, RIS и STAR-RIS."
+              "title": "Проекты",
+              "text": "Участвовал в проектах РНФ № 21-79-00160 \"Распределение ресурсов связи в телекоммуникационных системах с неортогональным множественным доступом\" и РНФ № 24-29-00172 \"Улучшение характеристик систем связи с неортогональным множественным доступом с помощью полярных кодов\". Также работал в проектах ТУСУР по программам \"Приоритет 2030\", ПИШ ТУСУР и \"У.М.Н.И.К.\", связанных с PD-NOMA, полярными кодами, RIS и STAR-RIS."
             },
             {
               "title": "Образовательная деятельность",
-              "text": "- Участвует в образовательном процессе ТУСУР с 2013 года.\n- Руководитель выпускных квалификационных работ 31 бакалавра и 18 магистрантов.\n- Ведет семь учебных дисциплин по тематике связи на русском и английском языках; разработал восемь онлайн-курсов."
+              "text": "Участвует в образовательном процессе ТУСУР с 2013 года. Руководил выпускными квалификационными работами 31 бакалавра и 18 магистрантов. Ведет семь учебных дисциплин по тематике связи на русском и английском языках; разработал восемь онлайн-курсов."
             },
             {
               "title": "Награды",
-              "text": "- Победитель стипендиальной программы Владимира Потанина, 2017.\n- Победитель конкурса разработок молодых ученых форума U-NOVUS, 2019.\n- II место в конкурсе \"Лучший электронный курс\" ТУСУР, 2023.\n- Лауреат премии Томской области в сфере образования, науки, здравоохранения и культуры, 2024."
+              "text": "Победитель стипендиальной программы Владимира Потанина 2017 года. Победитель конкурса разработок молодых ученых форума U-NOVUS 2019 года. В 2023 году занял II место в конкурсе \"Лучший электронный курс\" ТУСУР. В 2024 году стал лауреатом премии Томской области в сфере образования, науки, здравоохранения и культуры."
             }
           ]
         },
@@ -772,27 +737,27 @@ window.LAB_CONTENT = {
           "slug": "pokamestov",
           "name": "Покаместов Дмитрий Алексеевич",
           "role": "Кандидат технических наук, доцент кафедры ТОР, ТУСУР",
-          "summary": "Специалист в области методов неортогонального множественного доступа в многоантенных системах беспроводной связи. Научная работа связана с 5G/6G, SCMA, NOMA, RSMA, полярными кодами и моделированием радиоканалов.",
+          "summary": "Специалист в области методов неортогонального множественного доступа в многоантенных системах беспроводной связи. Научная работа связана с 5G/6G, SCMA, NOMA, RSMA, полярными кодами и моделированием радиоканалов.\nИмеет 21 публикацию в журналах, рекомендованных ВАК, 15 публикаций в журналах \"Белого списка\", 15 публикаций в трудах всероссийских конференций и 65 публикаций в трудах международных конференций.\nУчаствовал в грантах РНФ № 19-79-00087 \"Использование методов неортогонального множественного доступа для систем беспроводной связи\" и № 22-79-10148 \"Перспективные методы множественного доступа для будущих систем беспроводной связи 6G\". Также работал в проектах ТУСУР по программе \"Приоритет 2030\" и ПИШ ТУСУР по LDPC, полярным кодам, канальному кодированию 5G NR и цифровой компенсации искажений. В 2024 году участвовал в работах по договору ТУСУР с АО НПФ \"Микран\" по разработке программного обеспечения и алгоритмов обработки сигналов модема радиорелейной линии связи.\nЛауреат премии Законодательной Думы Томской области в номинации \"Технические науки\" 2018 года. Лауреат премии Томской области в сфере образования, науки, здравоохранения и культуры 2024 года.",
           "sections": [
             {
               "title": "Научная работа",
-              "text": "- Тема научно-исследовательской работы: методы неортогонального множественного доступа в многоантенных системах беспроводной связи.\n- Научный консультант: Филатов Александр Владимирович, доктор технических наук, профессор кафедры ТОР."
+              "text": "Тема научно-исследовательской работы: методы неортогонального множественного доступа в многоантенных системах беспроводной связи. Научный консультант: Филатов Александр Владимирович, доктор технических наук, профессор кафедры ТОР."
             },
             {
               "title": "Публикации и результаты",
-              "text": "- 21 публикация в журналах, рекомендованных ВАК.\n- 15 публикаций в журналах \"Белого списка\".\n- 15 публикаций в трудах всероссийских конференций.\n- 65 публикаций в трудах международных конференций."
+              "text": "Имеет 21 публикацию в журналах, рекомендованных ВАК, 15 публикаций в журналах \"Белого списка\", 15 публикаций в трудах всероссийских конференций и 65 публикаций в трудах международных конференций."
             },
             {
               "title": "Проекты и гранты",
-              "text": "- Руководитель гранта РНФ № 19-79-00087 \"Использование методов неортогонального множественного доступа для систем беспроводной связи\", 2019-2021.\n- Руководитель гранта РНФ № 22-79-10148 \"Перспективные методы множественного доступа для будущих систем беспроводной связи 6G\", 2022-2025.\n- Руководитель проектов ТУСУР по программе \"Приоритет 2030\" и ПИШ ТУСУР по LDPC, полярным кодам, канальному кодированию 5G NR и цифровой компенсации искажений.\n- Руководитель работ по договору ТУСУР с АО НПФ \"Микран\" по разработке ПО и алгоритмов обработки сигналов модема радиорелейной линии связи, 2024."
+              "text": "Участвовал в грантах РНФ № 19-79-00087 \"Использование методов неортогонального множественного доступа для систем беспроводной связи\" и № 22-79-10148 \"Перспективные методы множественного доступа для будущих систем беспроводной связи 6G\". Также работал в проектах ТУСУР по программе \"Приоритет 2030\" и ПИШ ТУСУР по LDPC, полярным кодам, канальному кодированию 5G NR и цифровой компенсации искажений. В 2024 году участвовал в работах по договору ТУСУР с АО НПФ \"Микран\" по разработке программного обеспечения и алгоритмов обработки сигналов модема радиорелейной линии связи."
             },
             {
               "title": "Интеллектуальная собственность",
-              "text": "- Изобретения 2025 года: \"Способ оценки канала в системах передачи данных с ортогональным частотным мультиплексированием с применением Compressed Sensing\" и \"Радиометрический приемник шумовых сигналов низкой интенсивности\".\n- Программы для ЭВМ по SCMA, SCMA-MIMO, MIMO, NOMA, полярному кодированию и моделям многопользовательских систем связи.\n- Полезные модели: \"Устройство передачи информации по цепям питания\" и \"Приемо-передающий модуль радиолокационной системы\"."
+              "text": "Среди результатов интеллектуальной деятельности: изобретения \"Способ оценки канала в системах передачи данных с ортогональным частотным мультиплексированием с применением Compressed Sensing\" и \"Радиометрический приемник шумовых сигналов низкой интенсивности\", программы для ЭВМ по SCMA, SCMA-MIMO, MIMO, NOMA, полярному кодированию и моделям многопользовательских систем связи, а также полезные модели \"Устройство передачи информации по цепям питания\" и \"Приемо-передающий модуль радиолокационной системы\"."
             },
             {
               "title": "Награды",
-              "text": "- Лауреат премии Законодательной Думы Томской области в номинации \"Технические науки\", 2018.\n- Лауреат премии Томской области в сфере образования, науки, здравоохранения и культуры, 2024."
+              "text": "Лауреат премии Законодательной Думы Томской области в номинации \"Технические науки\" 2018 года. Лауреат премии Томской области в сфере образования, науки, здравоохранения и культуры 2024 года."
             }
           ]
         }
@@ -858,7 +823,7 @@ window.LAB_CONTENT = {
         "peopleTitle": "Team",
         "studentsKicker": "For Students",
         "studentsTitle": "We will teach you",
-        "projectsKicker": "Grants and Research Projects",
+        "projectsKicker": "Current Work",
         "projectsTitle": "Projects",
         "patentsKicker": "Intellectual Property",
         "patentsTitle": "Patents",
@@ -1186,85 +1151,50 @@ window.LAB_CONTENT = {
       },
       "projects": [
         {
-          "title": "RSF No. 21-79-00160",
-          "text": "",
+          "title": "Russian Science Foundation",
+          "text": "- RSF No. 19-79-00087. Using non-orthogonal multiple access methods for wireless communication systems. 2019-2021. Funding: RUB 3 million.\n- RSF No. 21-79-00160. Communication resource allocation in telecommunication systems with non-orthogonal multiple access. 2021-2023.\n- RSF No. 22-79-10148. Advanced multiple access methods for future 6G wireless communication systems. 2022-2025. Funding: RUB 18 million.\n- RSF No. 24-29-00172. Improving non-orthogonal multiple access communication systems using polar codes. 2023-2025.",
           "images": []
         },
         {
-          "title": "RSF No. 24-29-00172",
-          "text": "",
+          "title": "Priority 2030",
+          "text": "- Development of an experimental prototype of a multichannel communication system with non-orthogonal multiple access. 2021.\n- Experimental study of PD-NOMA non-orthogonal multiple access for 6G networks. 2022.\n- Simulation modeling of low-density parity-check codes in 5G NR communication systems. 2022. Funding: RUB 0.5 million.\n- Research on the efficiency of polar codes for a broad class of channel models. 2022. Funding: RUB 1.5 million.\n- Adaptation of polar codes to the channel state. 2023. Funding: RUB 2 million.\n- Development of a STAR-RIS intelligent reflecting surface for future wireless communication systems. 2025.",
           "images": []
         },
         {
-          "title": "RSF No. 19-79-00087",
-          "text": "",
+          "title": "TUSUR Advanced Engineering School",
+          "text": "- Development of a communication channel model with a reconfigurable intelligent surface. 2023-2025.\n- Development of channel coding algorithms for 5G NR communication systems. 2023-2025. Funding: RUB 1.5 million.\n- Development of methods and algorithms for digital distortion compensation in wireless communication systems. 2024-2026. Funding: RUB 472.5 thousand.",
           "images": []
         },
         {
-          "title": "RSF No. 22-79-10148",
-          "text": "",
+          "title": "UMNIK",
+          "text": "- Development of a reconfigurable intelligent surface. 2024-2025.",
           "images": []
         },
         {
-          "title": "Priority 2030: PD-NOMA Prototype",
-          "text": "",
+          "title": "Industry Contracts",
+          "text": "- TUSUR contract with Micran. Development of software and signal processing algorithms for a radio-relay modem. 2024. Funding: RUB 12 million.\n- TUSUR and Skoltech contract. Mathematical model for calculating the maximum number of 5G base station users under limited computing resources. 2020.\n- TUSUR and Skoltech contract. Mathematical model for calculating communication channel throughput between an open-architecture 5G base station and the network core. 2021.\n- TUSUR and Skoltech contract. Mathematical model for calculating communication channel throughput between open-architecture 5G base station modules. 2021.\n- TUSUR and Skoltech contract. Machine-learning-based radio channel model for faster development and debugging of URLLC algorithms in 5G networks. 2021.",
           "images": []
         },
         {
-          "title": "Priority 2030: PD-NOMA Experimental Study",
-          "text": "",
-          "images": []
-        },
-        {
-          "title": "Priority 2030: Error-Correcting Codes",
-          "text": "",
-          "images": []
-        },
-        {
-          "title": "Priority 2030: Polar Codes",
-          "text": "",
-          "images": []
-        },
-        {
-          "title": "Priority 2030: Polar Code Adaptation",
-          "text": "",
-          "images": []
-        },
-        {
-          "title": "TUSUR Advanced Engineering School: RIS Channel Model",
-          "text": "",
-          "images": []
-        },
-        {
-          "title": "TUSUR Advanced Engineering School: 5G NR Channel Coding",
-          "text": "",
-          "images": []
-        },
-        {
-          "title": "TUSUR Advanced Engineering School: Digital Distortion Compensation",
-          "text": "",
-          "images": []
-        },
-        {
-          "title": "UMNIK: Reconfigurable Intelligent Surface",
-          "text": "",
-          "images": []
-        },
-        {
-          "title": "Priority 2030: STAR-RIS",
-          "text": "",
-          "images": []
-        },
-        {
-          "title": "TUSUR - Micran Contract",
-          "text": "",
+          "title": "Individual Grants",
+          "text": "- Presidential Grant 2019. Adaptive channel-state-dependent signal structures for sparse-code multiple access communication systems, No. 075-15-2019-374. 2019-2020. Funding: RUB 1.2 million.\n- Presidential Grant 2021. Signal generation and processing methods in multi-antenna communication systems with sparse-code multiple access, No. 075-15-2021-071. 2021-2022. Funding: RUB 1.2 million.",
           "images": []
         }
       ],
       "patents": [
         {
-          "title": "Coming soon",
-          "text": "This section will contain patents, software registrations, and other intellectual property results of the laboratory.",
+          "title": "Inventions",
+          "text": "- Radiometric receiver for low-intensity noise signals. Patent RU 2848653. 2025.\n- Method for adaptive matching of LDPC coding rate and data modulation parameters. Patent RU 2866894. 2026.\n- Method for compensating frequency and phase mismatch in a receive path. Patent RU 2858326. 2026.\n- Channel estimation method in orthogonal frequency division multiplexing data transmission systems using Compressed Sensing. Patent RU 2858294. 2026.\n- Method for forming a radio frame structure with adaptive placement of pilot symbols. Patent RU 2862272. 2026.",
+          "images": []
+        },
+        {
+          "title": "Utility Models",
+          "text": "- Transceiver module of a radar system. Utility model. 2016.\n- Device for transmitting information through power circuits. Utility model. 2020.",
+          "images": []
+        },
+        {
+          "title": "Software Registrations",
+          "text": "- SCMA communication system model. Software registration. 2019.\n- SCMA-MIMO communication system model. Software registration. 2020.\n- Channel parameter estimation model for SCMA communication systems. Software registration. 2020.\n- Downlink SCMA-MIMO communication system model. Registration RU 2021667581. 2021.\n- QR-decomposition-based receiver model for multi-antenna SCMA communication systems. Registration RU 2022664441. 2022.\n- Communication system model with channel-adaptive polar coding and NOMA. Registration RU 2022667267. 2022.\n- Multi-user MIMO communication system model with a polar codec. Registration RU 2023667837. 2023.\n- Polar-coded communication system model for a Rayleigh channel. Registration RU 2023668072. 2023.\n- Polar-coded communication system model for next-generation IH and UMa scenarios. Registration RU 2025686708. 2025.\n- Model for estimating spectral efficiency of rate-splitting communication systems. Registration RU 2025696848. 2025.",
           "images": []
         }
       ],
@@ -1496,28 +1426,28 @@ window.LAB_CONTENT = {
         {
           "slug": "kryukov",
           "name": "Yakov Kryukov",
-          "role": "Candidate of Technical Sciences, Associate Professor, one of the laboratory leads",
-          "summary": "Specialist in wireless communication systems, signal processing, and multiple access technologies. His professional work combines research, software model development, and education projects in telecommunications.",
+          "role": "Candidate of Technical Sciences, Associate Professor",
+          "summary": "Specialist in wireless communication systems, signal processing, and multiple access technologies. His professional work combines research, software model development, and education projects in telecommunications.\nSince 2025, he has worked as Associate Professor at the Department of Telecommunications and Basic Principles of Radio Engineering, TUSUR. In 2023-2028, his doctoral research focuses on signal generation, processing, and transmission in multi-user wireless communication systems with power-domain channel separation and reconfigurable intelligent surfaces.\nHis research areas include non-orthogonal multiple access, error-correcting coding, multi-antenna systems, reconfigurable intelligent surfaces, and signal generation and processing for 5G/6G communication systems. He is the author and co-author of more than 100 research works; more than 60 publications are indexed in Scopus, Web of Science, the VAK list, and the Russian \"White List\". He is also the author and co-author of 10 intellectual property results.\nHe participated in RSF No. 21-79-00160 \"Communication resource allocation in telecommunication systems with non-orthogonal multiple access\" and RSF No. 24-29-00172 \"Improving non-orthogonal multiple access communication systems using polar codes\". He also worked on TUSUR projects under Priority 2030, the TUSUR Advanced Engineering School, and UMNIK related to PD-NOMA, polar codes, RIS, and STAR-RIS.\nHe has participated in TUSUR education since 2013. He supervised graduation theses for 31 bachelor's students and 18 master's students. He teaches seven communication-related courses in Russian and English and developed eight online courses.\nWinner of the Vladimir Potanin Scholarship Program in 2017. Winner of the U-NOVUS young researchers' development competition in 2019. Second place in the TUSUR Best E-Course competition in 2023. Laureate of the Tomsk Region award in education, science, healthcare, and culture in 2024.",
           "sections": [
             {
               "title": "Professional Profile",
-              "text": "- 2025. Associate Professor at the Department of Telecommunications and Basic Principles of Radio Engineering, TUSUR.\n- 2023-2028. Doctoral research on signal generation, processing, and transmission in multi-user wireless communication systems with power-domain channel separation and reconfigurable intelligent surfaces."
+              "text": "Since 2025, he has worked as Associate Professor at the Department of Telecommunications and Basic Principles of Radio Engineering, TUSUR. In 2023-2028, his doctoral research focuses on signal generation, processing, and transmission in multi-user wireless communication systems with power-domain channel separation and reconfigurable intelligent surfaces."
             },
             {
               "title": "Research Areas and Results",
-              "text": "- Research areas: non-orthogonal multiple access, error-correcting coding, multi-antenna systems, reconfigurable intelligent surfaces, and signal generation and processing for 5G/6G communication systems.\n- Author and co-author of more than 100 research works; more than 60 publications are indexed in Scopus, Web of Science, the VAK list, and the Russian \"White List\".\n- Author and co-author of 10 intellectual property results."
+              "text": "His research areas include non-orthogonal multiple access, error-correcting coding, multi-antenna systems, reconfigurable intelligent surfaces, and signal generation and processing for 5G/6G communication systems. He is the author and co-author of more than 100 research works; more than 60 publications are indexed in Scopus, Web of Science, the VAK list, and the Russian \"White List\". He is also the author and co-author of 10 intellectual property results."
             },
             {
-              "title": "Research Project Leadership",
-              "text": "- RSF No. 21-79-00160 \"Communication resource allocation in telecommunication systems with non-orthogonal multiple access\", 2021-2023.\n- RSF No. 24-29-00172 \"Improving non-orthogonal multiple access communication systems using polar codes\", 2023-2025.\n- TUSUR projects under Priority 2030, the TUSUR Advanced Engineering School, and UMNIK related to PD-NOMA, polar codes, RIS, and STAR-RIS."
+              "title": "Projects",
+              "text": "He participated in RSF No. 21-79-00160 \"Communication resource allocation in telecommunication systems with non-orthogonal multiple access\" and RSF No. 24-29-00172 \"Improving non-orthogonal multiple access communication systems using polar codes\". He also worked on TUSUR projects under Priority 2030, the TUSUR Advanced Engineering School, and UMNIK related to PD-NOMA, polar codes, RIS, and STAR-RIS."
             },
             {
               "title": "Teaching",
-              "text": "- Participates in TUSUR education since 2013.\n- Supervised graduation theses for 31 bachelor's students and 18 master's students.\n- Teaches seven communication-related courses in Russian and English; developed eight online courses."
+              "text": "He has participated in TUSUR education since 2013. He supervised graduation theses for 31 bachelor's students and 18 master's students. He teaches seven communication-related courses in Russian and English and developed eight online courses."
             },
             {
               "title": "Awards",
-              "text": "- Winner of the Vladimir Potanin Scholarship Program, 2017.\n- Winner of the U-NOVUS young researchers' development competition, 2019.\n- Second place in the TUSUR Best E-Course competition, 2023.\n- Laureate of the Tomsk Region award in education, science, healthcare, and culture, 2024."
+              "text": "Winner of the Vladimir Potanin Scholarship Program in 2017. Winner of the U-NOVUS young researchers' development competition in 2019. Second place in the TUSUR Best E-Course competition in 2023. Laureate of the Tomsk Region award in education, science, healthcare, and culture in 2024."
             }
           ]
         },
@@ -1525,27 +1455,27 @@ window.LAB_CONTENT = {
           "slug": "pokamestov",
           "name": "Dmitriy Pokamestov",
           "role": "Candidate of Technical Sciences, Associate Professor at the TUSUR Department of Telecommunications and Basic Principles of Radio Engineering",
-          "summary": "Specialist in non-orthogonal multiple access methods for multi-antenna wireless communication systems. His research is connected with 5G/6G, SCMA, NOMA, RSMA, polar codes, and radio channel modeling.",
+          "summary": "Specialist in non-orthogonal multiple access methods for multi-antenna wireless communication systems. His research is connected with 5G/6G, SCMA, NOMA, RSMA, polar codes, and radio channel modeling.\nHe has 21 publications in journals recommended by VAK, 15 publications in Russian \"White List\" journals, 15 publications in proceedings of national conferences, and 65 publications in proceedings of international conferences.\nHe participated in RSF No. 19-79-00087 \"Using non-orthogonal multiple access methods for wireless communication systems\" and RSF No. 22-79-10148 \"Advanced multiple access methods for future 6G wireless communication systems\". He also worked on TUSUR Priority 2030 and Advanced Engineering School projects on LDPC, polar codes, 5G NR channel coding, and digital distortion compensation. In 2024, he participated in work under the TUSUR contract with Micran for software and signal processing algorithms for a radio-relay modem.\nIntellectual property results include the inventions \"Channel estimation method in orthogonal frequency division multiplexing data transmission systems using Compressed Sensing\" and \"Radiometric receiver for low-intensity noise signals\", software registrations for SCMA, SCMA-MIMO, MIMO, NOMA, polar coding, and multi-user communication system models, and the utility models \"Device for transmitting information through power circuits\" and \"Transceiver module of a radar system\".\nLaureate of the Legislative Duma of Tomsk Region award in Technical Sciences in 2018. Laureate of the Tomsk Region award in education, science, healthcare, and culture in 2024.",
           "sections": [
             {
               "title": "Research Work",
-              "text": "- Research topic: non-orthogonal multiple access methods in multi-antenna wireless communication systems.\n- Scientific consultant: Alexander Filatov, Doctor of Technical Sciences, Professor at the Department of Telecommunications and Basic Principles of Radio Engineering."
+              "text": "His research topic is non-orthogonal multiple access methods in multi-antenna wireless communication systems. Scientific consultant: Alexander Filatov, Doctor of Technical Sciences, Professor at the Department of Telecommunications and Basic Principles of Radio Engineering."
             },
             {
               "title": "Publications and Results",
-              "text": "- 21 publications in journals recommended by VAK.\n- 15 publications in Russian \"White List\" journals.\n- 15 publications in proceedings of national conferences.\n- 65 publications in proceedings of international conferences."
+              "text": "He has 21 publications in journals recommended by VAK, 15 publications in Russian \"White List\" journals, 15 publications in proceedings of national conferences, and 65 publications in proceedings of international conferences."
             },
             {
               "title": "Projects and Grants",
-              "text": "- Principal investigator of RSF No. 19-79-00087 \"Using non-orthogonal multiple access methods for wireless communication systems\", 2019-2021.\n- Principal investigator of RSF No. 22-79-10148 \"Advanced multiple access methods for future 6G wireless communication systems\", 2022-2025.\n- Principal investigator of TUSUR Priority 2030 and Advanced Engineering School projects on LDPC, polar codes, 5G NR channel coding, and digital distortion compensation.\n- Project lead under the TUSUR contract with Micran for software and signal processing algorithms for a radio-relay modem, 2024."
+              "text": "He participated in RSF No. 19-79-00087 \"Using non-orthogonal multiple access methods for wireless communication systems\" and RSF No. 22-79-10148 \"Advanced multiple access methods for future 6G wireless communication systems\". He also worked on TUSUR Priority 2030 and Advanced Engineering School projects on LDPC, polar codes, 5G NR channel coding, and digital distortion compensation. In 2024, he participated in work under the TUSUR contract with Micran for software and signal processing algorithms for a radio-relay modem."
             },
             {
               "title": "Intellectual Property",
-              "text": "- 2025 inventions: \"Channel estimation method in orthogonal frequency division multiplexing data transmission systems using Compressed Sensing\" and \"Radiometric receiver for low-intensity noise signals\".\n- Software registrations for SCMA, SCMA-MIMO, MIMO, NOMA, polar coding, and multi-user communication system models.\n- Utility models: \"Device for transmitting information through power circuits\" and \"Transceiver module of a radar system\"."
+              "text": "Intellectual property results include the inventions \"Channel estimation method in orthogonal frequency division multiplexing data transmission systems using Compressed Sensing\" and \"Radiometric receiver for low-intensity noise signals\", software registrations for SCMA, SCMA-MIMO, MIMO, NOMA, polar coding, and multi-user communication system models, and the utility models \"Device for transmitting information through power circuits\" and \"Transceiver module of a radar system\"."
             },
             {
               "title": "Awards",
-              "text": "- Laureate of the Legislative Duma of Tomsk Region award in Technical Sciences, 2018.\n- Laureate of the Tomsk Region award in education, science, healthcare, and culture, 2024."
+              "text": "Laureate of the Legislative Duma of Tomsk Region award in Technical Sciences in 2018. Laureate of the Tomsk Region award in education, science, healthcare, and culture in 2024."
             }
           ]
         }

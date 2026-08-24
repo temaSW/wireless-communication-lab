@@ -494,16 +494,12 @@
             ${profile.role ? `<p class="cv-role">${html(profile.role)}</p>` : ""}
             ${profile.summary ? `<div class="markdown-block">${blockMarkdown(profile.summary)}</div>` : ""}
           </div>
-          <div class="publication-list cv-list">
+          <div class="cv-list markdown-block">
             ${profile.sections.map((section) => `
-              <article class="publication-section cv-section">
-                <div class="publication-section-head">
-                  <h3>${html(section.title)}</h3>
-                </div>
-                <div class="publication-section-body markdown-block">
-                  ${blockMarkdown(section.text)}
-                </div>
-              </article>
+              <section class="cv-section">
+                <h3>${html(section.title)}</h3>
+                ${blockMarkdown(section.text)}
+              </section>
             `).join("")}
           </div>
         </section>
