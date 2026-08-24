@@ -59,32 +59,37 @@ window.LAB_CONTENT = {
       "home": "Главная",
       "sections": [
         {
-          "key": "Team",
+          "key": "people",
           "title": "Коллектив",
           "href": "people.html"
         },
         {
-          "key": "For students",
+          "key": "students",
           "title": "Студентам",
           "href": "students.html"
         },
         {
-          "key": "Projects",
+          "key": "projects",
           "title": "Проекты",
           "href": "projects.html"
         },
         {
-          "key": "Publications",
+          "key": "patents",
+          "title": "Патенты",
+          "href": "patents.html"
+        },
+        {
+          "key": "publications",
           "title": "Публикации",
           "href": "publications.html"
         },
         {
-          "key": "Media",
+          "key": "media",
           "title": "Медиа",
           "href": "media.html"
         },
         {
-          "key": "News",
+          "key": "news",
           "title": "Новости",
           "href": "news.html"
         }
@@ -96,14 +101,18 @@ window.LAB_CONTENT = {
         "peopleTitle": "Коллектив",
         "studentsKicker": "Для студентов",
         "studentsTitle": "Не знаешь – научим",
-        "projectsKicker": "Текущая работа",
+        "projectsKicker": "Гранты и НИР",
         "projectsTitle": "Проекты",
+        "patentsKicker": "Интеллектуальная собственность",
+        "patentsTitle": "Патенты",
         "publicationsKicker": "Результаты",
         "publicationsTitle": "Публикации",
         "mediaKicker": "Медиа",
         "mediaTitle": "Медиа",
         "newsKicker": "Новости лаборатории",
-        "newsTitle": "Новости"
+        "newsTitle": "Новости",
+        "cvKicker": "Профили коллектива",
+        "cvTitle": "CV"
       },
       "homeSections": [
         {
@@ -203,19 +212,11 @@ window.LAB_CONTENT = {
             {
               "name": "Покаместов Дмитрий Алексеевич",
               "photo": "",
-              "description": "",
+              "description": "Кандидат технических наук, доцент кафедры ТОР, ТУСУР. Специалист по неортогональному множественному доступу, многоантенным системам и помехоустойчивому кодированию.",
               "contacts": [
                 {
-                  "label": "Кандидат технических наук.",
-                  "value": ""
-                },
-                {
-                  "label": "Доцент кафедры ТОР, ТУСУР.",
-                  "value": ""
-                },
-                {
                   "label": "E-mail",
-                  "value": ""
+                  "value": "dmaltomsk@mail.ru"
                 },
                 {
                   "label": "Scholar",
@@ -224,6 +225,10 @@ window.LAB_CONTENT = {
                 {
                   "label": "ORCID",
                   "value": "0000-0002-9405-4573"
+                },
+                {
+                  "label": "CV",
+                  "value": "[CV](cv.html?person=pokamestov)"
                 }
               ],
               "photoLabel": "Ссылка на фото"
@@ -231,16 +236,8 @@ window.LAB_CONTENT = {
             {
               "name": "Крюков Яков Владимирович",
               "photo": "",
-              "description": "",
+              "description": "Кандидат технических наук, доцент кафедры ТОР, ТУСУР. Один из руководителей лаборатории; работает в области беспроводных систем связи, обработки сигналов и технологий множественного доступа.",
               "contacts": [
-                {
-                  "label": "Кандидат технических наук.",
-                  "value": ""
-                },
-                {
-                  "label": "Доцент кафедры ТОР, ТУСУР.",
-                  "value": ""
-                },
                 {
                   "label": "E-mail",
                   "value": ""
@@ -252,6 +249,10 @@ window.LAB_CONTENT = {
                 {
                   "label": "ORCID",
                   "value": "0000-0002-4115-9080"
+                },
+                {
+                  "label": "CV",
+                  "value": "[CV](cv.html?person=kryukov)"
                 }
               ],
               "photoLabel": "Ссылка на фото"
@@ -432,18 +433,85 @@ window.LAB_CONTENT = {
       },
       "projects": [
         {
-          "title": "Заглушка проекта 1",
-          "text": "Место для описания исследовательского проекта лаборатории.",
+          "title": "РНФ № 21-79-00160",
+          "text": "",
           "images": []
         },
         {
-          "title": "Заглушка проекта 2",
-          "text": "Место для описания совместной работы по беспроводным системам.",
+          "title": "РНФ № 24-29-00172",
+          "text": "",
           "images": []
         },
         {
-          "title": "Заглушка проекта 3",
-          "text": "Место для описания экспериментального исследования сетей связи.",
+          "title": "РНФ № 19-79-00087",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "РНФ № 22-79-10148",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "Приоритет 2030: макет PD-NOMA",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "Приоритет 2030: экспериментальное исследование PD-NOMA",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "Приоритет 2030: помехоустойчивое кодирование",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "Приоритет 2030: полярные коды",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "Приоритет 2030: адаптация полярных кодов",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "ПИШ ТУСУР: канал связи с RIS",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "ПИШ ТУСУР: канальное кодирование 5G NR",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "ПИШ ТУСУР: компенсация искажений",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "У.М.Н.И.К.: реконфигурируемая интеллектуальная поверхность",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "Приоритет 2030: STAR-RIS",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "Договор ТУСУР - АО НПФ \"Микран\"",
+          "text": "",
+          "images": []
+        }
+      ],
+      "patents": [
+        {
+          "title": "Раздел готовится",
+          "text": "Здесь будет размещен перечень патентов, свидетельств на программы для ЭВМ и других результатов интеллектуальной деятельности лаборатории.",
           "images": []
         }
       ],
@@ -671,6 +739,64 @@ window.LAB_CONTENT = {
         "Фотографии исследовательской деятельности",
         "Фотографии конференций"
       ],
+      "cvProfiles": [
+        {
+          "slug": "kryukov",
+          "name": "Крюков Яков Владимирович",
+          "role": "Кандидат технических наук, доцент, один из руководителей лаборатории",
+          "summary": "Специалист в области беспроводных систем связи, обработки сигналов и технологий множественного доступа. Профессиональная деятельность объединяет научные исследования, разработку программных моделей и образовательные проекты в сфере телекоммуникаций.",
+          "sections": [
+            {
+              "title": "Профессиональный профиль",
+              "text": "- 2025. Доцент кафедры телекоммуникаций и основ радиотехники ТУСУР.\n- 2023-2028. Работа над докторской диссертацией по тематике формирования, обработки и передачи сигналов в многопользовательских беспроводных системах связи с разделением каналов по мощности и реконфигурируемыми интеллектуальными поверхностями."
+            },
+            {
+              "title": "Научные направления и результаты",
+              "text": "- Основные направления исследований: неортогональный множественный доступ, помехоустойчивое кодирование, многоантенные системы, реконфигурируемые интеллектуальные поверхности, формирование и обработка сигналов для систем связи 5G/6G.\n- Автор и соавтор более 100 научных работ; более 60 публикаций индексируются в Scopus, Web of Science, перечне ВАК и \"Белом списке\".\n- Автор и соавтор 10 результатов интеллектуальной деятельности."
+            },
+            {
+              "title": "Руководство научными проектами",
+              "text": "- РНФ № 21-79-00160 \"Распределение ресурсов связи в телекоммуникационных системах с неортогональным множественным доступом\", 2021-2023.\n- РНФ № 24-29-00172 \"Улучшение характеристик систем связи с неортогональным множественным доступом с помощью полярных кодов\", 2023-2025.\n- Проекты ТУСУР по программам \"Приоритет 2030\", ПИШ ТУСУР и \"У.М.Н.И.К.\", связанные с PD-NOMA, полярными кодами, RIS и STAR-RIS."
+            },
+            {
+              "title": "Образовательная деятельность",
+              "text": "- Участвует в образовательном процессе ТУСУР с 2013 года.\n- Руководитель выпускных квалификационных работ 31 бакалавра и 18 магистрантов.\n- Ведет семь учебных дисциплин по тематике связи на русском и английском языках; разработал восемь онлайн-курсов."
+            },
+            {
+              "title": "Награды",
+              "text": "- Победитель стипендиальной программы Владимира Потанина, 2017.\n- Победитель конкурса разработок молодых ученых форума U-NOVUS, 2019.\n- II место в конкурсе \"Лучший электронный курс\" ТУСУР, 2023.\n- Лауреат премии Томской области в сфере образования, науки, здравоохранения и культуры, 2024."
+            }
+          ]
+        },
+        {
+          "slug": "pokamestov",
+          "name": "Покаместов Дмитрий Алексеевич",
+          "role": "Кандидат технических наук, доцент кафедры ТОР, ТУСУР",
+          "summary": "Специалист в области методов неортогонального множественного доступа в многоантенных системах беспроводной связи. Научная работа связана с 5G/6G, SCMA, NOMA, RSMA, полярными кодами и моделированием радиоканалов.",
+          "sections": [
+            {
+              "title": "Научная работа",
+              "text": "- Тема научно-исследовательской работы: методы неортогонального множественного доступа в многоантенных системах беспроводной связи.\n- Научный консультант: Филатов Александр Владимирович, доктор технических наук, профессор кафедры ТОР."
+            },
+            {
+              "title": "Публикации и результаты",
+              "text": "- 21 публикация в журналах, рекомендованных ВАК.\n- 15 публикаций в журналах \"Белого списка\".\n- 15 публикаций в трудах всероссийских конференций.\n- 65 публикаций в трудах международных конференций."
+            },
+            {
+              "title": "Проекты и гранты",
+              "text": "- Руководитель гранта РНФ № 19-79-00087 \"Использование методов неортогонального множественного доступа для систем беспроводной связи\", 2019-2021.\n- Руководитель гранта РНФ № 22-79-10148 \"Перспективные методы множественного доступа для будущих систем беспроводной связи 6G\", 2022-2025.\n- Руководитель проектов ТУСУР по программе \"Приоритет 2030\" и ПИШ ТУСУР по LDPC, полярным кодам, канальному кодированию 5G NR и цифровой компенсации искажений.\n- Руководитель работ по договору ТУСУР с АО НПФ \"Микран\" по разработке ПО и алгоритмов обработки сигналов модема радиорелейной линии связи, 2024."
+            },
+            {
+              "title": "Интеллектуальная собственность",
+              "text": "- Изобретения 2025 года: \"Способ оценки канала в системах передачи данных с ортогональным частотным мультиплексированием с применением Compressed Sensing\" и \"Радиометрический приемник шумовых сигналов низкой интенсивности\".\n- Программы для ЭВМ по SCMA, SCMA-MIMO, MIMO, NOMA, полярному кодированию и моделям многопользовательских систем связи.\n- Полезные модели: \"Устройство передачи информации по цепям питания\" и \"Приемо-передающий модуль радиолокационной системы\"."
+            },
+            {
+              "title": "Награды",
+              "text": "- Лауреат премии Законодательной Думы Томской области в номинации \"Технические науки\", 2018.\n- Лауреат премии Томской области в сфере образования, науки, здравоохранения и культуры, 2024."
+            }
+          ]
+        }
+      ],
       "newsItems": [
         {
           "date": "",
@@ -685,68 +811,77 @@ window.LAB_CONTENT = {
       ]
     },
     "en": {
-      "labName": "wireless laboratory",
-      "themeSelector": "Theme Settings",
+      "labName": "Wireless Communication Laboratory",
+      "themeSelector": "Theme selector",
       "home": "Home",
       "sections": [
         {
-          "key": "Team",
-          "title": "Collective",
+          "key": "people",
+          "title": "Team",
           "href": "people.html"
         },
         {
-          "key": "For students",
-          "title": "For students",
+          "key": "students",
+          "title": "Students",
           "href": "students.html"
         },
         {
-          "key": "Projects",
+          "key": "projects",
           "title": "Projects",
           "href": "projects.html"
         },
         {
-          "key": "Publications",
+          "key": "patents",
+          "title": "Patents",
+          "href": "patents.html"
+        },
+        {
+          "key": "publications",
           "title": "Publications",
           "href": "publications.html"
         },
         {
-          "key": "Media",
+          "key": "media",
           "title": "Media",
           "href": "media.html"
         },
         {
-          "key": "News",
+          "key": "news",
           "title": "News",
           "href": "news.html"
         }
       ],
       "sectionLabels": {
         "researchKicker": "Research Interests",
-        "researchTitle": "Research areas",
-        "peopleKicker": "Laboratory team",
+        "researchTitle": "Research Areas",
+        "peopleKicker": "Laboratory Team",
         "peopleTitle": "Team",
         "studentsKicker": "For Students",
-        "studentsTitle": "If you do not know yet, we will teach you",
-        "projectsKicker": "Current Work",
+        "studentsTitle": "We will teach you",
+        "projectsKicker": "Grants and Research Projects",
         "projectsTitle": "Projects",
+        "patentsKicker": "Intellectual Property",
+        "patentsTitle": "Patents",
         "publicationsKicker": "Outputs",
-        "publicationsTitle": "Publications",
+        "publicationsTitle": "Публикации",
         "mediaKicker": "Media",
         "mediaTitle": "Media",
         "newsKicker": "Laboratory News",
-        "newsTitle": "News"
+        "newsTitle": "News",
+        "cvKicker": "Team Profiles",
+        "cvTitle": "CV"
       },
       "homeSections": [
         {
-          "title": "Lab Information",
-          "text": "- The laboratory is based at the Department of Telecommunications and Radio Engineering Fundamentals (TOR) of Tomsk University of Control Systems and Radio Electronics (TUSUR).\n- Address: Russia, Tomsk, Vershinina str., 47, auditorium 317.\n- [Contact us](mailto: laboratory317@gmail.com)",
+          "title": "Laboratory Information",
+          "text": "- The laboratory is based at the Department of Telecommunications and Basic Principles of Radio Engineering, Tomsk State University of Control Systems and Radioelectronics (TUSUR).\n- Address: Russia, Tomsk, 47 Vershinin Street, room 317.",
           "images": [],
           "actions": [],
           "cards": [],
           "type": "text"
         },
         {
-          "title": "Research areas",
+          "title": "Research Areas",
           "text": "",
           "images": [
             {
@@ -777,7 +912,7 @@ window.LAB_CONTENT = {
               "images": []
             },
             {
-              "title": "Oryza sativa",
+              "title": "RIS",
               "text": "",
               "images": []
             }
@@ -785,7 +920,7 @@ window.LAB_CONTENT = {
           "type": "research"
         },
         {
-          "title": "History of the Laboratory",
+          "title": "Laboratory History",
           "text": "TODO",
           "images": [],
           "actions": [],
@@ -793,7 +928,13 @@ window.LAB_CONTENT = {
           "type": "text"
         }
       ],
-      "headerActions": [],
+      "headerActions": [
+        {
+          "label": "Contact",
+          "href": "mailto:laboratory317@gmail.com",
+          "icon": "mail"
+        }
+      ],
       "researchInterests": [
         {
           "title": "5G/6G",
@@ -816,31 +957,23 @@ window.LAB_CONTENT = {
           "images": []
         },
         {
-          "title": "Oryza sativa",
+          "title": "RIS",
           "text": "",
           "images": []
         }
       ],
       "peopleGroups": [
         {
-          "title": "Research Assistants",
+          "title": "Research Staff",
           "people": [
             {
-              "name": "Pokamestov Dmitry Alekseevich",
+              "name": "Dmitriy Pokamestov",
               "photo": "",
-              "description": "",
+              "description": "Candidate of Technical Sciences, Associate Professor at the Department of Telecommunications and Basic Principles of Radio Engineering, TUSUR. Researcher in non-orthogonal multiple access, multi-antenna systems, and error-correcting coding.",
               "contacts": [
                 {
-                  "label": "Candidate of Technical Sciences.",
-                  "value": ""
-                },
-                {
-                  "label": "Associate Professor of the THOR Department, TUSUR.",
-                  "value": ""
-                },
-                {
                   "label": "E-mail",
-                  "value": ""
+                  "value": "dmaltomsk@mail.ru"
                 },
                 {
                   "label": "Scholar",
@@ -849,23 +982,19 @@ window.LAB_CONTENT = {
                 {
                   "label": "ORCID",
                   "value": "0000-0002-9405-4573"
+                },
+                {
+                  "label": "CV",
+                  "value": "[CV](cv.html?person=pokamestov)"
                 }
               ],
-              "photoLabel": "Ссылка на фото"
+              "photoLabel": "Photo link"
             },
             {
-              "name": "Kryukov Yakov Vladimirovich",
+              "name": "Yakov Kryukov",
               "photo": "",
-              "description": "",
+              "description": "Candidate of Technical Sciences, Associate Professor at the Department of Telecommunications and Basic Principles of Radio Engineering, TUSUR. One of the laboratory leads; works on wireless communication systems, signal processing, and multiple access technologies.",
               "contacts": [
-                {
-                  "label": "Candidate of Technical Sciences.",
-                  "value": ""
-                },
-                {
-                  "label": "Associate Professor of the THOR Department, TUSUR.",
-                  "value": ""
-                },
                 {
                   "label": "E-mail",
                   "value": ""
@@ -877,21 +1006,21 @@ window.LAB_CONTENT = {
                 {
                   "label": "ORCID",
                   "value": "0000-0002-4115-9080"
+                },
+                {
+                  "label": "CV",
+                  "value": "[CV](cv.html?person=kryukov)"
                 }
               ],
-              "photoLabel": "Ссылка на фото"
+              "photoLabel": "Photo link"
             },
             {
-              "name": "Litvinov Rudolf Viktorovich",
+              "name": "Rudolf Litvinov",
               "photo": "",
               "description": "",
               "contacts": [
                 {
-                  "label": "Candidate of physical and mathematical sciences.",
-                  "value": ""
-                },
-                {
-                  "label": "Associate Professor of the THOR Department, TUSUR.",
+                  "label": "Candidate of Physical and Mathematical Sciences, Associate Professor at the Department of Telecommunications and Basic Principles of Radio Engineering, TUSUR.",
                   "value": ""
                 },
                 {
@@ -907,7 +1036,7 @@ window.LAB_CONTENT = {
                   "value": ""
                 }
               ],
-              "photoLabel": "Ссылка на фото"
+              "photoLabel": "Photo link"
             }
           ]
         },
@@ -915,29 +1044,29 @@ window.LAB_CONTENT = {
           "title": "Engineers",
           "people": [
             {
-              "name": "Stepnoy Viktor Serafimovich",
+              "name": "Viktor Stepnoy",
               "photo": "",
-              "description": "Senior Lecturer, TOR Department, TUSUR.",
+              "description": "Senior Lecturer at the Department of Telecommunications and Basic Principles of Radio Engineering, TUSUR.",
               "contacts": [
                 {
                   "label": "E-mail",
                   "value": ""
                 }
               ],
-              "photoLabel": "Ссылка на фото"
+              "photoLabel": "Photo link"
             }
           ]
         },
         {
-          "title": "PhD students",
+          "title": "Postgraduate Students",
           "people": [
             {
-              "name": "Shinkevich Artem Sergeevich",
+              "name": "Artyom Shinkevich",
               "photo": "Pasted image 20260823214412.png",
               "description": "",
               "contacts": [
                 {
-                  "label": "Assistant of the TOR Department, TUSUR.",
+                  "label": "Assistant at the Department of Telecommunications and Basic Principles of Radio Engineering, TUSUR.",
                   "value": ""
                 },
                 {
@@ -956,12 +1085,12 @@ window.LAB_CONTENT = {
               "photoAlt": "Pasted image 20260823214412"
             },
             {
-              "name": "Shalin Georgy Nikolaevich",
+              "name": "Georgy Shalin",
               "photo": "",
               "description": "",
               "contacts": [
                 {
-                  "label": "Assistant of the TOR Department, TUSUR.",
+                  "label": "Assistant at the Department of Telecommunications and Basic Principles of Radio Engineering, TUSUR.",
                   "value": ""
                 },
                 {
@@ -977,15 +1106,15 @@ window.LAB_CONTENT = {
                   "value": ""
                 }
               ],
-              "photoLabel": "Ссылка на фото"
+              "photoLabel": "Photo link"
             },
             {
-              "name": "Eremeev Sergey Alexandrovich",
+              "name": "Sergey Eremeev",
               "photo": "",
               "description": "",
               "contacts": [
                 {
-                  "label": "Assistant of the TOR Department, TUSUR.",
+                  "label": "Assistant at the Department of Telecommunications and Basic Principles of Radio Engineering, TUSUR.",
                   "value": ""
                 },
                 {
@@ -1001,15 +1130,15 @@ window.LAB_CONTENT = {
                   "value": ""
                 }
               ],
-              "photoLabel": "Ссылка на фото"
+              "photoLabel": "Photo link"
             },
             {
-              "name": "Ilyinsky Dmitry Evgenievich",
+              "name": "Dmitriy Ilinskiy",
               "photo": "",
               "description": "",
               "contacts": [
                 {
-                  "label": "Assistant of the TOR Department, TUSUR.",
+                  "label": "Assistant at the Department of Telecommunications and Basic Principles of Radio Engineering, TUSUR.",
                   "value": ""
                 },
                 {
@@ -1025,7 +1154,7 @@ window.LAB_CONTENT = {
                   "value": ""
                 }
               ],
-              "photoLabel": "Ссылка на фото"
+              "photoLabel": "Photo link"
             }
           ]
         },
@@ -1033,11 +1162,11 @@ window.LAB_CONTENT = {
           "title": "Students",
           "people": [
             {
-              "name": "Evgeny Batkovich Pogorelov",
+              "name": "Evgeniy Pogorelov",
               "photo": "",
               "description": "",
               "contacts": [],
-              "photoLabel": "Ссылка на фото"
+              "photoLabel": "Photo link"
             }
           ]
         }
@@ -1051,42 +1180,91 @@ window.LAB_CONTENT = {
         "media": "Placeholder"
       },
       "studentOffer": {
-        "lead": "",
-        "steps": [
-          {
-            "title": "Enter the field",
-            "text": "We explain the fundamentals of 5G/6G, coding, multiple access, and RIS in clear terms."
-          },
-          {
-            "title": "Get a task",
-            "text": "We help select a small research or engineering task that matches the student's current level."
-          },
-          {
-            "title": "Produce a result",
-            "text": "We support experiments, prototypes, talks, coursework, and graduation projects."
-          }
-        ],
-        "tracks": [
-          "Communication system modeling",
-          "Coding and signal processing",
-          "Network experiments",
-          "Scientific writing and talks"
-        ]
+        "lead": "TODO",
+        "steps": [],
+        "tracks": []
       },
       "projects": [
         {
-          "title": "Project placeholder 1",
-          "text": "Placeholder for a laboratory research project.",
+          "title": "RSF No. 21-79-00160",
+          "text": "",
           "images": []
         },
         {
-          "title": "Project placeholder 2",
-          "text": "Placeholder for a collaborative wireless systems activity.",
+          "title": "RSF No. 24-29-00172",
+          "text": "",
           "images": []
         },
         {
-          "title": "Project placeholder 3",
-          "text": "Placeholder for an experimental communication networks study.",
+          "title": "RSF No. 19-79-00087",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "RSF No. 22-79-10148",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "Priority 2030: PD-NOMA Prototype",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "Priority 2030: PD-NOMA Experimental Study",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "Priority 2030: Error-Correcting Codes",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "Priority 2030: Polar Codes",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "Priority 2030: Polar Code Adaptation",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "TUSUR Advanced Engineering School: RIS Channel Model",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "TUSUR Advanced Engineering School: 5G NR Channel Coding",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "TUSUR Advanced Engineering School: Digital Distortion Compensation",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "UMNIK: Reconfigurable Intelligent Surface",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "Priority 2030: STAR-RIS",
+          "text": "",
+          "images": []
+        },
+        {
+          "title": "TUSUR - Micran Contract",
+          "text": "",
+          "images": []
+        }
+      ],
+      "patents": [
+        {
+          "title": "Coming soon",
+          "text": "This section will contain patents, software registrations, and other intellectual property results of the laboratory.",
           "images": []
         }
       ],
@@ -1094,22 +1272,22 @@ window.LAB_CONTENT = {
         "lead": "",
         "sections": [
           {
-            "title": "Selected",
+            "title": "Избранные",
             "text": "",
             "items": [
               "**Fairness-Aware Comparison of PD-NOMA and OMA Under Max-Min, Proportional, and Round-Robin Scheduling.** Yakov Kryukov, Dmitriy Pokamestov, Artem Shinkevich, Georgy Shalin, Sergey Eremeev, Dmitriy Ilinskiy. *Internet Technology Letters*, vol. 9, no. 2, e70219. 2026. [DOI](https://doi.org/10.1002/itl2.70219)",
               "**Comparative analysis of multiple access techniques for 6G communication systems.** Dmitriy Pokamestov, Yakov Kryukov, Eugeniy Rogozhnikov, Georgiy Shalin, Artem Shinkevich, Rudolf Litvinov. *Telecommunication Systems*, vol. 88, no. 3, 104. 2025. [DOI](https://doi.org/10.1007/s11235-025-01333-8)",
               "**Evaluation of the capacity of Rate-Splitting Multiple Access communication systems.** DА Pokamestov, АV Filatov, Ya V Kryukov, АS Shinkevich, GN Shalin, ЕV Rogozhnikov. *Journal of Communications Technology and Electronics*, vol. 70, no. 1, pp. 88–95. 2025. [DOI](https://doi.org/10.31857/S0033849425010102)",
-              "**6G communication systems: concept, trends, physical level technologies.** DA Pokamestov, Ya V Kryukov, RR Abenov, EV Rogozhnikov, AA Brovkin, AS Shinkevich, GN Shalin. *Journal of Communications Technology and Electronics*, vol. 69, no. 1, pp. 3–33. 2024. [DOI](https://doi.org/10.31857/S0033849424010016)",
+              "**Cистемы связи 6G: концепция, тренды, технологии физического уровня.** ДА Покаместов, ЯВ Крюков, РР Абенов, ЕВ Рогожников, АА Бровкин, АС Шинкевич, ГН Шалин. *Радиотехника и электроника*, vol. 69, no. 1, pp. 3–33. 2024.",
               "**Implementation of scheduling in hybrid power domain non-orthogonal multiple access system considering adaptive modulation and coding schemes selection.** Yakov V Kryukov, Dmitriy A Pokamestov, Eugeniy V Rogozhnikov. *International Journal of Communication Systems*, vol. 37, no. 2, e5642. 2024. [DOI](https://doi.org/10.1002/dac.5642)",
               "**Adaptation of signal with NOMA and polar codes to the Rayleigh channel.** Dmitriy Pokamestov, Yakov Kryukov, Eugeniy Rogozhnikov, Georgiy Shalin, Artem Shinkevich, Serafim Novichkov. *Symmetry*, vol. 14, no. 10, 2103. 2022. [DOI](https://doi.org/10.3390/sym14102103)",
               "**Symbol Error-Rate Analytical Expressions for a Two-User PD-NOMA System with Square QAM.** Yakov V Kryukov, Dmitriy A Pokamestov, Serafim A Novichkov. *Symmetry*, vol. 13, no. 11, 2153. 2021. [DOI](https://doi.org/10.3390/sym13112153)",
-              "**Concepts of the physical level of the fifth generation communications systems.** DA Pokamestov, YV Kryukov, EV Rogozhnikov, RR Abenov, AY Demidov. *Radioelectronics and Communications Systems*, vol. 60, no. 7, pp. 285–296. 2017. [DOI](https://doi.org/10.3103/S0735272717070019)"
+              "**Концепция физического уровня систем связи пятого поколения.** Дмитрий Алексеевич Покаместов, Яков Владимирович Крюков, Евгений Васильевич Рогожников, Ренат Рамазанович Абенов, Анатолий Яковлевич Демидов. *Известия высших учебных заведений. Радиоэлектроника*, vol. 60, no. 7, pp. 367–382. 2017. [Источник](https://elibrary.ru/item.asp?id=30452010)"
             ],
             "groups": []
           },
           {
-            "title": "All publications",
+            "title": "Все публикации",
             "text": "",
             "items": [],
             "groups": [
@@ -1118,9 +1296,8 @@ window.LAB_CONTENT = {
                 "items": [
                   "**A Novel Genetic Algorithm for Low-Complexity PAPR Reduction in OTFS Modulation.** Hashem Khaled Rehab, Artyom Konovalchikov, Eugeniy Rogozhnikov, Dmitriy Pokamestov, Kirill Dinochenko. *2026 Systems of Signal Synchronization, Generating and Processing in Telecommunications (SYNCHROINFO)*, pp. 1–8. 2026.",
                   "**Fairness-Aware Comparison of PD-NOMA and OMA Under Max-Min, Proportional, and Round-Robin Scheduling.** Yakov Kryukov, Dmitriy Pokamestov, Artem Shinkevich, Georgy Shalin, Sergey Eremeev, Dmitriy Ilinskiy. *Internet Technology Letters*, vol. 9, no. 2, e70219. 2026. [DOI](https://doi.org/10.1002/itl2.70219)",
-                  "**Passive Microwave Radiometer of the 3-mm Wavelength Range for Routine Observations of Natural Environments.** AV Filatov, DA Pokamestov, Ya V Kryukov, AS Shinkevich, GA Shalin. *Radiophysics and Quantum Electronics*, pp. 1–9. 2026.",
-                  "**Множественный доступ с разделением по скорости: современное состояние и перспективы развития.** А. С. Шинкевич, Д. А. Покаместов, Я. В. Крюков, Г. Н. Шалин, С. А. Еремеев, Д. Е. Ильинский. *Доклады Томского государственного университета систем управления и радиоэлектроники*, vol. 29, no. 1 (89), pp. 53–67. 2026. [Link](https://elibrary.ru/item.asp?id=91678911)",
-                  "**Расчет мощности для обеспечения заданного качества приема в системе PD-NOMA с двумя пользователями и QAM-сигналами.** Я. В. Крюков, Д. А. Покаместов, А. С. Задорин, А. В. Филатов. *Радиоэлектроника. Наносистемы. Информационные технологии*, vol. 18, no. 1, pp. 93–100. 2026. [Link](https://elibrary.ru/item.asp?id=89121112)"
+                  "**Множественный доступ с разделением по скорости: современное состояние и перспективы развития.** А. С. Шинкевич, Д. А. Покаместов, Я. В. Крюков, Г. Н. Шалин, С. А. Еремеев, Д. Е. Ильинский. *Доклады Томского государственного университета систем управления и радиоэлектроники*, vol. 29, no. 1 (89), pp. 53–67. 2026. [Источник](https://elibrary.ru/item.asp?id=91678911)",
+                  "**Расчет мощности для обеспечения заданного качества приема в системе PD-NOMA с двумя пользователями и QAM-сигналами.** Я. В. Крюков, Д. А. Покаместов, А. С. Задорин, А. В. Филатов. *Радиоэлектроника. Наносистемы. Информационные технологии*, vol. 18, no. 1, pp. 93–100. 2026. [Источник](https://elibrary.ru/item.asp?id=89121112)"
                 ]
               },
               {
@@ -1134,42 +1311,43 @@ window.LAB_CONTENT = {
                   "**Influence of Phase States of Binary Unit Cell on Ris Characteristics.** Sergey Eremeev, Dmitriy Ilinskiy, Yakov Kryukov, Dmitriy Pokamestov, Eugeniy Rogozhnikov, Ivan Rybakov. *2025 IEEE 26th International Conference of Young Professionals in Electron Devices and Materials (EDM)*, pp. 520–524. 2025.",
                   "**Linear Frequency Modulated Signals in a Multipath Channel with Time and Frequency Offsets.** S Mukhamadiev, E Rogozhnikov, K Dinochenko, N Kalashnikova, Y Kryukov, D Pokamestov, E Lomakov. *Radiotehnika i èlektronika*, vol. 70, no. 6, pp. 583–597. 2025.",
                   "**Modeling and Prototyping of Unit Cell for Reconfigurable Intelligent Surface: Electromagnetic Model, Design and Circuitry.** Dmitriy Ilinskiy, Sergey Eremeev, Yakov Kryukov, Dmitriy Pokamestov, Georgiy Shalin, Artem Shinkevich. *2025 IEEE 26th International Conference of Young Professionals in Electron Devices and Materials (EDM)*, pp. 450–453. 2025.",
-                  "**Моделирование каналов многопользовательской системы связи с STAR-RIS в quadriga.** Я. В. Крюков, Д. А. Покаместов, С. А. Еремеев, Д. Е. Ильинский, Г. Н. Шалин, А. С. Шинкевич. *Радиоэлектроника. Наносистемы. Информационные технологии*, vol. 17, no. 6, pp. 727–736. 2025. [Link](https://elibrary.ru/item.asp?id=88792041)",
-                  "**Однопортовое измерение RIS: теория, расчётная модель и эксперимент на 2,4 ггц.** С. А. Еремеев, Д. Е. Ильинский, Я. В. Крюков. *Шарыгинские чтения: Международная научная конференция ведущих научных школ в области радиолокации, радионавигации и радиоэлектронных систем передачи информации*, vol. 1, no. 1, pp. 139–144. 2025. [Link](https://elibrary.ru/item.asp?id=89085072)",
+                  "**Моделирование каналов многопользовательской системы связи с STAR-RIS в quadriga.** Я. В. Крюков, Д. А. Покаместов, С. А. Еремеев, Д. Е. Ильинский, Г. Н. Шалин, А. С. Шинкевич. *Радиоэлектроника. Наносистемы. Информационные технологии*, vol. 17, no. 6, pp. 727–736. 2025. [Источник](https://elibrary.ru/item.asp?id=88792041)",
+                  "**Однопортовое измерение RIS: теория, расчётная модель и эксперимент на 2,4 ггц.** С. А. Еремеев, Д. Е. Ильинский, Я. В. Крюков. *Шарыгинские чтения: Международная научная конференция ведущих научных школ в области радиолокации, радионавигации и радиоэлектронных систем передачи информации*, vol. 1, no. 1, pp. 139–144. 2025. [Источник](https://elibrary.ru/item.asp?id=89085072)",
+                  "**Пассивный микроволновый радиометр 3-миллиметрового диапазона длин волн для проведения режимных наблюдений природных сред.** А. В. Филатов, Д. А. Покаместов, Я. В. Крюков, А. С. Шинкевич, Г. А. Шалин. *Известия высших учебных заведений. Радиофизика*, vol. 68, no. 7, pp. 545–555. 2025. [DOI](https://doi.org/10.52452/00213462_2025_68_07_545)",
                   "**Полярные коды: обзор подходов и направлений исследований.** Георгий Николаевич Шалин, Дмитрий Алексеевич Покаместов, Яков Владимирович Крюков, Артём Сергеевич Шинкевич, Сергей Александрович Еремеев, Дмитрий Евгеньевич Ильинский. *Доклады Томского государственного университета систем управления и радиоэлектроники*, vol. 28, no. 3, pp. 14–26. 2025.",
-                  "**Разработка элементарной ячейки для реконфигурируемой интеллектуальной поверхности.** Д. Е. Ильинский, С. А. Еремеев, Я. В. Крюков. *Сборник избранных статей научной сессии ТУСУР*, no. 1-1, pp. 173–176. 2025. [Link](https://elibrary.ru/item.asp?id=82965338)"
+                  "**Разработка элементарной ячейки для реконфигурируемой интеллектуальной поверхности.** Д. Е. Ильинский, С. А. Еремеев, Я. В. Крюков. *Сборник избранных статей научной сессии ТУСУР*, no. 1-1, pp. 173–176. 2025. [Источник](https://elibrary.ru/item.asp?id=82965338)"
                 ]
               },
               {
                 "title": "2024",
                 "items": [
-                  "**6G communication systems: concept, trends, physical level technologies.** DA Pokamestov, Ya V Kryukov, RR Abenov, EV Rogozhnikov, AA Brovkin, AS Shinkevich, GN Shalin. *Journal of Communications Technology and Electronics*, vol. 69, no. 1, pp. 3–33. 2024. [DOI](https://doi.org/10.31857/S0033849424010016)",
                   "**BER analytical expression for two-user PD-NOMA with square QAM by polynomial approximation.** Yakov V Kryukov, Dmitriy A Pokamestov, Eugeniy V Rogozhnikov. *AIP Conference Proceedings*, vol. 2969, no. 1, 050022. 2024.",
                   "**Comparison of PD-NOMA Capacity with Conventional and Joint Gray-Mapping.** Andrey A Brovkin, Yakov V Kryukov, Dmitriy A Pokamestov, Artem S Shinkevich, Georgiy N Shalin, Dmitriy E Ilinskiy. *2024 IEEE 25th International Conference of Young Professionals in Electron Devices and Materials (EDM)*, pp. 520–523. 2024.",
+                  "**Cистемы связи 6G: концепция, тренды, технологии физического уровня.** ДА Покаместов, ЯВ Крюков, РР Абенов, ЕВ Рогожников, АА Бровкин, АС Шинкевич, ГН Шалин. *Радиотехника и электроника*, vol. 69, no. 1, pp. 3–33. 2024.",
                   "**Design of SCMA codebooks based on APSK constellations for Rayleigh fading channels.** I Kanatbekuli, D Pokamestov, Y Kryukov, G Shalin, A Shinkevich. *Third International Conference on Digital Technologies, Optics, and Materials Science (DTIEE 2024)*, vol. 13217, pp. 75–83. 2024.",
                   "**Evaluation of the efficiency of rate-splitting multiple access in next-generation communication systems scenarios.** Dmitriy Pokamestov, Artyom Shinkevich, Yakov Kryukov, Evgeniy Rogozhnikov, Georgiy Shalin, Sergey Zemlyanukhin. *2024 IEEE 9th All-Russian Microwave Conference (RMC)*, pp. 161–165. 2024.",
-                  "**Formation of extended modulation code schemes based on the LDPC codec 5G NR.** Denis V Rybalov, Andrey A Moiseenko, Dmitry A Pokamestov, Yakov V Kryukov, Alexander V Filatov, Alexander M Zabolotskiy. *T-Comm-Телекоммуникации и Транспорт*, vol. 18, no. 12, pp. 41–47. 2024.",
                   "**Implementation of scheduling in hybrid power domain non-orthogonal multiple access system considering adaptive modulation and coding schemes selection.** Yakov V Kryukov, Dmitriy A Pokamestov, Eugeniy V Rogozhnikov. *International Journal of Communication Systems*, vol. 37, no. 2, e5642. 2024. [DOI](https://doi.org/10.1002/dac.5642)",
                   "**MCS map for link-level simulation of two-user PD-NOMA system.** Yakov Kryukov, Dmitriy Pokamestov, Andrey Brovkin, Artem Shinkevich, Georgiy Shalin. *Proceedings on Engineering*, vol. 6, no. 1, pp. 151–160. 2024.",
                   "**Reducing Successive Interference Cancellation Iterations in Hybrid Beamforming Multiuser Massive Multiple Input Multiple Output Systems Through Grouping Users with Symmetry Channels.** Hashem Khaled Rehab, Eugeniy Rogozhnikov, Kirill Savenko, Semen Mukhamadiev, Yakov Kryukov, Dmitriy Pokamestov. *Symmetry*, vol. 16, no. 11, 1437. 2024.",
                   "**Simulation of RIS-assisted OFDM multipath channel.** Sergey A Eremeev, Dmitriy E Ilinskiy, Yakov V Kryukov, Dmitriy A Pokamestov, Georgiy N Shalin, Artem S Shinkevich. *2024 IEEE 25th International Conference of Young Professionals in Electron Devices and Materials (EDM)*, pp. 660–663. 2024.",
                   "**Алгоритм совместной оценки и компенсации ошибок временной и частотной синхронизации сигналов с возможностью регулирования точности оценки.** С. М. Мухамадиев, Е. В. Рогожников, Х. К. Х. А. А. Рехаб, К. В. Диноченко, Я. В. Крюков, Н. Г. Калашникова. *Радиоэлектроника. Наносистемы. Информационные технологии*, vol. 16, no. 3, pp. 331–340. 2024. [DOI](https://doi.org/10.17725/rensit.2024.16.331)",
-                  "**Применение физического уровня 5G NR в космических коммуникациях, оценка эффективности.** Евгений Васильевич Рогожников, Эдгар Михайлович Дмитриев, Данила Александрович Кондрашов, Яков Владимирович Крюков, Артем Владимирович Коновальчиков, Семен Минисович Мухамадиев. *Радиоэлектроника. Наносистемы. Информационные технологии*, vol. 16, no. 1, pp. 143–156. 2024. [DOI](https://doi.org/10.17725/j.rensit.2024.16.143)"
+                  "**Применение физического уровня 5G NR в космических коммуникациях, оценка эффективности.** Евгений Васильевич Рогожников, Эдгар Михайлович Дмитриев, Данила Александрович Кондрашов, Яков Владимирович Крюков, Артем Владимирович Коновальчиков, Семен Минисович Мухамадиев. *Радиоэлектроника. Наносистемы. Информационные технологии*, vol. 16, no. 1, pp. 143–156. 2024. [DOI](https://doi.org/10.17725/j.rensit.2024.16.143)",
+                  "**Формирование расширенных сигнально-кодовых конструкций на основе ldpс кодека 5G NR.** Денис Вячеславович Рыбалов, Андрей Александрович Моисеенко, Дмитрий Алексеевич Покаместов, Яков Владимирович Крюков, Александр Владимирович Филатов, Александр Михайлович Заболоцкий. *T Comm*, vol. 18, no. 12. 2024."
                 ]
               },
               {
                 "title": "2023",
                 "items": [
-                  "**Adaptation of the polar coding procedure in 5G NR for signaling in rayleigh channels.** G. N. Shalin, D. A. Pokamestov, Ya. V. Krykov, A. V. Filatov, A. S. Shinkevic, A. A. Brovkin. *T-Comm*, vol. 17, no. 11, pp. 58–63. 2023. [Link](https://elibrary.ru/item.asp?id=59722088)",
-                  "**Comparison of Theoretical and Real Throughput of PD-NOMA.** Ya V Kryukov, DA Pokamestov, EV Rogozhnikov. *Journal of Communications Technology and Electronics*, vol. 68, no. 1, pp. 88–95. 2023.",
+                  "**Adaptation of the polar coding procedure in 5G NR for signaling in rayleigh channels.** G. N. Shalin, D. A. Pokamestov, Ya. V. Krykov, A. V. Filatov, A. S. Shinkevic, A. A. Brovkin. *T-Comm*, vol. 17, no. 11, pp. 58–63. 2023. [Источник](https://elibrary.ru/item.asp?id=59722088)",
                   "**Differential properties of polar codes.** Georgiy Shalin, Dmitriy Pokamestov, Yakov Kryukov, Artem Shinkevich, Andrey Brovkin, Eugeniy Rogozhnikov. *E3S Web of Conferences*, vol. 376, 01060. 2023.",
                   "**Evaluation of LDPC codes efficiency in channels with fading.** Artem Shinkevich, Dmitriy Pokamestov, Yakov Kryukov, Georgiy Shalin, Andrey Brovkin, Eugeniy Rogozhnikov. *E3S Web of Conferences*, vol. 376, 01061. 2023.",
                   "**Method for Digital Cancellation of System Interference in a Full-Duplex Power Line Communication System.** Semen Mukhamadiev, Eugeniy Rogozhnikov, Edgar Dmitriyev, Dmitriy Pokamestov, Yakov Kryukov, Serafim Novichkov, Dmitry Lakontsev. *Electronics*, vol. 12, no. 10, 2211. 2023.",
                   "**Representation of ICI as AWGN in PD-NOMA system model.** Yakov V Kryukov, Dmitriy A Pokamestov, Andrey A Brovkin. *2023 IEEE 24th International Conference of Young Professionals in Electron Devices and Materials (EDM)*, pp. 580–583. 2023.",
-                  "**Моделирование карты радиопокрытия для систем PD-NOMA в сценарии robotics communication.** С. А. Еремеев, Д. Е. Ильинский, Ю. И. Можаров, А. Д. Долженко, Я. В. Крюков. *Сборник избранных статей научной сессии ТУСУР*, no. 1-1, pp. 139–141. 2023. [Link](https://elibrary.ru/item.asp?id=54515120)",
-                  "**Моделирование радиокарты помещения для оценки качества связи различных устройств.** Д. Е. Ильинский, Ю. И. Можаров, С. А. Еремеев, А. Д. Долженко, Я. В. Крюков. *Сборник избранных статей научной сессии ТУСУР*, no. 1-1, pp. 123–125. 2023. [Link](https://elibrary.ru/item.asp?id=54515115)",
+                  "**Моделирование карты радиопокрытия для систем PD-NOMA в сценарии robotics communication.** С. А. Еремеев, Д. Е. Ильинский, Ю. И. Можаров, А. Д. Долженко, Я. В. Крюков. *Сборник избранных статей научной сессии ТУСУР*, no. 1-1, pp. 139–141. 2023. [Источник](https://elibrary.ru/item.asp?id=54515120)",
+                  "**Моделирование радиокарты помещения для оценки качества связи различных устройств.** Д. Е. Ильинский, Ю. И. Можаров, С. А. Еремеев, А. Д. Долженко, Я. В. Крюков. *Сборник избранных статей научной сессии ТУСУР*, no. 1-1, pp. 123–125. 2023. [Источник](https://elibrary.ru/item.asp?id=54515115)",
                   "**Помехоустойчивость многопользовательских систем MIMO при неидеальной оценке канала и других искажениях.** Артём Шинкевич, Дмитрий Алексеевич Покаместов, Яков Владимирович Крюков, Евгений Васильевич Рогожников, Георгий Николаевич Шалин, Андрей Александрович Бровкин. *Радиоэлектроника. Наносистемы. Информационные технологии*, vol. 15, no. 4, pp. 441–452. 2023.",
-                  "**Распределение ресурса системы мобильной связи согласно стратегии proportional fair.** А. А. Бровкин, Я. В. Крюков, Д. А. Покаместов. *Сборник избранных статей научной сессии ТУСУР*, no. 1-3, pp. 111–114. 2023. [Link](https://elibrary.ru/item.asp?id=54623922)"
+                  "**Распределение ресурса системы мобильной связи согласно стратегии proportional fair.** А. А. Бровкин, Я. В. Крюков, Д. А. Покаместов. *Сборник избранных статей научной сессии ТУСУР*, no. 1-3, pp. 111–114. 2023. [Источник](https://elibrary.ru/item.asp?id=54623922)",
+                  "**Сравнение теоретической и реальной пропускной способности PD-NOMA.** Я. В. Крюков, Д. А. Покаместов, Е. В. Рогожников. *Радиотехника и электроника*, vol. 68, no. 1, pp. 95–102. 2023. [Источник](https://elibrary.ru/item.asp?id=50404421)"
                 ]
               },
               {
@@ -1181,7 +1359,7 @@ window.LAB_CONTENT = {
                   "**Scheduling PD-NOMA with round-robin, equal-rate and proportional-fair strategies.** Andrey A Brovkin, Yakov V Kryukov, Dmitriy A Pokamestov, Evgeniy V Rogozhnikov, Georgiy N Shalin, Artyom S Shinkevich. *2022 International Siberian Conference on Control and Communications (SIBCON)*, pp. 1–6. 2022.",
                   "**SCMA-LDPC coded communication system.** Dmitriy Pokamestov, Artem Shinkevich, Yakov Kryukov, Georgiy Shalin, Eugeniy Rogozhnikov, Edgar Dmitriyev. *2022 International Siberian Conference on Control and Communications (SIBCON)*, pp. 1–5. 2022.",
                   "**Simulation of Massive Transmission in Wide Area UNB LPWANs.** Ya V Kryukov, DA Pokamestov. *Proceedings of the Computational Methods in Systems and Software*, pp. 600–605. 2022.",
-                  "**Исследование моделей пространственно-временного кодирования MIMO.** А. Н. Соломеина, Д. В. Митченков, Д. А. Покаместов, Я. В. Крюков. *Сборник избранных статей научной сессии ТУСУР*, no. 1-2, pp. 211–214. 2022. [Link](https://elibrary.ru/item.asp?id=49525475)",
+                  "**Исследование моделей пространственно-временного кодирования MIMO.** А. Н. Соломеина, Д. В. Митченков, Д. А. Покаместов, Я. В. Крюков. *Сборник избранных статей научной сессии ТУСУР*, no. 1-2, pp. 211–214. 2022. [Источник](https://elibrary.ru/item.asp?id=49525475)",
                   "**Оценка эффективности LDPC кодов в системах связи 5G NR.** АС Шинкевич, ДА Покаместов, ГН Шалин, АА Жалсараев. *Вызовы цифровой экономики: импортозамещение и стратегические приоритеты развития на региональном уровне*, 694. 2022.",
                   "**Приемник сигналов многоантенных систем связи с множественным доступом на основе разреженных кодов, основанный на qr-разложении.** Канатбекулы Ислам, Дмитрий Алексеевич Покаместов, Яков Владимирович Крюков, Евгений Васильевич Рогожников, Ренат Рамазанович Абенов. *Радиоэлектроника. Наносистемы. Информационные технологии*, vol. 14, no. 3, pp. 291–300. 2022.",
                   "**Сравнение декодеров группового сигнала с неортогональным множественным доступом, сформированного из сигнально-кодовых конструкций LTE.** Яков Владимирович Крюков, Дмитрий Алексеевич Покаместов, Андрей Александрович Бровкин, Евгений Васильевич Рогожников. *Радиоэлектроника. Наносистемы. Информационные технологии*, vol. 14, no. 4, pp. 463–472. 2022.",
@@ -1255,7 +1433,7 @@ window.LAB_CONTENT = {
                   "**Исследование помехоустойчивости каналов связи с уплотнением по мощности.** Сержан Серикович Сарыпбеков, Яков Владимирович Крюков. *Молодой ученый*, no. 18, pp. 88–92. 2018.",
                   "**Исследование помехоустойчивости множественного канала связи с мощностным уплотнением на ортогональных несущих pd/ofmda.** Владимир Иванович Иванов, Яков Владимирович Крюков. *Сборник избранных статей научной сессии ТУСУР*, no. 1-1, pp. 62–64. 2018.",
                   "**Канал связи с мультиплексированием абонентов по мощности.** Артем Аркадьевич Охрименко, Яков Владимирович Крюков, Артур Викторович Местников, Александр Николаевич Глазырин. *Электронные средства и системы управления. Материалы докладов Международной научно-практической конференции*, no. 1-1, pp. 12–16. 2018.",
-                  "**Метод множественного доступа с разделением каналов по мощности.** Я. В. Крюков, А. Я. Демидов, Д. А. Покаместов, Е. В. Рогожников, Р. Р. Абенов. *Омский научный вестник*, no. 6 (162), pp. 184–188. 2018. [Link](https://elibrary.ru/item.asp?id=36721877)",
+                  "**Метод множественного доступа с разделением каналов по мощности.** Я. В. Крюков, А. Я. Демидов, Д. А. Покаместов, Е. В. Рогожников, Р. Р. Абенов. *Омский научный вестник*, no. 6 (162), pp. 184–188. 2018. [Источник](https://elibrary.ru/item.asp?id=36721877)",
                   "**Метод множественного доступа с разделением каналов по мощности на ортогональных несущих.** Яков Владимирович Крюков, Анатолий Яковлевич Демидов, Дмитрий Алексеевич Покаместов. *T-Comm-Телекоммуникации и Транспорт*, vol. 12, no. 1, pp. 17–22. 2018.",
                   "**Оценка вычислительной сложности демодуляции PD-NOMA сигнала.** ЯВ Крюков, ЮС Громова. *Гагаринские чтения-2018*, pp. 239–240. 2018.",
                   "**Проблемы оценки канала в системе с частотным мультиплексированием с использованием банка фильтров.** Ренат Рамазанович Абенов, Евгений Васильевич Рогожников, Дмитрий Алексеевич Покаместов, Яков Владимирович Крюков, Анатолий Яковлевич Демидов. *Вестник СибГУТИ*, no. 1, pp. 72–78. 2018.",
@@ -1265,9 +1443,9 @@ window.LAB_CONTENT = {
               {
                 "title": "2017",
                 "items": [
-                  "**Concepts of the physical level of the fifth generation communications systems.** DA Pokamestov, YV Kryukov, EV Rogozhnikov, RR Abenov, AY Demidov. *Radioelectronics and Communications Systems*, vol. 60, no. 7, pp. 285–296. 2017. [DOI](https://doi.org/10.3103/S0735272717070019)",
                   "**Dynamically changing SCMA codebooks.** DA Pokamestov, A Ya Demidov, Ya V Kryukov, EV Rogozhnikov. *2017 International Siberian Conference on Control and Communications (SIBCON)*, pp. 1–4. 2017.",
                   "**Full duplex wireless communication system, analog and digital cancellation, experimental research.** EV Rogozhnikov, AS Koldomov, DA Pokamestov, Ya V Kryukov. *2017 International Siberian Conference on Control and Communications (SIBCON)*, pp. 1–5. 2017.",
+                  "**Концепция физического уровня систем связи пятого поколения.** Дмитрий Алексеевич Покаместов, Яков Владимирович Крюков, Евгений Васильевич Рогожников, Ренат Рамазанович Абенов, Анатолий Яковлевич Демидов. *Известия высших учебных заведений. Радиоэлектроника*, vol. 60, no. 7, pp. 367–382. 2017. [Источник](https://elibrary.ru/item.asp?id=30452010)",
                   "**Расчёт зон обслуживания кластера базовых станций систем сотовой связи при заданном распределении абонентов.** Дмитрий Алексеевич Покаместов, Василий Андреевич Кологривов, Галина Петровна Бабур-Карателли, Яков Владимирович Крюков. *Вестник СибГУТИ*, no. 2 (38), pp. 26–34. 2017."
                 ]
               },
@@ -1275,23 +1453,23 @@ window.LAB_CONTENT = {
                 "title": "2016",
                 "items": [
                   "**Decrease in the computational complexity of the signal processing algorithms for passive radars using the signals of illuminators of opportunity.** Eugeniy V Rogozhnikov, Dmitriy A Pokamestov, Renat R Abenov. *2016 17th International Conference of Young Specialists on Micro/Nanotechnologies and Electron Devices (EDM)*, pp. 168–172. 2016.",
-                  "**Formation and processing of OFDM signals.** VV Kovalev, O Yu Seleckaya, DA Pokamestov. *Young scientist*, no. 14, 118. 2016.",
-                  "**Forming matrix of sparse code multiple access.** DA Pokamestov, A Ya Demidov, Ya V Kryukov. *Proc. TUSUR*, vol. 19, no. 3, pp. 65–69. 2016.",
-                  "**Power calculation algorithm in non-orthogonal multiple access NOMA.** Ya V Kryukov, A Ya Demidov, DA Pokamestov. *Proc. TUSUR*, vol. 19, no. 4, pp. 91–94. 2016.",
-                  "**Powerline Communications Channel: Modeling and Noise Monitoring.** Renat R. Abenov, Dmitriy A. Pokamestov, Andrey A. Geltser, Yakov V. Kryukov, Evgeniy V. Rogozhnikov. *Президиум организационного комитета*, pp. 7–13. 2016. [Link](https://elibrary.ru/item.asp?id=26827973)",
+                  "**Powerline Communications Channel: Modeling and Noise Monitoring.** Renat R. Abenov, Dmitriy A. Pokamestov, Andrey A. Geltser, Yakov V. Kryukov, Evgeniy V. Rogozhnikov. *Президиум организационного комитета*, pp. 7–13. 2016. [Источник](https://elibrary.ru/item.asp?id=26827973)",
+                  "**Алгоритм расчета мощности каналов при неортогональном множественном доступе NOMA.** Яков Владимирович Крюков, Анатолий Яковлевич Демидов, Дмитрий Алексеевич Покаместов. *Доклады Томского государственного университета систем управления и радиоэлектроники*, vol. 19, no. 4, pp. 91–94. 2016.",
+                  "**Влияние формирующих матриц на помехозащищенность каналов связи с множественным доступом на основе разреженных кодов.** Дмитрий Алексеевич Покаместов, Анатолий Яковлевич Демидов, Яков Владимирович Крюков. *Доклады Томского государственного университета систем управления и радиоэлектроники*, vol. 19, no. 3, pp. 65–69. 2016.",
                   "**Использование эквалайзирования для борьбы с многолучевым распространением.** Василий Васильевич Ковалев, Дмитрий Алексеевич Покаместов. *Science Time*, no. 7 (31), pp. 104–112. 2016.",
                   "**Метод неортогонального множественного доступа.** ЯВ Крюков, АЯ Демидов, ДА Покаместов. *26-я Международная Крымская конференция\" СВЧ-техника и телекоммуникационные технологии\"(КрыМиКо'2016)*, pp. 658–664. 2016.",
                   "**Множественный доступ с разреженным кодом.** ДА Покаместов, АЯ Демидов, ЯВ Крюков. *26-я Международная Крымская конференция\" СВЧ-техника и телекоммуникационные технологии\"(КрыМиКо'2016)*, pp. 693–699. 2016.",
                   "**Помехоустойчивость канала управления системы LTE.** Яков Крюков, Дмитрий Покаместов, Евгений Рогожников. *Технологии и средства связи*, no. 4, pp. 54–57. 2016.",
+                  "**Формирование и обработка OFDM сигналов.** Василий Васильевич Ковалев, Оксана Юрьевна Селецкая, Дмитрий Алексеевич Покаместов. *Молодой ученый*, no. 14, pp. 151–154. 2016.",
                   "**Формирование и обработка сигналов множественного доступа с разреженным кодом.** ДА Покаместов, АЯ Демидов, ЯВ Крюков, ЕВ Рогожников, РР Абенов. *Электросвязь*, no. 10, pp. 56–61. 2016."
                 ]
               },
               {
                 "title": "2015",
                 "items": [
-                  "**Method of suppression of the direct signal illumination in multi-station passive radar using the signals from third-party sources.** EV Rogozhnikov, YV Kryukov, AA Shipengult, EP Voroshilin, et al.. *Izvestiya MGTU MAMI*, vol. 9, no. 1-4, pp. 81–87. 2015.",
                   "**Multipath powerline communications channel (PLC) modelling.** Renat Abenov, Dmitriy Pokamestov, Andrew Geltser. *2015 IEEE International Conference on Microwaves, Communications, Antennas and Electronic Systems (COMCAS)*, pp. 1–4. 2015.",
                   "**Multirate wideband communication channel.** YV Krukov, EV Rogozhnikov, AA Shibelgut. *2015 International Siberian Conference on Control and Communications (SIBCON)*, pp. 1–4. 2015.",
+                  "**Метод подавления прямого сигнала подсвета в многопозиционной пассивной РЛС, работающей по сигналам сторонних источников.** ЕВ Рогожников, ЯВ Крюков, АА Шибельгут, ЕП Ворошилин. *Известия МГТУ МАМИ*, vol. 4, no. 1, pp. 81–87. 2015.",
                   "**Регистратор OFDM сигналов на базе плис aLTEra.** ДА Покаместов, АВ Максимов, ЯВ Крюков. *Многоядерные процессоры, параллельное программирование, ПЛИС, системы обработки сигналов*, vol. 1, no. 5, pp. 57–62. 2015.",
                   "**Эквалайзирование канала данных системы LTE с частотно-селективными замираниями и аддитивным гауссовым шумом.** Яков Владимирович Крюков, Дарья Николаевна Ушарова, Александр Сергеевич Вершинин. *Молодой ученый*, no. 10, pp. 244–247. 2015."
                 ]
@@ -1300,8 +1478,8 @@ window.LAB_CONTENT = {
                 "title": "2014",
                 "items": [
                   "**Method for increasing the accuracy of the doppler frequency shift estimation in the passive radar systems operated by signals from the telecommunication sources.** EV Rogozhnikov, YV Krukov, DA Pokamestov. *Applied and Fundamental Studies*, pp. 73–76. 2014.",
-                  "**Phase noise model considering spectral mask of frequency synthesizers and signal generators.** Яков Владимирович Крюков, Евгений Васильевич Рогожников, Дмитрий Алексеевич Покаместов. *Bulletin of the Tomsk Polytechnic University Geo Assets Engineering*, vol. 325, no. 5, pp. 45–51. 2014.",
                   "**Декодер Витерби.** ВА Ахмадулина, ДА Каримова, ДА Покаместов. *Электронные средства и системы управления. Материалы докладов Международной научно-практической конференции*, no. 1, pp. 4–6. 2014.",
+                  "**Модель фазового шума с учетом спектральной маски синтезаторов частоты и генераторов сигнала.** Яков Владимирович Крюков, Евгений Васильевич Рогожников, Дмитрий Алексеевич Покаместов. *Известия Томского политехнического университета. Инжиниринг георесурсов*, vol. 325, no. 5, pp. 45–51. 2014.",
                   "**Регистрация OFDMA сигналов с периодической преамбулой.** Дмитрий Алексеевич Покаместов, Яков Владимирович Крюков. *Научная сессия ТУСУР-2014*, pp. 58–60. 2014."
                 ]
               }
@@ -1314,16 +1492,74 @@ window.LAB_CONTENT = {
         "Research activity photos",
         "Conference photos"
       ],
+      "cvProfiles": [
+        {
+          "slug": "kryukov",
+          "name": "Yakov Kryukov",
+          "role": "Candidate of Technical Sciences, Associate Professor, one of the laboratory leads",
+          "summary": "Specialist in wireless communication systems, signal processing, and multiple access technologies. His professional work combines research, software model development, and education projects in telecommunications.",
+          "sections": [
+            {
+              "title": "Professional Profile",
+              "text": "- 2025. Associate Professor at the Department of Telecommunications and Basic Principles of Radio Engineering, TUSUR.\n- 2023-2028. Doctoral research on signal generation, processing, and transmission in multi-user wireless communication systems with power-domain channel separation and reconfigurable intelligent surfaces."
+            },
+            {
+              "title": "Research Areas and Results",
+              "text": "- Research areas: non-orthogonal multiple access, error-correcting coding, multi-antenna systems, reconfigurable intelligent surfaces, and signal generation and processing for 5G/6G communication systems.\n- Author and co-author of more than 100 research works; more than 60 publications are indexed in Scopus, Web of Science, the VAK list, and the Russian \"White List\".\n- Author and co-author of 10 intellectual property results."
+            },
+            {
+              "title": "Research Project Leadership",
+              "text": "- RSF No. 21-79-00160 \"Communication resource allocation in telecommunication systems with non-orthogonal multiple access\", 2021-2023.\n- RSF No. 24-29-00172 \"Improving non-orthogonal multiple access communication systems using polar codes\", 2023-2025.\n- TUSUR projects under Priority 2030, the TUSUR Advanced Engineering School, and UMNIK related to PD-NOMA, polar codes, RIS, and STAR-RIS."
+            },
+            {
+              "title": "Teaching",
+              "text": "- Participates in TUSUR education since 2013.\n- Supervised graduation theses for 31 bachelor's students and 18 master's students.\n- Teaches seven communication-related courses in Russian and English; developed eight online courses."
+            },
+            {
+              "title": "Awards",
+              "text": "- Winner of the Vladimir Potanin Scholarship Program, 2017.\n- Winner of the U-NOVUS young researchers' development competition, 2019.\n- Second place in the TUSUR Best E-Course competition, 2023.\n- Laureate of the Tomsk Region award in education, science, healthcare, and culture, 2024."
+            }
+          ]
+        },
+        {
+          "slug": "pokamestov",
+          "name": "Dmitriy Pokamestov",
+          "role": "Candidate of Technical Sciences, Associate Professor at the TUSUR Department of Telecommunications and Basic Principles of Radio Engineering",
+          "summary": "Specialist in non-orthogonal multiple access methods for multi-antenna wireless communication systems. His research is connected with 5G/6G, SCMA, NOMA, RSMA, polar codes, and radio channel modeling.",
+          "sections": [
+            {
+              "title": "Research Work",
+              "text": "- Research topic: non-orthogonal multiple access methods in multi-antenna wireless communication systems.\n- Scientific consultant: Alexander Filatov, Doctor of Technical Sciences, Professor at the Department of Telecommunications and Basic Principles of Radio Engineering."
+            },
+            {
+              "title": "Publications and Results",
+              "text": "- 21 publications in journals recommended by VAK.\n- 15 publications in Russian \"White List\" journals.\n- 15 publications in proceedings of national conferences.\n- 65 publications in proceedings of international conferences."
+            },
+            {
+              "title": "Projects and Grants",
+              "text": "- Principal investigator of RSF No. 19-79-00087 \"Using non-orthogonal multiple access methods for wireless communication systems\", 2019-2021.\n- Principal investigator of RSF No. 22-79-10148 \"Advanced multiple access methods for future 6G wireless communication systems\", 2022-2025.\n- Principal investigator of TUSUR Priority 2030 and Advanced Engineering School projects on LDPC, polar codes, 5G NR channel coding, and digital distortion compensation.\n- Project lead under the TUSUR contract with Micran for software and signal processing algorithms for a radio-relay modem, 2024."
+            },
+            {
+              "title": "Intellectual Property",
+              "text": "- 2025 inventions: \"Channel estimation method in orthogonal frequency division multiplexing data transmission systems using Compressed Sensing\" and \"Radiometric receiver for low-intensity noise signals\".\n- Software registrations for SCMA, SCMA-MIMO, MIMO, NOMA, polar coding, and multi-user communication system models.\n- Utility models: \"Device for transmitting information through power circuits\" and \"Transceiver module of a radar system\"."
+            },
+            {
+              "title": "Awards",
+              "text": "- Laureate of the Legislative Duma of Tomsk Region award in Technical Sciences, 2018.\n- Laureate of the Tomsk Region award in education, science, healthcare, and culture, 2024."
+            }
+          ]
+        }
+      ],
       "newsItems": [
         {
           "date": "",
-          "title": "Lab News",
+          "title": "Laboratory News",
           "text": ""
         },
         {
           "date": "",
-          "title": "Creating a website",
-          "text": "The first version of the site is ready"
+          "title": "Website Launch",
+          "text": "The first version of the website is ready."
         }
       ]
     }

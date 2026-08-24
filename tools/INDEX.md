@@ -4,8 +4,8 @@ Reusable project tools.
 
 ## `tools/build-content.js`
 
-- Purpose: Auto-generate missing English Markdown from Russian Markdown, then
-  generate `js/lab-content.js` from human-readable Markdown in `content/**/*.md`.
+- Purpose: Generate `js/lab-content.js` from human-readable Markdown in
+  `content/**/*.md`.
 - Parameters: None.
 - Example:
 
@@ -18,16 +18,16 @@ node tools/build-content.js
   missing.
 - Notes:
   - Required after changing `content/` or the parser itself.
-  - Set `LAB_TRANSLATE_PROVIDER=libre` to use LibreTranslate during the build.
-  - Set `LAB_SKIP_AUTO_TRANSLATE=1` to skip network translation and build from
-    available English files, falling back to Russian content where English files
-    are missing. The GitHub Pages workflow uses this mode.
+  - Does not use network translation by default.
+  - Set `LAB_AUTO_TRANSLATE=1` to auto-generate missing English Markdown during
+    the build.
+  - Set `LAB_TRANSLATE_PROVIDER=libre` to use LibreTranslate when automatic
+    translation is enabled.
 
 ## `setup-theme-showcase.ps1`
 
 - Purpose: Regenerate shared content, sync the root `labicon.png` into theme
-  preview folders, auto-generate missing English Markdown from Russian Markdown,
-  and ensure required preview pages exist.
+  preview folders, and ensure required preview pages exist.
 - Parameters: None.
 - Example:
 

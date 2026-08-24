@@ -149,14 +149,16 @@
 
     const nav = content.sections
       .filter((section) => section.key !== "research" && section.href !== "research.html")
-      .map((section) => `<a href="${section.href}" aria-current="${page === section.key ? "page" : "false"}">${section.title}</a>`)
+      .map((section) => {
+        const isCurrent = page === section.key || (page === "cv" && section.key === "people");
+        return `<a href="${section.href}" aria-current="${isCurrent ? "page" : "false"}">${section.title}</a>`;
+      })
       .join("");
 
     function newsBlock() {
       return `
         <section class="section section-news">
           <div class="section-head">
-            <p class="kicker">${labels.newsKicker}</p>
             <h2>${labels.newsTitle}</h2>
           </div>
           <div class="news-list">
@@ -178,7 +180,6 @@
         return `
           <section class="section section-research">
             <div class="section-head">
-              <p class="kicker">${labels.researchKicker}</p>
               <h2>${html(section.title || labels.researchTitle)}</h2>
             </div>
             <div class="interest-list">
@@ -217,7 +218,6 @@
       return `
         <section class="section section-research">
           <div class="section-head">
-            <p class="kicker">${labels.researchKicker}</p>
             <h2>${labels.researchTitle}</h2>
           </div>
           <div class="interest-list">
@@ -239,7 +239,6 @@
       return `
         <section class="section section-projects">
           <div class="section-head">
-            <p class="kicker">${labels.projectsKicker}</p>
             <h2>${labels.projectsTitle}</h2>
           </div>
           <div class="project-list">
@@ -247,6 +246,24 @@
               <article class="project">
                 <h3>${project.title}</h3>
                 <div class="markdown-block">${blockMarkdown(project.text)}</div>
+              </article>
+            `).join("")}
+          </div>
+        </section>
+      `;
+    }
+
+    function patentsBlock() {
+      return `
+        <section class="section section-patents">
+          <div class="section-head">
+            <h2>${labels.patentsTitle}</h2>
+          </div>
+          <div class="project-list">
+            ${content.patents.map((patent) => `
+              <article class="project">
+                <h3>${html(patent.title)}</h3>
+                <div class="markdown-block">${blockMarkdown(patent.text)}</div>
               </article>
             `).join("")}
           </div>
@@ -311,13 +328,22 @@
         return person.contacts.map((contact) => ({
           label: contact.label,
           value: contact.value || placeholders.value
-        }));
+        })).filter((contact) => contact.label.toLowerCase() !== "cv");
+      }
+
+      function personCvHref(person) {
+        if (typeof person === "string" || !person.contacts) return "";
+
+        const cvContact = person.contacts.find((contact) => contact.label.toLowerCase() === "cv");
+        if (!cvContact || !cvContact.value) return "";
+
+        const markdownLink = cvContact.value.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        return markdownLink ? markdownLink[2] : cvContact.value;
       }
 
       return `
         <section class="section">
           <div class="section-head">
-            <p class="kicker">${labels.peopleKicker}</p>
             <h2>${labels.peopleTitle}</h2>
           </div>
           ${content.peopleGroups.map((group, groupIndex) => `
@@ -330,6 +356,7 @@
                 ${group.people.map((person) => {
                   const name = personName(person);
                   const description = personDescription(person);
+                  const cvHref = personCvHref(person);
                   return `
                   <article class="person">
                     <div class="person-photo">
@@ -339,7 +366,7 @@
                       </dl>
                     </div>
                     <div class="person-info">
-                      <h4>${name}</h4>
+                      <h4>${cvHref ? `<a href="${html(cvHref)}">${html(name)}</a>` : html(name)}</h4>
                       ${description ? `<p class="person-bio">${description}</p>` : ""}
                     </div>
                   </article>
@@ -356,7 +383,6 @@
       return `
         <section class="section section-students">
           <div class="section-head">
-            <p class="kicker">${labels.studentsKicker}</p>
             <h2>${labels.studentsTitle}</h2>
             <div class="student-lead markdown-block">${blockMarkdown(content.studentOffer.lead)}</div>
           </div>
@@ -400,7 +426,6 @@
       return `
         <section class="section section-publications">
           <div class="section-head">
-            <p class="kicker">${labels.publicationsKicker}</p>
             <h2>${labels.publicationsTitle}</h2>
             ${publicationContent.lead ? `<div class="markdown-block">${blockMarkdown(publicationContent.lead)}</div>` : ""}
           </div>
@@ -431,7 +456,6 @@
       return `
         <section class="section">
           <div class="section-head">
-            <p class="kicker">${labels.mediaKicker}</p>
             <h2>${labels.mediaTitle}</h2>
           </div>
           <div class="media-list">
@@ -447,14 +471,55 @@
       `;
     }
 
+    function cvBlock() {
+      const params = new URLSearchParams(window.location.search);
+      const requestedSlug = params.get("person");
+      const profiles = content.cvProfiles || [];
+      const profile = profiles.find((item) => item.slug === requestedSlug) || profiles[0];
+
+      if (!profile) {
+        return `
+          <section class="section section-cv">
+            <div class="section-head">
+              <h2>${labels.cvTitle}</h2>
+            </div>
+          </section>
+        `;
+      }
+
+      return `
+        <section class="section section-cv">
+          <div class="section-head">
+            <h2>${html(profile.name)}</h2>
+            ${profile.role ? `<p class="cv-role">${html(profile.role)}</p>` : ""}
+            ${profile.summary ? `<div class="markdown-block">${blockMarkdown(profile.summary)}</div>` : ""}
+          </div>
+          <div class="publication-list cv-list">
+            ${profile.sections.map((section) => `
+              <article class="publication-section cv-section">
+                <div class="publication-section-head">
+                  <h3>${html(section.title)}</h3>
+                </div>
+                <div class="publication-section-body markdown-block">
+                  ${blockMarkdown(section.text)}
+                </div>
+              </article>
+            `).join("")}
+          </div>
+        </section>
+      `;
+    }
+
     const pages = {
       home: researchBlock(),
       news: newsBlock(),
       projects: projectsBlock(),
+      patents: patentsBlock(),
       people: peopleBlock(),
       students: studentsBlock(),
       publications: publicationsBlock(),
-      media: mediaBlock()
+      media: mediaBlock(),
+      cv: cvBlock()
     };
 
     app.innerHTML = `

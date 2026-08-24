@@ -2,7 +2,8 @@
 
 ## Current Objective
 
-Design and install an agent harness for this static lab website.
+Update the lab website with a patents placeholder, grant projects, and team CV
+profile pages.
 
 ## Completed
 
@@ -27,25 +28,46 @@ Design and install an agent harness for this static lab website.
   home-page action links render consistently across theme previews.
 - Removed visible `undefined` fallbacks from shared renderers and converted the
   home contact link into a mail button action.
-- Moved automatic RU to EN synchronization into `tools/build-content.js` so the
-  main content build creates missing paired English Markdown before generating
-  `js/lab-content.js`.
+- Moved RU to EN synchronization behind the explicit `LAB_AUTO_TRANSLATE=1`
+  switch so ordinary content builds do not depend on network translation.
+- Added a patents page placeholder to the shared navigation and all theme
+  previews.
+- Replaced project placeholders with grant and research project cards sourced
+  from the supplied Kryukov and Pokamestov documents.
+- Added CV profile content for Yakov Kryukov and Dmitriy Pokamestov, plus CV
+  links from their people cards.
+- Extended the shared content builder and theme renderer for `patents` and
+  `cv` pages.
+- Regenerated `js/lab-content.js` with the local default `node tools/build-content.js`.
+- Simplified section rendering by removing visible kicker labels from public
+  page headers.
+- Changed people cards so CV links are attached to the person's name instead
+  of appearing as a separate contact row.
+- Changed news editing to the simpler inline `content/news/<lang>.md` format,
+  where each `##` section is one news item; legacy `news/items` folders remain
+  parser-compatible as fallback.
+- Changed CV source files to separate `content/cv/<surname>_<lang>.md` files.
+- Added `content/README.md` with editor-facing instructions for non-technical
+  content maintenance.
+- Full `tools/codex-check.ps1` passed after translation was made opt-in.
 
 ## In Progress
 
-- No active harness implementation work.
+- No active website content implementation work.
 
 ## Blocked
 
-- Regenerating all deleted `content/**/en.md` files is blocked until the
-  MyMemory daily quota resets or a reachable LibreTranslate endpoint is
-  configured.
+- Automatic translation through MyMemory is blocked until the daily quota resets
+  or a reachable LibreTranslate endpoint is configured.
 
 ## Known Issues
 
 - The working tree had pre-existing modifications before this harness work.
 - The generated `js/lab-content.js` may change when checks regenerate content;
   treat pre-existing generated changes separately from harness changes.
+- `content/publications/en.md` is currently a copied fallback of the Russian
+  publications list; replace it with edited English content when translation
+  quality matters.
 
 ## Temporary Decisions
 

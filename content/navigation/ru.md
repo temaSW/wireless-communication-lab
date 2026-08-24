@@ -6,9 +6,10 @@
 
 ## Вкладки
 
-- Team | Коллектив | people.html
-- For students | Студентам | students.html
-- Projects | Проекты | projects.html
-- Publications | Публикации | publications.html
-- Media | Медиа | media.html
-- News | Новости | news.html
+- people | Коллектив | people.html
+- students | Студентам | students.html
+- projects | Проекты | projects.html
+- patents | Патенты | patents.html
+- publications | Публикации | publications.html
+- media | Медиа | media.html
+- news | Новости | news.html

@@ -31,6 +31,9 @@ facts about this machine are stored in `environment/INVENTORY.md`.
 - For RU to EN content drafts, use `tools/translate-ru-to-en.js`. Prefer
   MyMemory when no local service is configured; prefer LibreTranslate when a
   free/self-hosted endpoint is available.
+- Do not make translation a hard dependency of ordinary site builds. Local
+  LibreTranslate is useful for editor workflows, but `node tools/build-content.js`
+  must stay usable without network access.
 
 ## External Services
 

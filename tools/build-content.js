@@ -7,7 +7,7 @@ const contentRoot = path.join(root, "content");
 const languages = ["ru", "en"];
 
 function syncEnglishContent() {
-  if (process.env.LAB_SKIP_AUTO_TRANSLATE === "1") return;
+  if (process.env.LAB_AUTO_TRANSLATE !== "1") return;
 
   const args = [
     path.join(__dirname, "translate-ru-to-en.js"),
@@ -40,18 +40,22 @@ const kickerDefaults = {
     people: "Команда лаборатории",
     students: "Для студентов",
     projects: "Текущая работа",
+    patents: "Интеллектуальная собственность",
     publications: "Результаты",
     media: "Медиа",
-    news: "Новости лаборатории"
+    news: "Новости лаборатории",
+    cv: "Профили коллектива"
   },
   en: {
     home: "Research Interests",
     people: "Laboratory Team",
     students: "For Students",
     projects: "Current Work",
+    patents: "Intellectual Property",
     publications: "Outputs",
     media: "Media",
-    news: "Laboratory News"
+    news: "Laboratory News",
+    cv: "Team Profiles"
   }
 };
 
@@ -587,6 +591,90 @@ function parseProjects(lang) {
   };
 }
 
+function parsePatents(lang) {
+  const { filePath, markdown } = readPage(lang, "patents");
+  const title = titleOf(markdown, filePath);
+  const meta = metadata(bodyAfterTitle(markdown));
+
+  return {
+    ...labelData(lang, "patents", title, meta),
+    patents: parseSectionCards(markdown)
+  };
+}
+
+function parseCv(lang) {
+  const cvRoot = path.join(contentRoot, "cv");
+  const profileFiles = fs.existsSync(cvRoot)
+    ? fs.readdirSync(cvRoot)
+      .filter((fileName) => fileName.endsWith(`_${lang}.md`))
+      .sort()
+    : [];
+
+  return {
+    ...labelData(lang, "cv", "CV", {}),
+    cvProfiles: profileFiles.map((fileName) => {
+      const filePath = path.join(cvRoot, fileName);
+      const markdown = readMarkdown(filePath);
+      const title = titleOf(markdown, filePath);
+      const bodyLines = bodyAfterTitle(markdown).map(stripComment).filter(Boolean);
+      const profileMeta = metadata(bodyLines);
+      const slug = fileName.replace(new RegExp(`_${lang}\\.md$`), "");
+
+      return {
+        slug: profileMeta.slug || slug,
+        name: profileMeta["имя"] || profileMeta.name || title,
+        role: profileMeta["роль"] || profileMeta.role || "",
+        summary: textFromLines(bodyLines),
+        sections: parseCvSections(bodyLines)
+      };
+    })
+  };
+}
+
+function parseCvSections(lines) {
+  const result = [];
+  let current = null;
+
+  lines.forEach((line) => {
+    const title = headingTitle(line, 3);
+
+    if (title) {
+      current = {
+        title,
+        lines: []
+      };
+      result.push(current);
+      return;
+    }
+
+    if (current) {
+      current.lines.push(line);
+    }
+  });
+
+  return result.map((section) => ({
+    title: section.title,
+    text: textFromLines(section.lines, { includeBullets: true, includeKeyValues: true })
+  })).filter((section) => section.text);
+}
+
+function slugify(text) {
+  const translit = {
+    а: "a", б: "b", в: "v", г: "g", д: "d", е: "e", ё: "e", ж: "zh", з: "z",
+    и: "i", й: "y", к: "k", л: "l", м: "m", н: "n", о: "o", п: "p", р: "r",
+    с: "s", т: "t", у: "u", ф: "f", х: "h", ц: "ts", ч: "ch", ш: "sh",
+    щ: "sch", ъ: "", ы: "y", ь: "", э: "e", ю: "yu", я: "ya"
+  };
+
+  return String(text || "")
+    .toLowerCase()
+    .split("")
+    .map((char) => translit[char] || char)
+    .join("")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 function parseSimpleList(lang, sectionName, outputKey, placeholderKey) {
   const { filePath, markdown } = readPage(lang, sectionName);
   const title = titleOf(markdown, filePath);
@@ -680,6 +768,24 @@ function parseNewsPage(lang) {
 }
 
 function parseNewsItems(lang) {
+  const pageItems = parseInlineNewsItems(lang);
+  return pageItems.length ? pageItems : parseLegacyNewsItems(lang);
+}
+
+function parseInlineNewsItems(lang) {
+  const { markdown } = readPage(lang, "news");
+
+  return sections(markdown).map((section) => {
+    const meta = metadata(section.lines);
+    return {
+      date: meta["дата"] || meta.date || "",
+      title: section.title,
+      text: textFromLines(section.lines, { includeBullets: true })
+    };
+  });
+}
+
+function parseLegacyNewsItems(lang) {
   const itemsRoot = path.join(contentRoot, "news", "items");
 
   if (!fs.existsSync(itemsRoot)) {
@@ -730,9 +836,11 @@ function buildLanguage(lang) {
     parsePeople(lang),
     parseStudents(lang),
     parseProjects(lang),
+    parsePatents(lang),
     parsePublications(lang),
     parseSimpleList(lang, "media", "mediaSections", "media"),
-    parseNewsPage(lang)
+    parseNewsPage(lang),
+    parseCv(lang)
   ].forEach((section) => mergeContent(data, section));
 
   data.newsItems = parseNewsItems(lang);

@@ -15,12 +15,18 @@ Site content belongs in `content/`. Write normal Markdown: page title as `#`,
 section titles as `##`, paragraphs as plain text, and lists with `-`.
 
 Each visible page has its own folder:
-`home`, `people`, `students`, `projects`, `publications`, `media`, and `news`.
+`home`, `people`, `students`, `projects`, `patents`, `publications`, `media`,
+and `news`.
 Each folder stores separate `ru.md` and `en.md` files.
 
-News items are separate notes in `content/news/items/<item-id>/ru.md` and
-`content/news/items/<item-id>/en.md`. Folders are sorted by name, so prefix
-item folders with numbers to control order.
+News items are sections in `content/news/ru.md` and `content/news/en.md`.
+Each `## News title` section becomes one news item. The older
+`content/news/items/<item-id>/` folder format remains supported only as a
+fallback.
+
+CV pages are separate files in `content/cv/` named `surname_ru.md` and
+`surname_en.md`; the `surname` stem is used in links such as
+`cv.html?person=kryukov`.
 
 Do not write JSON in content files, and do not edit generated
 `js/lab-content.js` by hand.

@@ -34,8 +34,12 @@ separate Russian and English Markdown files.
 
 `content/site.md` defines site-wide configuration and available themes.
 
-`content/news/items/<item-id>/` stores individual news entries. Folder names are
-sorted lexicographically, so numeric prefixes control order.
+`content/news/<lang>.md` stores news entries as ordinary `##` sections. The
+older `content/news/items/<item-id>/` folder format remains supported only as a
+fallback when no inline news sections are present.
+
+`content/cv/<surname>_<lang>.md` stores individual team CV pages. The surname
+stem is used in links such as `cv.html?person=kryukov`.
 
 `tools/build-content.js` parses Markdown from `content/` and generates
 `js/lab-content.js`.
